@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/index.md:1
+msgid "Introduction"
+msgstr ""
+
+#: src/index.md:3
+msgid ""
+"_rustup_ installs [The Rust Programming Language](https://www.rust-lang.org) "
+"from the official release channels, enabling you to easily switch between "
+"stable, beta, and nightly compilers and keep them updated. It makes cross-"
+"compiling simpler with binary builds of the standard library for common "
+"platforms. And it runs on all platforms Rust supports."
+msgstr ""
+
+#: src/index.md:9
+msgid ""
+"Check out the [Concepts](concepts/index.md) chapter for an overview of how "
+"rustup works and some of the terminology it uses. The [Installation]"
+"(installation/index.md) chapter covers installing rustup and getting started."
+msgstr ""
+
+#: src/index.md:13
+msgid ""
+"The source code of rustup and this manual may be found at <https://github."
+"com/rust-lang/rustup>. If you find a problem, check out the [issue tracker]"
+"(https://github.com/rust-lang/rustup/issues)."
+msgstr ""
+
+#: src/index.md:17
+msgid ""
+"Release notes for rustup may be found in the [CHANGELOG](https://github.com/"
+"rust-lang/rustup/blob/HEAD/CHANGELOG.md)."
+msgstr ""

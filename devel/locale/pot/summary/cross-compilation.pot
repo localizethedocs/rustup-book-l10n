@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/cross-compilation.md:1
+msgid "Cross-compilation"
+msgstr ""
+
+#: src/cross-compilation.md:3
+msgid ""
+"Rust [supports a great number of platforms](https://doc.rust-lang.org/"
+"nightly/rustc/platform-support.html). For many of these platforms The Rust "
+"Project publishes binary releases of the standard library, and for some the "
+"full compiler. `rustup` gives easy access to all of them."
+msgstr ""
+
+#: src/cross-compilation.md:9
+msgid ""
+"When you first install a toolchain, `rustup` installs only the standard "
+"library for your _host_ platform - that is, the architecture and operating "
+"system you are presently running. To compile to other platforms you must "
+"install other _target_ platforms. This is done with the `rustup target add` "
+"command. For example, to add the Android target:"
+msgstr ""
+
+#: src/cross-compilation.md:21
+msgid ""
+"With the `arm-linux-androideabi` target installed you can then build for "
+"Android with Cargo by passing the `--target` flag, as in `cargo build --"
+"target=arm-linux-androideabi`."
+msgstr ""
+
+#: src/cross-compilation.md:25
+msgid ""
+"Note that `rustup target add` only installs the Rust standard library for a "
+"given target. There are typically other tools necessary to cross-compile, "
+"particularly a linker. For example, to cross compile to Android the [Android "
+"NDK](https://developer.android.com/tools/sdk/ndk/index.html) must be "
+"installed. In the future, `rustup` will provide assistance installing the "
+"NDK components as well. See the [target section](https://doc.rust-lang.org/"
+"cargo/reference/config.html#target) of the `cargo` configuration for how to "
+"setup a linker to use for a certain target."
+msgstr ""
+
+#: src/cross-compilation.md:35
+msgid ""
+"To install a target for a toolchain that isn't the default toolchain use the "
+"`--toolchain` argument of `rustup target add`, like so:"
+msgstr ""
+
+#: src/cross-compilation.md:42
+msgid ""
+"To see a list of available targets, `rustup target list`. To remove a "
+"previously-added target, `rustup target remove`."
+msgstr ""
