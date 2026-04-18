@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/installation/index.md:1
+msgid "Installation"
+msgstr ""
+
+#: src/installation/index.md:3
+msgid ""
+"Follow the instructions at <https://www.rust-lang.org/tools/install>. If "
+"that doesn't work for you there are [other installation methods](other.md)."
+msgstr ""
+
+#: src/installation/index.md:6
+msgid ""
+"`rustup` installs `rustc`, `cargo`, `rustup` and other standard tools to "
+"Cargo's `bin` directory. On Unix it is located at `$HOME/.cargo/bin` and on "
+"Windows at `%USERPROFILE%\\.cargo\\bin`. This is the same directory that "
+"`cargo install` will install Rust programs and Cargo plugins."
+msgstr ""
+
+#: src/installation/index.md:11
+msgid ""
+"This directory will be in your `$PATH` environment variable, which means you "
+"can run them from the shell without further configuration. Open a _new_ "
+"shell and type the following:"
+msgstr ""
+
+#: src/installation/index.md:19
+msgid ""
+"If you see something like `rustc 1.19.0 (0ade33941 2017-07-17)` then you are "
+"ready to Rust. If you decide Rust isn't your thing, you can completely "
+"remove it from your system by running `rustup self uninstall`."
+msgstr ""
+
+#: src/installation/index.md:25
+msgid "Choosing where to install"
+msgstr ""
+
+#: src/installation/index.md:27
+msgid ""
+"`rustup` allows you to customise your installation by setting the "
+"environment variables `CARGO_HOME` and `RUSTUP_HOME` before running the "
+"`rustup-init` executable. As mentioned in the [Environment Variables](../"
+"environment-variables.md) section, `RUSTUP_HOME` sets the root `rustup` "
+"folder, which is used for storing installed toolchains and configuration "
+"options. `CARGO_HOME` contains cache files used by [cargo](https://doc.rust-"
+"lang.org/cargo/)."
+msgstr ""
+
+#: src/installation/index.md:33
+msgid ""
+"Note that you will need to ensure these environment variables are always set "
+"and that `CARGO_HOME/bin` is in the `$PATH` environment variable when using "
+"the toolchain."
+msgstr ""
+
+#: src/installation/index.md:40
+msgid "Installing nightly"
+msgstr ""
+
+#: src/installation/index.md:42
+msgid ""
+"If you specify the [nightly channel](../concepts/channels.md) when "
+"installing `rustup`, the `rustup-init` script will do a \"forced\" "
+"installation by default. A \"forced\" installation means it will install the "
+"nightly channel regardless of whether it might be missing [components](../"
+"concepts/components.md) that you want. If you want to install rustup with "
+"the nightly channel, and ensure it has the components that you want, you "
+"will need to do this in two phases. For example, if you want to make a fresh "
+"installation of `rustup` and then install `nightly` along with `clippy` or "
+"`miri`, first install `rustup` without a toolchain:"
+msgstr ""
+
+#: src/installation/index.md:51
+msgid ""
+"```console\n"
+"curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain none -y\n"
+"```"
+msgstr ""
+
+#: src/installation/index.md:55
+msgid ""
+"Next you can install `nightly` allowing `rustup` to downgrade until it finds "
+"the components you need:"
+msgstr ""
+
+#: src/installation/index.md:62
+msgid ""
+"This can be used to great effect in CI, to get you a toolchain rapidly which "
+"meets your criteria."
+msgstr ""
+
+#: src/installation/index.md:68
+msgid "Enable tab completion for Bash, Fish, Zsh, or PowerShell"
+msgstr ""
+
+#: src/installation/index.md:70
+msgid ""
+"`rustup` now supports generating completion scripts for Bash, Fish, Zsh, and "
+"PowerShell. See `rustup help completions` for full details, but the gist is "
+"as simple as using one of the following:"
+msgstr ""
+
+#: src/installation/index.md:94
+msgid ""
+"**Note**: you may need to restart your shell in order for the changes to "
+"take effect."
+msgstr ""
+
+#: src/installation/index.md:97
+msgid ""
+"For `zsh`, you must then add the following line in your `~/.zshrc` before "
+"`compinit`:"
+msgstr ""
+
+#: src/installation/index.md:101
+msgid "~/.zfunc"
+msgstr ""
+
+#: src/installation/index.md:104
+msgid ""
+"In Xonsh you can reuse Fish completion by installing [xontrib-fish-completer]"
+"(https://github.com/xonsh/xontrib-fish-completer)."
+msgstr ""
