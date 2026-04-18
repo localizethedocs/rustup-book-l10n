@@ -1,0 +1,47 @@
+{
+  "po" : 
+  {
+    "en_US" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_CN" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_TW" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    }
+  },
+  "pot" : 
+  {
+    "branch" : "stable",
+    "commit" : 
+    {
+      "date" : "2026-03-05 06:31:28 +0000",
+      "hash" : "28d1352dbcb436d3111c3594b9e1588e94950464",
+      "title" : "chore(deps): update `aws-lc-rs` and `aws-lc-sys`"
+    }
+  },
+  "type" : "branch",
+  "version" : "stable"
+}

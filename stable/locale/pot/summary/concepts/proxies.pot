@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/proxies.md:1
+msgid "Proxies"
+msgstr ""
+
+#: src/concepts/proxies.md:3
+msgid ""
+"`rustup` provides a number of wrappers for common Rust tools. These are "
+"called _proxies_ and represent commands which are provided by the various "
+"[components](components.md)."
+msgstr ""
+
+#: src/concepts/proxies.md:7
+msgid "The list of proxies is currently static in `rustup` and is as follows:"
+msgstr ""
+
+#: src/concepts/proxies.md:11
+msgid ""
+"`rustc` is the compiler for the Rust programming language, provided by the "
+"project itself and comes from the `rustc` component."
+msgstr ""
+
+#: src/concepts/proxies.md:13
+msgid ""
+"`rustdoc` is a tool distributed in the `rustc` component which helps you to "
+"generate documentation for Rust projects."
+msgstr ""
+
+#: src/concepts/proxies.md:15
+msgid ""
+"`cargo` is the Rust package manager which downloads your Rust package’s "
+"dependencies, compiles your packages, makes distributable packages, and "
+"uploads them to crates.io (the Rust community’s package registry). It comes "
+"from the `cargo` component."
+msgstr ""
+
+#: src/concepts/proxies.md:17
+msgid ""
+"`rust-lldb`, `rust-gdb`, and `rust-gdbgui` are simple wrappers around the "
+"`lldb`, `gdb`, and `gdbgui` debuggers respectively. The wrappers enable some "
+"pretty-printing of Rust values and add some convenience features to the "
+"debuggers by means of their scripting interfaces."
+msgstr ""
+
+#: src/concepts/proxies.md:19
+msgid ""
+"`rust-analyzer` is part of the Rust IDE integration tooling. It implements "
+"the language-server protocol to permit IDEs and editors such as Visual "
+"Studio Code, Vim, or Emacs, access to the semantics of the Rust code you are "
+"editing. It comes from the `rust-analyzer` component."
+msgstr ""
+
+#: src/concepts/proxies.md:21
+msgid ""
+"`cargo-clippy` and `clippy-driver` are related to the `clippy` linting tool "
+"which provides extra checks for common mistakes and stylistic choices and it "
+"comes from the `clippy` component."
+msgstr ""
+
+#: src/concepts/proxies.md:23
+msgid ""
+"`cargo-miri` is an experimental interpreter for Rust's mid-level "
+"intermediate representation (MIR) and it comes from the `miri` component."
+msgstr ""
+
+#: src/concepts/proxies.md:25
+msgid ""
+"`rls` is a deprecated IDE tool that has been replaced by `rust-analyzer`. It "
+"comes from the `rls` component."
+msgstr ""
