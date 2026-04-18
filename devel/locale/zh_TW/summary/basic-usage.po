@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/basics.md:1
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/basics.md:31
 msgid "Keeping `rustup` up to date"
-msgstr ""
+msgstr "保持 `rustup` 更新"
 
 #: src/basics.md:33
 msgid ""
@@ -80,7 +80,7 @@ msgstr ""
 
 #: src/basics.md:56
 msgid "Disabling self updates on a per-invocation basis"
-msgstr ""
+msgstr "停用每次呼叫時的自我更新"
 
 #: src/basics.md:57
 msgid ""

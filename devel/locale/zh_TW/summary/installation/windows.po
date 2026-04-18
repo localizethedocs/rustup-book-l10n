@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/installation/windows.md:1
@@ -82,6 +82,8 @@ msgid ""
 "You don't need to switch toolchains to support all windows targets though; a "
 "single toolchain supports all four x86 windows targets:"
 msgstr ""
+"您無需切換工具鏈即可支援所有 Windows 目標平臺；單一工具鏈即可支援所有四個 "
+"x86 Windows 目標平臺："
 
 #: src/installation/windows.md:59
 msgid ""
