@@ -1,0 +1,126 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/channels.md:1
+msgid "Channels"
+msgstr ""
+
+#: src/concepts/channels.md:3
+msgid ""
+"Rust is released to three different \"channels\": stable, beta, and nightly. "
+"The stable releases are made every 6 weeks (with occasional point releases). "
+"Beta releases are the version that will appear in the next stable release. "
+"Nightly releases are made every night. See [The Rust Book](https://doc.rust-"
+"lang.org/book/appendix-07-nightly-rust.html) for more details on Rust's "
+"train release model. The release schedule is posted to the [Rust Forge]"
+"(https://forge.rust-lang.org/). `rustup` assists with installing different "
+"channels, keeping them up-to-date, and easily switching between them."
+msgstr ""
+
+#: src/concepts/channels.md:11
+msgid ""
+"After a release channel has been installed, `rustup` can be used to update "
+"the installed version to the latest release on that channel. See the "
+"[Keeping rust up to date](../basics.md#keeping-rust-up-to-date) section for "
+"more information."
+msgstr ""
+
+#: src/concepts/channels.md:15
+msgid ""
+"`rustup` can also install specific versions of Rust, such as `1.45.2` or "
+"`nightly-2020-07-27`. See the [Toolchains](toolchains.md) chapter for more "
+"information on installing different channels and releases. See the "
+"[Overrides](../overrides.md) chapter for details on switching between "
+"toolchains and pinning your project to a specific toolchain."
+msgstr ""
+
+#: src/concepts/channels.md:26
+msgid "Working with nightly Rust"
+msgstr ""
+
+#: src/concepts/channels.md:28
+msgid ""
+"`rustup` gives you easy access to the nightly compiler and its [experimental "
+"features](https://doc.rust-lang.org/unstable-book/). To add it just run "
+"`rustup toolchain install nightly`:"
+msgstr ""
+
+#: src/concepts/channels.md:50
+msgid ""
+"Now Rust nightly is installed, but not activated. To test it out you can run "
+"a command from the nightly toolchain like"
+msgstr ""
+
+#: src/concepts/channels.md:58
+msgid ""
+"But more likely you want to use it for a while. To switch to nightly "
+"globally, change [the default](../overrides.md#default-toolchain) with "
+"`rustup default nightly`:"
+msgstr ""
+
+#: src/concepts/channels.md:70
+msgid ""
+"Now any time you run `cargo` or `rustc` you will be running the nightly "
+"compiler."
+msgstr ""
+
+#: src/concepts/channels.md:73
+msgid ""
+"With nightly installed any time you run `rustup update`, the nightly channel "
+"will be updated in addition to stable:"
+msgstr ""
+
+#: src/concepts/channels.md:90
+msgid "Nightly availability"
+msgstr ""
+
+#: src/concepts/channels.md:92
+msgid ""
+"Nightly toolchains may fail to build, so for any given date and target "
+"platform there may not be a toolchain available. Furthermore, nightly builds "
+"may be published with missing non-default [components](components.md) (such "
+"as [`clippy`](https://github.com/rust-lang/rust-clippy)). As such, it can be "
+"difficult to find fully-working nightlies. Use the [rustup-components-"
+"history](https://rust-lang.github.io/rustup-components-history/) project to "
+"find the build status of recent nightly toolchains and components."
+msgstr ""
+
+#: src/concepts/channels.md:99
+msgid ""
+"When you attempt to install or update the `nightly` channel, `rustup` will "
+"check if a required or previously installed component is missing. If it is "
+"missing, `rustup` will automatically search for an older release that "
+"contains the required components. There are several ways to change this "
+"behavior:"
+msgstr ""
+
+#: src/concepts/channels.md:104
+msgid ""
+"Use the `--force` flag to `rustup toolchain install` to force it to install "
+"the most recent version even if there is a missing component."
+msgstr ""
+
+#: src/concepts/channels.md:106
+msgid ""
+"Use the `--profile` flag to `rustup toolchain install` to use a different "
+"profile that does not contain the missing component. For example, `--"
+"profile=minimal` should always work, as the minimal set is required to "
+"exist. See the [Profiles](profiles.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/channels.md:110
+msgid ""
+"Install a specific date that contains the components you need. For example, "
+"`rustup toolchain install nightly-2020-07-27`. You can then use [overrides]"
+"(../overrides.md) to pin to that specific release."
+msgstr ""

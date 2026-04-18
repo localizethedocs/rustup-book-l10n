@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr ""
+
+#: src/SUMMARY.md:4
+msgid "Installation"
+msgstr ""
+
+#: src/SUMMARY.md:5
+msgid "Windows"
+msgstr ""
+
+#: src/SUMMARY.md:6
+msgid "MSVC prerequisites"
+msgstr ""
+
+#: src/SUMMARY.md:7
+msgid "Other installation methods"
+msgstr ""
+
+#: src/SUMMARY.md:8
+msgid "Already installed Rust?"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Concepts"
+msgstr ""
+
+#: src/SUMMARY.md:10
+msgid "Channels"
+msgstr ""
+
+#: src/SUMMARY.md:11
+msgid "Toolchains"
+msgstr ""
+
+#: src/SUMMARY.md:12
+msgid "Components"
+msgstr ""
+
+#: src/SUMMARY.md:13
+msgid "Profiles"
+msgstr ""
+
+#: src/SUMMARY.md:14
+msgid "Proxies"
+msgstr ""
+
+#: src/SUMMARY.md:15
+msgid "Basic usage"
+msgstr ""
+
+#: src/SUMMARY.md:16
+msgid "Overrides"
+msgstr ""
+
+#: src/SUMMARY.md:17
+msgid "Cross-compilation"
+msgstr ""
+
+#: src/SUMMARY.md:18
+msgid "Environment variables"
+msgstr ""
+
+#: src/SUMMARY.md:19
+msgid "Configuration"
+msgstr ""
+
+#: src/SUMMARY.md:20
+msgid "Network proxies"
+msgstr ""
+
+#: src/SUMMARY.md:21
+msgid "Examples"
+msgstr ""
+
+#: src/SUMMARY.md:22
+msgid "Security"
+msgstr ""
+
+#: src/SUMMARY.md:23
+msgid "FAQ"
+msgstr ""
