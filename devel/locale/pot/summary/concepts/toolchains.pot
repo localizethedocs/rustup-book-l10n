@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/toolchains.md:1
+msgid "Toolchains"
+msgstr ""
+
+#: src/concepts/toolchains.md:3
+msgid ""
+"Many `rustup` commands deal with _toolchains_, a single installation of the "
+"Rust compiler. `rustup` supports multiple types of toolchains. The most "
+"basic track the official release [channels](channels.md): _stable_, _beta_ "
+"and _nightly_; but `rustup` can also install toolchains from the official "
+"archives, for alternate host platforms, and from local builds."
+msgstr ""
+
+#: src/concepts/toolchains.md:11
+msgid "Toolchain specification"
+msgstr ""
+
+#: src/concepts/toolchains.md:13
+msgid "Standard release channel toolchain names have the following form:"
+msgstr ""
+
+#: src/concepts/toolchains.md:25
+msgid ""
+"'channel' is a named release channel, a major and minor version number such "
+"as `1.42`, or a fully specified version number, such as `1.42.0`. Channel "
+"names can be optionally appended with an archive date, as in "
+"`nightly-2014-12-18`, in which case the toolchain is downloaded from the "
+"archive for that date."
+msgstr ""
+
+#: src/concepts/toolchains.md:30
+msgid ""
+"Finally, the host may be specified as a target tuple. This is most useful "
+"for installing a 32-bit compiler on a 64-bit platform, or for installing the "
+"[MSVC-based toolchain](https://www.rust-lang.org/tools/install?"
+"platform_override=win) on Windows. For example:"
+msgstr ""
+
+#: src/concepts/toolchains.md:38
+msgid ""
+"For convenience, elements of the target tuple that are omitted will be "
+"inferred, so the above could be written:"
+msgstr ""
+
+#: src/concepts/toolchains.md:45
+msgid ""
+"Toolchain names that don't name a channel instead can be used to name "
+"[custom toolchains](#custom-toolchains)."
+msgstr ""
+
+#: src/concepts/toolchains.md:51
+msgid "Custom toolchains"
+msgstr ""
+
+#: src/concepts/toolchains.md:53
+msgid ""
+"For convenience of developers working on Rust itself, `rustup` can manage "
+"local builds of the Rust toolchain. To teach `rustup` about your build, run:"
+msgstr ""
+
+#: src/concepts/toolchains.md:60
+msgid ""
+"For example, on Ubuntu you might clone `rust-lang/rust` into `~/rust`, build "
+"it, and then run:"
+msgstr ""
+
+#: src/concepts/toolchains.md:68
+msgid ""
+"Now you can name `my-toolchain` as any other `rustup` toolchain. Create a "
+"`rustup` toolchain for each of your `rust-lang/rust` workspaces and test "
+"them easily with `rustup run my-toolchain rustc`."
+msgstr ""
+
+#: src/concepts/toolchains.md:72
+msgid ""
+"Because the `rust-lang/rust` tree does not include Cargo, _when `cargo` is "
+"invoked for a custom toolchain and it is not available, `rustup` will "
+"attempt to use `cargo` from one of the release channels_, preferring "
+"'nightly', then 'beta' or 'stable'."
+msgstr ""
