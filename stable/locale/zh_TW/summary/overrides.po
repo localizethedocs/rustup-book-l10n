@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/overrides.md:1
@@ -30,7 +30,7 @@ msgstr ""
 
 #: src/overrides.md:9
 msgid "The `RUSTUP_TOOLCHAIN` environment variable."
-msgstr ""
+msgstr "`RUSTUP_TOOLCHAIN` 環境變數。"
 
 #: src/overrides.md:10
 msgid ""
@@ -40,11 +40,11 @@ msgstr ""
 
 #: src/overrides.md:11
 msgid "The [`rust-toolchain.toml`](#the-toolchain-file) file."
-msgstr ""
+msgstr "[`rust-toolchain.toml`](#the-toolchain-file) 檔案。"
 
 #: src/overrides.md:12
 msgid "The [default toolchain](#default-toolchain)."
-msgstr ""
+msgstr "[默認工具鏈](#default-toolchain)。"
 
 #: src/overrides.md:14
 msgid ""
@@ -108,7 +108,7 @@ msgstr ""
 
 #: src/overrides.md:69
 msgid "The toolchain file"
-msgstr ""
+msgstr "工具鏈檔案"
 
 #: src/overrides.md:71
 msgid ""
@@ -176,7 +176,7 @@ msgstr ""
 
 #: src/overrides.md:115
 msgid "Toolchain file settings"
-msgstr ""
+msgstr "工具鏈檔案設定"
 
 #: src/overrides.md:117
 msgid "channel"

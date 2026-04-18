@@ -5,29 +5,31 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/faq.md:1
 msgid "FAQ"
-msgstr ""
+msgstr "常見問題"
 
 #: src/faq.md:3
 msgid "Is this an official Rust project?"
-msgstr ""
+msgstr "這是一個官方的 Rust 專案嗎？"
 
 #: src/faq.md:5
 msgid ""
 "Yes. rustup is an official Rust project. It is the recommended way to "
 "install Rust at https://www.rust-lang.org."
 msgstr ""
+"是的。 rustup 是一個官方的 Rust 專案。它是從 https://www.rust-lang.org 安裝 "
+"Rust 的推薦方式。"
 
 #: src/faq.md:8
 msgid "How is this related to multirust?"
-msgstr ""
+msgstr "這和 multirust 有什麼關係？"
 
 #: src/faq.md:10
 msgid ""
@@ -36,10 +38,13 @@ msgid ""
 "Rust, by [Diggory Blake](https://github.com/Diggsey), and is now maintained "
 "by The Rust Project."
 msgstr ""
+"rustup 是 [multirust](https://github.com/brson/multirust) 的繼任者 。 rustup "
+"最初是 multirust-rs，由 [Diggory Blake](https://github.com/Diggsey) 將 "
+"multirust 從外殼腳本重寫為 Rust 版本，現在由 Rust 專案維護。"
 
 #: src/faq.md:17
 msgid "Can rustup download the Rust source code?"
-msgstr ""
+msgstr "rustup 可以下載 Rust 來源碼嗎？"
 
 #: src/faq.md:19
 msgid ""
@@ -47,6 +52,8 @@ msgid ""
 "component add rust-src`. It will be downloaded to the `<toolchain root>/lib/"
 "rustlib/src/rust` directory of the current toolchain."
 msgstr ""
+"可以透過執行 `rustup component add rust-src` 來取得 Rust 標準程式庫的來源碼。"
+"它將被下載到當前工具鏈的 `<toolchain root>/lib/rustlib/src/rust` 目錄。"
 
 #: src/faq.md:23
 msgid ""

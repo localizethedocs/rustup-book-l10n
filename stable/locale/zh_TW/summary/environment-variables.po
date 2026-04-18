@@ -5,15 +5,15 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/environment-variables.md:1
 msgid "Environment variables"
-msgstr ""
+msgstr "環境變數"
 
 #: src/environment-variables.md:3
 msgid ""
@@ -31,6 +31,8 @@ msgid ""
 "root `rustup` folder, used for storing installed toolchains and "
 "configuration options."
 msgstr ""
+"`RUSTUP_HOME`（默認值：`~/.rustup` 或 `%USERPROFILE%/.rustup`）。設定根 "
+"`rustup` 資料夾，用於儲存已安裝的工具鏈和組態選項。"
 
 #: src/environment-variables.md:12
 msgid ""
@@ -152,6 +154,8 @@ msgid ""
 "`RUSTUP_CONCURRENT_DOWNLOADS` _unstable_ (default: 2). Controls the number "
 "of downloads made concurrently."
 msgstr ""
+"`RUSTUP_CONCURRENT_DOWNLOADS` _不穩定_ （默認值：2）。控制同時進行的下載數"
+"量。"
 
 #: src/environment-variables.md:75
 msgid ""
