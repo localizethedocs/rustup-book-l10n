@@ -1,0 +1,12 @@
+{
+  "dev" : [
+    {
+      "VERSION" : "devel",
+      "VERSION_COMPENDIUM" : ""
+    },
+    {
+      "VERSION" : "stable",
+      "VERSION_COMPENDIUM" : "devel"
+    }
+  ]
+}
