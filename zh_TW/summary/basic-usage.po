@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/basics.md:1
+msgid "Basic usage"
+msgstr ""
+
+#: src/basics.md:3
+msgid "Keeping Rust up to date"
+msgstr ""
+
+#: src/basics.md:5
+msgid ""
+"Rust is distributed on three different [release channels](concepts/channels."
+"md): stable, beta, and nightly. `rustup` uses the stable channel by default, "
+"which represents the latest release of Rust. Stable publishes new releases "
+"every six weeks."
+msgstr ""
+
+#: src/basics.md:11
+msgid ""
+"When a new version of Rust is released, simply type `rustup update` to "
+"update:"
+msgstr ""
+
+#: src/basics.md:31
+msgid "Keeping `rustup` up to date"
+msgstr "保持 `rustup` 更新"
+
+#: src/basics.md:33
+msgid ""
+"If your `rustup` was built with the [no-self-update feature](https://github."
+"com/rust-lang/rustup/blob/HEAD/Cargo.toml#L29), it can not update itself. "
+"This is not the default, and only versions of `rustup` built with `--no-"
+"default-features`, or obtained from a third-party distributor who has "
+"disabled it (such as NixOS)."
+msgstr ""
+
+#: src/basics.md:38
+msgid ""
+"Otherwise Rustup can update itself. It is possible to control Rustup's "
+"automatic self update mechanism with the `auto-self-update` configuration "
+"variable. This setting supports three values: `enable` and `disable` and "
+"`check-only`."
+msgstr ""
+
+#: src/basics.md:42
+msgid ""
+"`disable` will ensure that no automatic self updating actions are taken."
+msgstr ""
+
+#: src/basics.md:43
+msgid ""
+"`enable` will mean that `rustup update` and similar commands will also check "
+"for, and install, any update to Rustup."
+msgstr ""
+
+#: src/basics.md:44
+msgid ""
+"`check-only` will cause any automatic self update to check and report on any "
+"updates, but not to automatically install them."
+msgstr ""
+
+#: src/basics.md:46
+msgid ""
+"Whether `auto-self-update` is `enable` or not, you can request that Rustup "
+"update itself to the latest version of `rustup` by running `rustup self "
+"update`. This will not download new toolchains:"
+msgstr ""
+
+#: src/basics.md:56
+msgid "Disabling self updates on a per-invocation basis"
+msgstr "停用每次呼叫時的自我更新"
+
+#: src/basics.md:57
+msgid ""
+"Self updates can also be suppressed on individual invocations of `rustup` by "
+"passing the argument `--no-self-update`  when running `rustup update` or "
+"`rustup toolchain install`."
+msgstr ""
+
+#: src/basics.md:61
+msgid "Help system"
+msgstr ""
+
+#: src/basics.md:63
+msgid ""
+"The `rustup` command-line has a built-in help system that provides more "
+"information about each command. Run `rustup help` for an overview. Detailed "
+"help for each subcommand is also available. For example, run `rustup "
+"toolchain install --help` for specifics on installing [toolchains](concepts/"
+"toolchains.md)."
+msgstr ""
