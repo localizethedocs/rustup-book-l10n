@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-04-26 19:23:16 +0000",
+      "hash" : "4fed1c8001b0d92b8acd0df7af0de8858e2ec10e",
+      "title" : "dist: bump `rustup` version to v1.30.0"
     }
   },
   "type" : "branch",
