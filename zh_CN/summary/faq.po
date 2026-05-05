@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/faq.md:1
+msgid "FAQ"
+msgstr ""
+
+#: src/faq.md:3
+msgid "Is this an official Rust project?"
+msgstr ""
+
+#: src/faq.md:5
+msgid ""
+"Yes. rustup is an official Rust project. It is the recommended way to "
+"install Rust at https://www.rust-lang.org."
+msgstr ""
+
+#: src/faq.md:8
+msgid "How is this related to multirust?"
+msgstr ""
+
+#: src/faq.md:10
+msgid ""
+"rustup is the successor to [multirust](https://github.com/brson/multirust). "
+"rustup began as multirust-rs, a rewrite of multirust from shell script to "
+"Rust, by [Diggory Blake](https://github.com/Diggsey), and is now maintained "
+"by The Rust Project."
+msgstr ""
+
+#: src/faq.md:17
+msgid "Can rustup download the Rust source code?"
+msgstr ""
+
+#: src/faq.md:19
+msgid ""
+"The source for Rust's standard library can be obtained by running `rustup "
+"component add rust-src`. It will be downloaded to the `<toolchain root>/lib/"
+"rustlib/src/rust` directory of the current toolchain."
+msgstr ""
+
+#: src/faq.md:23
+msgid ""
+"The source for the compiler and tools must be obtained from the [Rust "
+"repository](https://github.com/rust-lang/rust/) or the standalone [source "
+"tarballs](https://forge.rust-lang.org/infra/other-installation-methods."
+"html#source-code)."
+msgstr ""
+
+#: src/faq.md:29
+msgid "rustup fails with Windows error 32"
+msgstr ""
+
+#: src/faq.md:31
+msgid ""
+"If `rustup` fails with Windows error 32, it may be due to antivirus scanning "
+"in the background. Disable antivirus scanner and try again."
+msgstr ""
+
+#: src/faq.md:34
+msgid ""
+"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\\\."
+"cargo\\bin\\rustup.exe'\""
+msgstr ""
+
+#: src/faq.md:36
+msgid ""
+"If `rustup` fails to self-update in this way it's usually because RLS is "
+"running (your editor is open and running RLS). The solution is to stop RLS "
+"(by closing your editor) and try again."
+msgstr ""
+
+#: src/faq.md:40
+msgid "rustup exited successfully but I can't run `rustc --version`"
+msgstr ""
+
+#: src/faq.md:42
+msgid ""
+"Restart your shell. This will reload your `PATH` environment variable to "
+"include Cargo's bin directory (`$CARGO_HOME/bin`)."
+msgstr ""
