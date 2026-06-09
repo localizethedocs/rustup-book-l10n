@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/installation/windows-msvc.md:1
 msgid "MSVC prerequisites"
-msgstr ""
+msgstr "MSVC 前置条件"
 
 #: src/installation/windows-msvc.md:3
 msgid ""
@@ -21,10 +21,12 @@ msgid ""
 "Windows API import libraries. For `msvc` targets these can be acquired "
 "through Visual Studio."
 msgstr ""
+"若要将程序编译为exe 文件，Rust 需要链接、库和 Windows API 导入库。 对于`msvc`"
+"目标，这些可以通过 Visual Studio 获得。"
 
 #: src/installation/windows-msvc.md:6
 msgid "Automatic install"
-msgstr ""
+msgstr "自动安装"
 
 #: src/installation/windows-msvc.md:8
 msgid ""
@@ -37,10 +39,16 @@ msgid ""
 "which edition is right for them. See [licensing terms](https://visualstudio."
 "microsoft.com/license-terms/) for more details."
 msgstr ""
+"如果您尚未安装 Visual Studio，那么 [rustup-init](https://rustup.rs) 将自动安"
+"装先决条件。 这意味着您可以跳过此页面的其余部分。 然而，它安装了可能不适合所"
+"有用户的 Visual Studio 社区版本。 它对个人、学术界和开放源码的使用是免费的，"
+"但对其他用途，如专利企业软件则是免费的。 用户应该询问他们组织哪个版本对他们是"
+"正确的。详情请参阅[许可证条款](https://visualstudio.microsoft.com/license-"
+"terms/)。"
 
 #: src/installation/windows-msvc.md:15
 msgid "WinGet"
-msgstr ""
+msgstr "WinGet"
 
 #: src/installation/windows-msvc.md:17
 msgid ""
@@ -59,16 +67,24 @@ msgid ""
 "VisualStudio.Component.Windows11SDK.22621 --addProductLang En-us\"\n"
 "```"
 msgstr ""
+"```\n"
+"winget install --id Microsoft.VisualStudio.2022.Community --source winget --"
+"force --override \"--add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --"
+"add Microsoft.VisualStudio.Component.VC.Tools.ARM64 --add Microsoft."
+"VisualStudio.Component.Windows11SDK.22621 --addProductLang En-us\"\n"
+"```"
 
 #: src/installation/windows-msvc.md:24
 msgid ""
 "You can replace \"Community\" with \"BuildTools\" in the above command if "
 "you already have a Visual Studio license."
 msgstr ""
+"如果你已经拥有 Visual Studio 的许可证，可以在上述命令中将“Community”替换"
+"为“BuildTools”。"
 
 #: src/installation/windows-msvc.md:26
 msgid "Missing Windows SDK"
-msgstr ""
+msgstr "缺少Windows SDK"
 
 #: src/installation/windows-msvc.md:28
 msgid ""
@@ -79,17 +95,19 @@ msgstr ""
 
 #: src/installation/windows-msvc.md:35
 msgid "This should display a table of results. that will look like this:"
-msgstr ""
+msgstr "这应该会显示一个结果表格，看起来就像这样："
 
 #: src/installation/windows-msvc.md:45
 msgid ""
 "Pick the Id with the latest version and install that via `winget install`. "
 "For example, to install `Microsoft.WindowsSDK.10.0.26100` run:"
 msgstr ""
+"请选择最新版本的Id，并通过 `winget install` 进行安装。例如，要安装 "
+"`Microsoft.WindowsSDK.10.0.26100`，请执行以下操作："
 
 #: src/installation/windows-msvc.md:54
 msgid "Manual install"
-msgstr ""
+msgstr "手动安装"
 
 #: src/installation/windows-msvc.md:56
 msgid ""
@@ -100,6 +118,10 @@ msgid ""
 "IDE. However this requires you already have a license to the Community, "
 "Professional or Enterprise edition."
 msgstr ""
+"[下载 Visual Studio](https://visualstudio.microsoft.com/downloads/)。 Rust 支"
+"持 Visual Studio 2017 及更高版本，但建议您使用最新版本 (当前为2022) 进行新项"
+"目。 您可以选择仅下载不包含 IDE 的 Visual Studio 构建工具。 然而，这需要您已"
+"经拥有社区、专业或企业版本的许可证。"
 
 #: src/installation/windows-msvc.md:61
 msgid ""
@@ -109,6 +131,8 @@ msgid ""
 "sure the English language pack is installed in addition to your preferred "
 "language."
 msgstr ""
+"一旦你下载并开始安装，所有安装的最简单的方法是选择\"桌面开发C++\"。 这将包含"
+"必要的组件。在“语言包”选项卡中，请确保除了您的首选语言外，还安装了英语包。"
 
 #: src/installation/windows-msvc.md:65
 msgid ""
@@ -116,16 +140,20 @@ msgid ""
 "customize the install then follow the walkthrough below. Otherwise complete "
 "the Visual Studio install and continue with installing Rust."
 msgstr ""
+"如果您想要安装过程的更多详细信息，或想要进一步定制安装，请跟随下面的步行。 否"
+"则请安装 Visual Studio 并继续安装 Rust。"
 
 #: src/installation/windows-msvc.md:68
 msgid "Walkthrough: Installing Visual Studio 2022"
-msgstr ""
+msgstr "安装 Visual Studio 2022 的教程"
 
 #: src/installation/windows-msvc.md:70
 msgid ""
 "This walkthrough uses the Community edition of Visual Studio but the "
 "Professional, Enterprise and the Build Tools all work the same way."
 msgstr ""
+"此演示使用的是 Visual Studio 的社区版，不过 Professional、Enterprise 以及 "
+"Build Tools 版本的功能都是相同的。"
 
 #: src/installation/windows-msvc.md:72
 msgid ""
@@ -133,12 +161,14 @@ msgid ""
 "microsoft.com/license-terms/) and for your edition of Visual Studio and then "
 "preparing the installer."
 msgstr ""
+"安装程序将通过链接到 [license](https://visualstudio.microsoft.com/license-"
+"terms/)以及您的 Visual Studio 版本，然后准备安装程序。"
 
 #: src/installation/windows-msvc.md:74
 msgid ""
 "![Accept the license](images/step1.png) ![Installing the installer](images/"
 "step2.png)"
-msgstr ""
+msgstr "![接受许可](images/step1.png) ![安装安装](images/step2.png)"
 
 #: src/installation/windows-msvc.md:77
 msgid ""
@@ -147,10 +177,13 @@ msgid ""
 "workload. This will includes all needed components for Rust: ![Select the C+"
 "+ Workload](images/step3.png)"
 msgstr ""
+"完成这些步骤后，您可以选择要安装的组件。在这里，我们使用“Workload”选项卡来选"
+"择“Desktop Development with C++”工作负载。这将包含所有所需的Rust组件：![选择"
+"C++工作负载](images/step3.png)"
 
 #: src/installation/windows-msvc.md:82
 msgid "Installing only the required components (optional)"
-msgstr ""
+msgstr "仅安装所需的组件（可选）"
 
 #: src/installation/windows-msvc.md:84
 msgid ""
@@ -158,14 +191,18 @@ msgid ""
 "then you can use the \"Individual Components\" tab to select just the "
 "essentials, which are:"
 msgstr ""
+"如果您希望采用更精简的安装方式（并且不需要进行C++开发），那么可以使用“单个组"
+"件”选项卡来仅选择必要的组件，这些组件包括："
 
 #: src/installation/windows-msvc.md:86
 msgid "MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)"
 msgstr ""
+"MSVC v143 - VS 2022 C++ x64/x86 构建工具(Latet)MSVC v143 - VS 2022 C++ 64 "
+"位/86 位构建工具（旧版本）"
 
 #: src/installation/windows-msvc.md:87
 msgid "Windows 11 SDK (10.0.22621.0)"
-msgstr ""
+msgstr "Windows 11 SDK (10.0.22621.0)Windows 11 SDK（10.0.22621.0）"
 
 #: src/installation/windows-msvc.md:89
 msgid ""
@@ -173,16 +210,21 @@ msgid ""
 "Rust code but if using C++ as well you'll likely want either the latest or "
 "whichever version is required by the C++ project (or both)."
 msgstr ""
+"请注意，对于纯Rust代码来说，Windows SDK的具体版本并不重要，但如果你同时使用C+"
+"+语言，那么你可能需要使用最新版本的Windows SDK，或者至少是C++项目所要求的那个"
+"版本（或者两者都需要）。"
 
 #: src/installation/windows-msvc.md:91
 msgid ""
 "![Select the latest MSVC component](images/component-msvc.png) ![Select the "
 "Windows 11 SDK component](images/component-sdk.png)"
 msgstr ""
+"![选择最新的 MSVC 组件](images/component-msvc.png) ![选择Windows 11 SDK 组件]"
+"(images/component-sdk.png)  "
 
 #: src/installation/windows-msvc.md:94
 msgid "Adding Language Packs (optional)"
-msgstr ""
+msgstr "添加语言包(可选)"
 
 #: src/installation/windows-msvc.md:96
 msgid ""
@@ -192,24 +234,27 @@ msgid ""
 "addition to your preferred language. This will provide English language "
 "error messages, which may help when reporting errors."
 msgstr ""
+"在选择组件后，您也可能想要选择要安装的语言包。切换到“语言包”选项卡并添加语"
+"言。 建议您在首选语言之外添加英语包。 这将提供英文错误消息，这可能有助于报告"
+"错误。"
 
 #: src/installation/windows-msvc.md:101
 msgid "![Add the English language](images/step4.png)"
-msgstr ""
+msgstr "![添加英文](images/step4.png)"
 
 #: src/installation/windows-msvc.md:103
 msgid "Completing the install"
-msgstr ""
+msgstr "完成安装"
 
 #: src/installation/windows-msvc.md:105
 msgid ""
 "Finally click the install button and wait for everything to be installed."
-msgstr ""
+msgstr "最后单击安装按钮，等待安装一切。"
 
 #: src/installation/windows-msvc.md:107
 msgid "![Wait for the install to complete](images/step5.png)"
-msgstr ""
+msgstr "![等待安装完成](images/step5.png)"
 
 #: src/installation/windows-msvc.md:109
 msgid "Once finished, you can continue on to installing Rust."
-msgstr ""
+msgstr "完成后，您可以继续安装 Rust。"

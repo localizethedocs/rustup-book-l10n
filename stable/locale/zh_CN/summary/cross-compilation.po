@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/cross-compilation.md:1
 msgid "Cross-compilation"
-msgstr ""
+msgstr "交叉编译"
 
 #: src/cross-compilation.md:3
 msgid ""
@@ -22,6 +22,10 @@ msgid ""
 "Project publishes binary releases of the standard library, and for some the "
 "full compiler. `rustup` gives easy access to all of them."
 msgstr ""
+"Rust 支持大量的平台[支持情况](https://doc.rust-lang.org/nightly/rustc/"
+"platform-support.html)。对于这些平台中的许多类型，Rust 项目会发布标准库的二进"
+"制版本；而对于某些平台，则会发布完整的编译器版本。而`rustup`工具则能够方便地"
+"访问所有这些版本。"
 
 #: src/cross-compilation.md:9
 msgid ""
@@ -31,6 +35,9 @@ msgid ""
 "install other _target_ platforms. This is done with the `rustup target add` "
 "command. For example, to add the Android target:"
 msgstr ""
+"当你第一次安装一个工具链时，`rustup` 只为你的 _host_ 平台安装标准库，也就是"
+"说： 您正在运行的架构和操作系统。 要编译到其他平台，您必须安装其他 _target_ "
+"平台。 使用 \"rusup targetadd\" 命令完成。例如，添加安卓目标："
 
 #: src/cross-compilation.md:21
 msgid ""
@@ -38,6 +45,8 @@ msgid ""
 "Android with Cargo by passing the `--target` flag, as in `cargo build --"
 "target=arm-linux-androideabi`."
 msgstr ""
+"使用 `arm-linux-androideabi` 目标安装后，您就可以通过 `--target` 标志来构建安"
+"卓系统，如在 `cargo building --target=arm-Linux-androideabi` 中。"
 
 #: src/cross-compilation.md:25
 msgid ""
@@ -50,15 +59,25 @@ msgid ""
 "cargo/reference/config.html#target) of the `cargo` configuration for how to "
 "setup a linker to use for a certain target."
 msgstr ""
+"请注意，`rustup target add`仅会为特定目标平台安装 Rust 标准库。通常还需要其他"
+"工具来进行交叉编译，比如链接器。例如，要将其编译为 Android 版本，就必须安装"
+"[Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)。未来，"
+"`rustup`将会提供关于如何安装 NDK 组件的帮助。更多详细信息请参考`cargo`配置文"
+"件的[目标部分](https://doc.rust-lang.org/cargo/reference/config."
+"html#target)。"
 
 #: src/cross-compilation.md:35
 msgid ""
 "To install a target for a toolchain that isn't the default toolchain use the "
 "`--toolchain` argument of `rustup target add`, like so:"
 msgstr ""
+"如果要为工具链添加目标，且该工具链并非默认工具链，可以使用`rustup target add`"
+"命令中的`--toolchain`参数来实现，具体步骤如下："
 
 #: src/cross-compilation.md:42
 msgid ""
 "To see a list of available targets, `rustup target list`. To remove a "
 "previously-added target, `rustup target remove`."
 msgstr ""
+"要查看可用的目标列表，请执行 `rustup target list` 命令。如果要删除已添加的目"
+"标，可以使用 `rustup target remove` 命令。"

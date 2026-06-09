@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/configuration.md:1
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: src/configuration.md:3
 msgid ""
@@ -23,6 +23,10 @@ msgid ""
 "interface for rustup - the rustup CLI should be used to query and set "
 "settings."
 msgstr ""
+"Rustup 有一个 [TOML](https://github.com/toml-lang/toml) 设置文件，位于 "
+"`${RUSTUP_HOME}/settings.toml` 位置（该文件默认设置为 `~/.rustup` 或 "
+"`%USERPROFILE%/.rustup`）。该文件的格式并非 rustup 公共接口的一部分——应该通"
+"过 rustup CLI 来进行设置查询和更改。"
 
 #: src/configuration.md:8
 msgid ""
@@ -30,3 +34,5 @@ msgid ""
 "settings. This fallback file is located at `/etc/rustup/settings.toml` and "
 "currently can define only `default_toolchain`."
 msgstr ""
+"在 Unix 操作系统中，某些设置会参考一个备用配置文件。这个备用文件位于 `/etc/"
+"rustup/settings.toml` 目录下，目前只能定义 `default_toolchain` 范围内的设置。"

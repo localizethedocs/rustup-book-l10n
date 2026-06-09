@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/installation/already-installed-rust.md:1
 msgid "Already installed Rust?"
-msgstr ""
+msgstr "已经安装了Rust吗？"
 
 #: src/installation/already-installed-rust.md:3
 msgid ""
@@ -24,10 +24,14 @@ msgid ""
 "refuse to install. However, you can install Rust via `rustup` and have it "
 "coexist with your packaged Rust toolchain."
 msgstr ""
+"其他包管理器也提供了Rust版本，您可能希望使用这些打包的工具链，例如用于分发包"
+"的开发。您也可以选择使用由 `rustup` 管理的工具链，比如nightly或beta版本。通常"
+"情况下， `rustup` 会提示您已经安装了Rust，并拒绝进行安装。不过，您可以通过 "
+"`rustup` 来安装Rust，使其与您已使用的打包Rust工具链共存。"
 
 #: src/installation/already-installed-rust.md:10
 msgid "Set up rustup with an existing Rust toolchain"
-msgstr ""
+msgstr "使用现有的Rust工具链来安装rustup"
 
 #: src/installation/already-installed-rust.md:12
 msgid ""
@@ -37,6 +41,10 @@ msgid ""
 "`rustup` do it for you by not passing `--no-modify-path`). Then, to tell "
 "`rustup` about your system toolchain, run:"
 msgstr ""
+"当你首次使用 `rustup` 安装 Rust 时，需要传递 `-y` 选项，使其忽略已打包的 "
+"Rust 工具链，并安装一个由 `rustup` 管理的工具链，将其安装到 `~/.cargo/bin` "
+"中。将那个目录添加到你的 `$PATH` 中（或者让 `rustup` 帮你完成，无需传递 `--"
+"no-modify-path`）。然后，为了告诉 `rustup` 你的系统工具链的位置，请运行："
 
 #: src/installation/already-installed-rust.md:22
 msgid ""
@@ -45,6 +53,10 @@ msgid ""
 "md#toolchain-override-shorthand), you can run `cargo +system build` to build "
 "with the system toolchain, or `cargo +nightly build` to build with nightly."
 msgstr ""
+"你可以将“system”当作一个工具链来使用，就像使用“nightly”一样。例如，使用[工具"
+"链快捷方式](../overrides.md#toolchain-override-shorthand)，你可以运行 `cargo "
+"+system build` 来使用系统工具链进行构建，或者运行 `cargo +nightly build` 来使"
+"用 nightly 版本进行构建。"
 
 #: src/installation/already-installed-rust.md:26
 msgid ""
@@ -52,10 +64,12 @@ msgid ""
 "packages), you may want to make it your [default toolchain](../overrides."
 "md#default-toolchain):"
 msgstr ""
+"如果您想要开发系统工具链(例如发行软件包)，您可能想要将其变成您的[默认工具链]"
+"(../overrides.md#default-toolchain)："
 
 #: src/installation/already-installed-rust.md:33
 msgid "Ensure the correct `$PATH` configuration"
-msgstr ""
+msgstr "确保正确的 `$PATH` 配置"
 
 #: src/installation/already-installed-rust.md:35
 msgid ""
@@ -64,12 +78,16 @@ msgid ""
 "rustup. For example, when running `cargo +stable --version`, you may "
 "encounter the following error:"
 msgstr ""
+"有时候，上述步骤可能无法正常工作，在运行本应被 rustup 代理的命令时，你可能会"
+"看到奇怪的错误信息。例如，在运行 `cargo +stable --version` 时，你可能会遇到以"
+"下错误："
 
 #: src/installation/already-installed-rust.md:47
 msgid ""
 "This means `cargo` is currently not a `rustup` proxy, and your `$PATH` needs "
 "to be fixed."
 msgstr ""
+"这意味着 `cargo` 目前并不是一个 `rustup` 的代理，而你的 `$PATH` 需要被修复。"
 
 #: src/installation/already-installed-rust.md:50
 msgid ""
@@ -78,6 +96,9 @@ msgid ""
 "installations. Don't worry: these shadowed installations can then be adopted "
 "by rustup with the `rustup toolchain link` command as mentioned above."
 msgstr ""
+"事实上，在任何安装了rustup的机器上，您都希望**rustup代理在`$PATH`**中首先显"
+"示，并覆盖任何其他Rust安装。别担心：如上所述，这些阴影安装可以通过使"
+"用“rustup toolchain link”命令的rustup来采用。"
 
 #: src/installation/already-installed-rust.md:55
 msgid ""
@@ -85,6 +106,8 @@ msgid ""
 "according to your system environment, but usually it is about changing the "
 "evaluation order of certain lines in your shell configuration file(s)."
 msgstr ""
+"首先需要采取的确切步骤来制作rusup proxies 可能会根据您的系统环境而变化。 但通"
+"常是为了更改您的 shell 配置文件(s) 中某些行的评估顺序。"
 
 #: src/installation/already-installed-rust.md:59
 msgid ""
@@ -93,6 +116,9 @@ msgid ""
 "`rust`. The **right way** to configure `.profile` in this environment would "
 "be:"
 msgstr ""
+"使之更加清晰， 让我们看看一个Mac 的例子，这个Mac 同时从 [rustup.rs](https://"
+"rustup.rs) 和自制安装的 \"rust\" 中获取了正常的生成。 **正确的方式** 在这个环"
+"境中配置 `.profile` 的方式是："
 
 #: src/installation/already-installed-rust.md:68
 msgid ""
@@ -101,6 +127,9 @@ msgid ""
 "On the other hand, putting these lines the other way around will cause the "
 "aforementioned error."
 msgstr ""
+"在这个示例中，这两行代码都位于 `$PATH` 之前，因此最后那一行会优先执行，使得 "
+"rustup 代理能够覆盖 homebrew 安装的 `rust`。另一方面，如果将这些代码的位置颠"
+"倒，就会引发上述错误。"
 
 #: src/installation/already-installed-rust.md:73
 msgid ""
@@ -109,6 +138,9 @@ msgid ""
 "attention to the order of `$CARGO_HOME/bin` (which defaults to `$HOME/.cargo/"
 "bin`) compared to your package manager's `bin` directory."
 msgstr ""
+"如果不确定，你可以通过打印当前 `$PATH` 的 status，并使用 `echo $PATH | xargs "
+"-n1` 来调试你的 shell 配置，同时注意 `$CARGO_HOME/bin` 的排序（默认是 "
+"`$HOME/.cargo/bin`）与你的包管理器中的 `bin` 目录的排序是否一致。"
 
 #: src/installation/already-installed-rust.md:78
 msgid ""
@@ -116,3 +148,5 @@ msgid ""
 "one of the following, depending on whether you have had the `stable` "
 "toolchain installed:"
 msgstr ""
+"在修复之后， `cargo +stable --version` 的输出结果应该与以下其中一种情况类似，"
+"具体取决于您是否安装了 `stable` 工具链。"
