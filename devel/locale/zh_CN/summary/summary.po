@@ -13,88 +13,88 @@ msgstr ""
 
 #: src/SUMMARY.md:1
 msgid "Summary"
-msgstr ""
+msgstr "摘要"
 
 #: src/SUMMARY.md:3
 msgid "Introduction"
-msgstr ""
+msgstr "引言"
 
 #: src/SUMMARY.md:4
 msgid "Installation"
-msgstr ""
+msgstr "安装"
 
 #: src/SUMMARY.md:5
 msgid "Windows"
-msgstr ""
+msgstr "Windows系统"
 
 #: src/SUMMARY.md:6
 msgid "MSVC prerequisites"
-msgstr ""
+msgstr "MSVC 前置条件"
 
 #: src/SUMMARY.md:7
 msgid "Other installation methods"
-msgstr ""
+msgstr "其他安装方法"
 
 #: src/SUMMARY.md:8
 msgid "Already installed Rust?"
-msgstr ""
+msgstr "已经安装了Rust吗？"
 
 #: src/SUMMARY.md:9
 msgid "Concepts"
-msgstr ""
+msgstr "概念"
 
 #: src/SUMMARY.md:10
 msgid "Channels"
-msgstr ""
+msgstr "频道"
 
 #: src/SUMMARY.md:11
 msgid "Toolchains"
-msgstr ""
+msgstr "工具链"
 
 #: src/SUMMARY.md:12
 msgid "Components"
-msgstr ""
+msgstr "组件"
 
 #: src/SUMMARY.md:13
 msgid "Profiles"
-msgstr ""
+msgstr "配置文件"
 
 #: src/SUMMARY.md:14
 msgid "Proxies"
-msgstr ""
+msgstr "代理服务器"
 
 #: src/SUMMARY.md:15
 msgid "Basic usage"
-msgstr ""
+msgstr "基本使用"
 
 #: src/SUMMARY.md:16
 msgid "Overrides"
-msgstr ""
+msgstr "覆盖"
 
 #: src/SUMMARY.md:17
 msgid "Cross-compilation"
-msgstr ""
+msgstr "交叉编译"
 
 #: src/SUMMARY.md:18
 msgid "Environment variables"
-msgstr ""
+msgstr "环境变量"
 
 #: src/SUMMARY.md:19
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: src/SUMMARY.md:20
 msgid "Network proxies"
-msgstr ""
+msgstr "网络代理"
 
 #: src/SUMMARY.md:21
 msgid "Examples"
-msgstr ""
+msgstr "示例"
 
 #: src/SUMMARY.md:22
 msgid "Security"
-msgstr ""
+msgstr "安全性"
 
 #: src/SUMMARY.md:23
 msgid "FAQ"
-msgstr ""
+msgstr "常见问题解答"

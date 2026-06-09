@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/index.md:1
 msgid "Introduction"
-msgstr ""
+msgstr "引言"
 
 #: src/index.md:3
 msgid ""
@@ -23,6 +23,9 @@ msgid ""
 "compiling simpler with binary builds of the standard library for common "
 "platforms. And it runs on all platforms Rust supports."
 msgstr ""
+"_rustup_installs [Rust Programming Language](https://www.rust-lang.org) 使您"
+"能够轻松地在稳定、贝塔和夜间编译器之间切换并随时更新。 它使交叉编译更加简单，"
+"使用普通平台标准库的二进制构建。它运行在所有平台上。Rust 支持。"
 
 #: src/index.md:9
 msgid ""
@@ -30,6 +33,8 @@ msgid ""
 "rustup works and some of the terminology it uses. The [Installation]"
 "(installation/index.md) chapter covers installing rustup and getting started."
 msgstr ""
+"查看 [Concepts](concepts/index.md章，以了解生死是如何工作的，以及它使用的一些"
+"术语。 [Installation](installation/index.md章涉及安装程序和启动程序。"
 
 #: src/index.md:13
 msgid ""
@@ -37,9 +42,14 @@ msgid ""
 "com/rust-lang/rustup>. If you find a problem, check out the [issue tracker]"
 "(https://github.com/rust-lang/rustup/issues)."
 msgstr ""
+"Rustup 及其使用手册的源代码可以在以下地址找到：<https://github.com/rust-lang/"
+"rustup>。如果您发现任何问题，请访问[问题跟踪系统](https://github.com/rust-"
+"lang/rustup/issues)。"
 
 #: src/index.md:17
 msgid ""
 "Release notes for rustup may be found in the [CHANGELOG](https://github.com/"
 "rust-lang/rustup/blob/HEAD/CHANGELOG.md)."
 msgstr ""
+"Rustup的发布说明可以在[CHANGELOG](https://github.com/rust-lang/rustup/blob/"
+"HEAD/CHANGELOG.md)中找到。"

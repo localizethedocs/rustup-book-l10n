@@ -13,137 +13,141 @@ msgstr ""
 
 #: src/examples.md:1
 msgid "Examples"
-msgstr ""
+msgstr "示例"
 
 #: src/examples.md:3
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: src/examples.md:3
 msgid "Description"
-msgstr ""
+msgstr "说明"
 
 #: src/examples.md:5
 msgid "`rustup default nightly`"
-msgstr ""
+msgstr "`rusup 默认夜晚`"
 
 #: src/examples.md:5
 msgid ""
 "Set the [default toolchain](overrides.md#default-toolchain) to the latest "
 "nightly"
-msgstr ""
+msgstr "将[默认工具链](overrides.md#default-toolchain) 设置为最新夜晚。"
 
 #: src/examples.md:6
 msgid "`rustup set profile minimal`"
-msgstr ""
+msgstr "`rusup 设置简档最小化`"
 
 #: src/examples.md:6
 msgid "Set the default [profile](concepts/profiles.md)"
 msgstr ""
+"设置默认 [profile](concepts/profiles.md)设置默认[配置文件](concepts/profiles."
+"md)"
 
 #: src/examples.md:7
 msgid "`rustup target list`"
-msgstr ""
+msgstr "`rustup target list`"
 
 #: src/examples.md:7
 msgid ""
 "List all available [targets](cross-compilation.md) for the active toolchain"
-msgstr ""
+msgstr "列出所有活动工具链的 [targets](cross-compilation.md)"
 
 #: src/examples.md:8
 msgid "`rustup target add arm-linux-androideabi`"
-msgstr ""
+msgstr "`rustup target add arm-linux-androideabi`"
 
 #: src/examples.md:8
 msgid "Install the Android target"
-msgstr ""
+msgstr "Install the Android target安装安卓目标设备"
 
 #: src/examples.md:9
 msgid "`rustup target remove arm-linux-androideabi`"
-msgstr ""
+msgstr "`rusup targets remove arm-linux-androideabi`  "
 
 #: src/examples.md:9
 msgid "Remove the Android target"
-msgstr ""
+msgstr "移除安卓目标"
 
 #: src/examples.md:10
 msgid "`rustup run nightly rustc foo.rs`"
-msgstr ""
+msgstr "`rusup 每晚运行rustc foo.rs`"
 
 #: src/examples.md:10
 msgid "Run the nightly regardless of the active toolchain"
-msgstr ""
+msgstr "不论活动的工具链，每晚运行一次"
 
 #: src/examples.md:11
 msgid "`rustc +nightly foo.rs`"
-msgstr ""
+msgstr "`rustc +夜间foo.rs`  "
 
 #: src/examples.md:11
 msgid ""
 "[Shorthand](overrides.md#toolchain-override-shorthand) way to run a nightly "
 "compiler"
 msgstr ""
+"[Shorthand](overrides.md#toolchain-override-shorthand) 每晚运行一个编译器的方"
+"法"
 
 #: src/examples.md:12
 msgid "`rustup run nightly bash`"
-msgstr ""
+msgstr "`rusup 夜间运行 bash`"
 
 #: src/examples.md:12
 msgid "Run a shell configured for the nightly compiler"
-msgstr ""
+msgstr "运行一个为夜间编译器配置的shell文件"
 
 #: src/examples.md:13
 msgid "`rustup default stable-msvc`"
-msgstr ""
+msgstr "`rusup default stable-msvc`  "
 
 #: src/examples.md:13
 msgid "On Windows, use the MSVC toolchain instead of GNU"
-msgstr ""
+msgstr "在 Windows上，使用 MSVC 工具链而不是 GNU"
 
 #: src/examples.md:14
 msgid "`rustup override set nightly-2015-04-01`"
-msgstr ""
+msgstr "`rusup overlapper 设置 2015-04-01`  "
 
 #: src/examples.md:14
 msgid "For the current directory, use a nightly from a specific date"
-msgstr ""
+msgstr "对于当前目录，从指定日期起使用每夜一次"
 
 #: src/examples.md:15
 msgid "`rustup toolchain link my-toolchain \"C:\\RustInstallation\"`"
-msgstr ""
+msgstr "`rusup toolchain link my-toolchain \"C:\\RustInstallation\"`  "
 
 #: src/examples.md:15
 msgid "Install a custom toolchain by symlinking an existing installation"
-msgstr ""
+msgstr "通过创建符号链接来安装自定义的工具链，从而替代现有的安装程序。"
 
 #: src/examples.md:16
 msgid "`rustup show`"
-msgstr ""
+msgstr "`rusup show`  "
 
 #: src/examples.md:16
 msgid "Show which toolchain will be used in the current directory"
-msgstr ""
+msgstr "请显示当前目录下将使用的工具链。"
 
 #: src/examples.md:17
 msgid "`rustup toolchain uninstall nightly`"
-msgstr ""
+msgstr "`rustup 工具链 卸载 夜间版`"
 
 #: src/examples.md:17
 msgid "Uninstall a given toolchain"
-msgstr ""
+msgstr "卸载指定的工具链"
 
 #: src/examples.md:18
 msgid "`rustup toolchain help`"
-msgstr ""
+msgstr "`rustup 工具链帮助`"
 
 #: src/examples.md:18
 msgid "Show the `help` page for a subcommand (like `toolchain`)"
-msgstr ""
+msgstr "显示有关子命令（如`toolchain`）的帮助页面。"
 
 #: src/examples.md:19
 msgid "`rustup man cargo`"
-msgstr ""
+msgstr "`rusup man cargo`  "
 
 #: src/examples.md:19
 msgid "(_Unix only_) View the man page for a given command (like `cargo`)"
-msgstr ""
+msgstr "(仅适用于 Unix 系统）查看特定命令的说明页，例如`cargo`命令。"

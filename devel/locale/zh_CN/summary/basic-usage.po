@@ -13,11 +13,11 @@ msgstr ""
 
 #: src/basics.md:1
 msgid "Basic usage"
-msgstr ""
+msgstr "基本使用"
 
 #: src/basics.md:3
 msgid "Keeping Rust up to date"
-msgstr ""
+msgstr "保持 Rust 的更新状态"
 
 #: src/basics.md:5
 msgid ""
@@ -26,16 +26,19 @@ msgid ""
 "which represents the latest release of Rust. Stable publishes new releases "
 "every six weeks."
 msgstr ""
+"Rust 分布在三个不同的不同的[发行频道](concepts/channels.md)：稳定、贝塔和夜"
+"间。 `rustup` 默认使用稳定通道，代表最新版本的 Rustup。稳定每六周发布一次新版"
+"本。"
 
 #: src/basics.md:11
 msgid ""
 "When a new version of Rust is released, simply type `rustup update` to "
 "update:"
-msgstr ""
+msgstr "当发行新版本Rust时，只需输入`rustup update`以更新："
 
 #: src/basics.md:31
 msgid "Keeping `rustup` up to date"
-msgstr ""
+msgstr "保持`rustup`更新"
 
 #: src/basics.md:33
 msgid ""
@@ -45,6 +48,10 @@ msgid ""
 "default-features`, or obtained from a third-party distributor who has "
 "disabled it (such as NixOS)."
 msgstr ""
+"如果你的 `rustup` 是用[没有自我更新功能](https://github.com/rust-lang/rustup/"
+"blob/HEAD/Cargo.toml#L29)构建的，它不能自动更新。 这不是默认，只有`--no-"
+"default-features`构建的 `rustup` 版本， 或从已禁用它的第三方经销商(如NixOS)获"
+"取。"
 
 #: src/basics.md:38
 msgid ""
@@ -53,23 +60,26 @@ msgid ""
 "variable. This setting supports three values: `enable` and `disable` and "
 "`check-only`."
 msgstr ""
+"否则Rusup可以更新自己。可以使用 \"自动自更新\" 配置变量来控制Rustup自动更新机"
+"制。 此设置支持三个值：`enable` 和 `disabl` 和 `chec-only check` 。"
 
 #: src/basics.md:42
 msgid ""
 "`disable` will ensure that no automatic self updating actions are taken."
-msgstr ""
+msgstr "`disable` 将确保不会自动进行自我更新操作。"
 
 #: src/basics.md:43
 msgid ""
 "`enable` will mean that `rustup update` and similar commands will also check "
 "for, and install, any update to Rustup."
 msgstr ""
+"`enable`表示`rustup update`和类似命令也会检查并安装到Rustup上的任何更新。"
 
 #: src/basics.md:44
 msgid ""
 "`check-only` will cause any automatic self update to check and report on any "
 "updates, but not to automatically install them."
-msgstr ""
+msgstr "\"只勾选\"会导致任何自动更新来检查和报告任何更新，但不会自动安装它们。"
 
 #: src/basics.md:46
 msgid ""
@@ -77,10 +87,12 @@ msgid ""
 "update itself to the latest version of `rustup` by running `rustup self "
 "update`. This will not download new toolchains:"
 msgstr ""
+"无论`自动更新` 是否为`enable` ，你都可以通过运行 `rustup 自我更新` 来请求"
+"Rustup更新自己到最新版本的 `rustup` 。 这将不会下载新的工具链："
 
 #: src/basics.md:56
 msgid "Disabling self updates on a per-invocation basis"
-msgstr ""
+msgstr "在每次调用的基础上禁用自我更新"
 
 #: src/basics.md:57
 msgid ""
@@ -88,10 +100,12 @@ msgid ""
 "passing the argument `--no-self-update`  when running `rustup update` or "
 "`rustup toolchain install`."
 msgstr ""
+"在运行 `rustup update` 或 `rustup toolchain install` 时，也可以通过 `--no-"
+"self-update` 传递参数来抑制自身的更新。"
 
 #: src/basics.md:61
 msgid "Help system"
-msgstr ""
+msgstr "帮助系统"
 
 #: src/basics.md:63
 msgid ""
@@ -101,3 +115,7 @@ msgid ""
 "toolchain install --help` for specifics on installing [toolchains](concepts/"
 "toolchains.md)."
 msgstr ""
+"`rustup`命令行有一个内置的帮助系统，提供更多关于每个命令的信息。运行 `rustup "
+"help` 以获取概述。 每个子命令的详细帮助也是可用的。例如，运行 \"rusup "
+"toolchain install --help\" 以获取安装 [toolchains](concepts/toolchains."
+"md)。  "
