@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-09-01T13:22:33Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/cross-compilation.md:1
+msgid "Targets and cross-compilation"
+msgstr ""
+
+#: src/cross-compilation.md:3
+msgid ""
+"Rust [supports a great number of platforms](https://doc.rust-lang.org/"
+"nightly/rustc/platform-support.html). For many of these platforms, the Rust "
+"Project publishes binary releases of the standard library, and for some the "
+"full compiler. `rustup` gives easy access to all of them."
+msgstr ""
+
+#: src/cross-compilation.md:9
+msgid "Targets"
+msgstr ""
+
+#: src/cross-compilation.md:11
+msgid ""
+"Before going further, it is important to know the distinction between a "
+"toolchain's _host platform_ and the _compilation targets_ the toolchain "
+"supports."
+msgstr ""
+
+#: src/cross-compilation.md:14
+msgid ""
+"For example, if you develop on Linux and have installed the `stable-x86_64-"
+"unknown-linux-gnu` toolchain, `x86_64-unknown-linux-gnu` is that toolchain's "
+"_host tuple_. When this toolchain is first installed, it can already compile "
+"to that same target, because it comes with the _target_ support for the host "
+"tuple preinstalled."
+msgstr ""
+
+#: src/cross-compilation.md:20
+msgid ""
+"Note that with _the same toolchain_, you can already compile to various "
+"other _targets_, such as:"
+msgstr ""
+
+#: src/cross-compilation.md:23
+msgid "`x86_64-unknown-linux-musl`"
+msgstr ""
+
+#: src/cross-compilation.md:24
+msgid "`i686-unknown-linux-gnu`"
+msgstr ""
+
+#: src/cross-compilation.md:25
+msgid "`armv7-unknown-linux-gnueabihf`"
+msgstr ""
+
+#: src/cross-compilation.md:27
+msgid ""
+"For this to work, you will need to install these targets to your toolchain, "
+"as explained in the next section."
+msgstr ""
+
+#: src/cross-compilation.md:30
+msgid ""
+"NOTE: For this reason, it is generally recommended to rely on a single host "
+"tuple of your choice and compile to other targets as needed. For example, "
+"you don't need a `i686-pc-windows-msvc` host toolchain on your `x86_64` "
+"Windows machine to compile and test `i686-msvc` projects. Instead, you may "
+"want to stick to your existing `stable-x86_64-pc-windows-msvc` (or `stable-"
+"x86_64-pc-windows-gnu`) toolchain with the `i686-pc-windows-msvc` target "
+"added to it."
+msgstr ""
+
+#: src/cross-compilation.md:38
+msgid "Installing a new target"
+msgstr ""
+
+#: src/cross-compilation.md:40
+msgid ""
+"To install a new target to the _active toolchain_, you can run `rustup "
+"target add` followed by the target tuple. Let's take Android as an example:"
+msgstr ""
+
+#: src/cross-compilation.md:49
+msgid ""
+"You can then build for Android with Cargo by passing the `--target` flag, as "
+"in `cargo build --target=arm-linux-androideabi`."
+msgstr ""
+
+#: src/cross-compilation.md:52
+msgid ""
+"Note that `rustup target add` only installs the Rust standard library for a "
+"given target. This is sufficient for certain host/target combinations, but "
+"for others, there are typically other tools necessary to cross-compile, "
+"particularly a linker. For example, to cross compile to Android the [Android "
+"NDK](https://developer.android.com/tools/sdk/ndk/index.html) must be "
+"installed. In the future, `rustup` will provide assistance installing the "
+"NDK components as well. See the [target section](https://doc.rust-lang.org/"
+"cargo/reference/config.html#target) of the `cargo` configuration for how to "
+"setup a linker to use for a certain target."
+msgstr ""
+
+#: src/cross-compilation.md:63
+msgid "Managing targets"
+msgstr ""
+
+#: src/cross-compilation.md:65
+msgid ""
+"Below are some common commands to manage the targets for a given toolchain, "
+"defaulting to the active one:"
+msgstr ""
+
+#: src/cross-compilation.md:68
+msgid "To install a new target: `rustup target add`."
+msgstr ""
+
+#: src/cross-compilation.md:69
+msgid "To see a list of available targets: `rustup target list`."
+msgstr ""
+
+#: src/cross-compilation.md:70
+msgid "To see a list of installed targets: `rustup target list --installed`."
+msgstr ""
+
+#: src/cross-compilation.md:71
+msgid "To remove a previously-installed target: `rustup target remove`."
+msgstr ""
+
+#: src/cross-compilation.md:73
+msgid ""
+"To do the same on a different toolchain than the active one, you can use `--"
+"toolchain` like so:"
+msgstr ""

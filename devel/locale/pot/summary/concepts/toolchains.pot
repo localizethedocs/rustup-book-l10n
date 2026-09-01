@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The rustup book\n"
-"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"POT-Creation-Date: 2026-09-01T13:22:33Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/concepts/toolchains.md:1
@@ -73,18 +73,29 @@ msgstr ""
 
 #: src/concepts/toolchains.md:60
 msgid ""
+"Custom toolchain names may contain any character that [UTS #39](https://www."
+"unicode.org/reports/tr39/#Identifier_Status_and_Type) allows in an "
+"identifier, except for `:` and `'`. In practice that means letters and "
+"digits in any script, along with `.`, `_`, and `-`; whitespace, most "
+"punctuation, emoji, and invisible or direction-altering characters are "
+"rejected. A name may not start with `-`, which would be read as an argument, "
+"nor be `.` or `..`."
+msgstr ""
+
+#: src/concepts/toolchains.md:68
+msgid ""
 "For example, on Ubuntu you might clone `rust-lang/rust` into `~/rust`, build "
 "it, and then run:"
 msgstr ""
 
-#: src/concepts/toolchains.md:68
+#: src/concepts/toolchains.md:76
 msgid ""
 "Now you can name `my-toolchain` as any other `rustup` toolchain. Create a "
 "`rustup` toolchain for each of your `rust-lang/rust` workspaces and test "
 "them easily with `rustup run my-toolchain rustc`."
 msgstr ""
 
-#: src/concepts/toolchains.md:72
+#: src/concepts/toolchains.md:80
 msgid ""
 "Because the `rust-lang/rust` tree does not include Cargo, _when `cargo` is "
 "invoked for a custom toolchain and it is not available, `rustup` will "

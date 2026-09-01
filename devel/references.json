@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-09-01 09:34:23 +0000",
+      "hash" : "54cbe77c2949d421573796414922722fced8c254",
+      "title" : "refactor(config): accept `Option<Vec<_>>` for components/targets in overrides"
     }
   },
   "type" : "branch",
