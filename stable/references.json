@@ -37,9 +37,9 @@
     "branch" : "stable",
     "commit" : 
     {
-      "date" : "2026-03-05 06:31:28 +0000",
-      "hash" : "28d1352dbcb436d3111c3594b9e1588e94950464",
-      "title" : "chore(deps): update `aws-lc-rs` and `aws-lc-sys`"
+      "date" : "2026-08-13 19:10:40 +0200",
+      "hash" : "d95a37b6ab92cc1e455d1576039333c97ca3e2c5",
+      "title" : "dist(rustup-init/sh): update commit shasum in help string"
     }
   },
   "type" : "branch",

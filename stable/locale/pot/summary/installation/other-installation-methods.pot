@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The rustup book\n"
-"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"POT-Creation-Date: 2026-09-01T13:28:20Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/installation/other.md:1
@@ -169,7 +169,7 @@ msgstr ""
 #: src/installation/other.md:104
 msgid ""
 "You can manually download `rustup-init` for a given target from `https://"
-"static.rust-lang.org/rustup/dist/{target-triple}/rustup-init[.exe]`[^msys2] "
+"static.rust-lang.org/rustup/dist/{target-tuple}/rustup-init[.exe]`[^msys2] "
 "[^msvc]."
 msgstr ""
 
@@ -199,455 +199,503 @@ msgstr ""
 
 #: src/installation/other.md:114
 msgid ""
-"[aarch64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/aarch64-"
-"pc-windows-msvc/rustup-init.exe)"
+"[aarch64-pc-windows-gnullvm](https://static.rust-lang.org/rustup/dist/"
+"aarch64-pc-windows-gnullvm/rustup-init.exe)"
 msgstr ""
 
 #: src/installation/other.md:115
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-"
-"msvc/rustup-init.exe.sha256)"
+"gnullvm/rustup-init.exe.sha256)"
 msgstr ""
 
 #: src/installation/other.md:116
+msgid ""
+"[aarch64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/aarch64-"
+"pc-windows-msvc/rustup-init.exe)"
+msgstr ""
+
+#: src/installation/other.md:117
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-"
+"msvc/rustup-init.exe.sha256)"
+msgstr ""
+
+#: src/installation/other.md:118
 msgid ""
 "[aarch64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/aarch64-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:117
+#: src/installation/other.md:119
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:118
+#: src/installation/other.md:120
 msgid ""
 "[aarch64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
 "aarch64-unknown-linux-musl/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:119
+#: src/installation/other.md:121
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-"
 "musl/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:120
+#: src/installation/other.md:122
+msgid ""
+"[aarch64-unknown-freebsd](https://static.rust-lang.org/rustup/dist/aarch64-"
+"unknown-freebsd/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:123
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-unknown-"
+"freebsd/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:124
 msgid ""
 "[arm-linux-androideabi](https://static.rust-lang.org/rustup/dist/arm-linux-"
 "androideabi/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:121
+#: src/installation/other.md:125
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/arm-linux-androideabi/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:122
+#: src/installation/other.md:126
 msgid ""
 "[arm-unknown-linux-gnueabi](https://static.rust-lang.org/rustup/dist/arm-"
 "unknown-linux-gnueabi/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:123
+#: src/installation/other.md:127
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/arm-unknown-linux-"
 "gnueabi/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:124
+#: src/installation/other.md:128
 msgid ""
 "[arm-unknown-linux-gnueabihf](https://static.rust-lang.org/rustup/dist/arm-"
 "unknown-linux-gnueabihf/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:125
+#: src/installation/other.md:129
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/arm-unknown-linux-"
 "gnueabihf/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:126
+#: src/installation/other.md:130
 msgid ""
 "[armv7-linux-androideabi](https://static.rust-lang.org/rustup/dist/armv7-"
 "linux-androideabi/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:127
+#: src/installation/other.md:131
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/armv7-linux-"
 "androideabi/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:128
+#: src/installation/other.md:132
 msgid ""
 "[armv7-unknown-linux-gnueabihf](https://static.rust-lang.org/rustup/dist/"
 "armv7-unknown-linux-gnueabihf/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:129
+#: src/installation/other.md:133
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-"
 "gnueabihf/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:130
+#: src/installation/other.md:134
 msgid ""
 "[i686-apple-darwin](https://static.rust-lang.org/rustup/dist/i686-apple-"
 "darwin/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:131
+#: src/installation/other.md:135
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/i686-apple-darwin/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:132
+#: src/installation/other.md:136
 msgid ""
 "[i686-linux-android](https://static.rust-lang.org/rustup/dist/i686-linux-"
 "android/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:133
+#: src/installation/other.md:137
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/i686-linux-android/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:134
+#: src/installation/other.md:138
 msgid ""
 "[i686-pc-windows-gnu](https://static.rust-lang.org/rustup/dist/i686-pc-"
 "windows-gnu/rustup-init.exe)[^msys2]"
 msgstr ""
 
-#: src/installation/other.md:135
+#: src/installation/other.md:139
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/"
 "rustup-init.exe.sha256)"
 msgstr ""
 
-#: src/installation/other.md:136
+#: src/installation/other.md:140
 msgid ""
 "[i686-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/i686-pc-"
 "windows-msvc/rustup-init.exe)[^msvc]"
 msgstr ""
 
-#: src/installation/other.md:137
+#: src/installation/other.md:141
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/i686-pc-windows-msvc/"
 "rustup-init.exe.sha256)"
 msgstr ""
 
-#: src/installation/other.md:138
+#: src/installation/other.md:142
 msgid ""
 "[i686-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/i686-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:139
+#: src/installation/other.md:143
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/i686-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:140
+#: src/installation/other.md:144
 msgid ""
 "[loongarch64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
 "loongarch64-unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:141
+#: src/installation/other.md:145
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/loongarch64-unknown-"
 "linux-gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:142
+#: src/installation/other.md:146
 msgid ""
 "[loongarch64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
 "loongarch64-unknown-linux-musl/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:143
+#: src/installation/other.md:147
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/loongarch64-unknown-"
 "linux-musl/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:144
+#: src/installation/other.md:148
 msgid ""
 "[mips-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/mips-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:145
+#: src/installation/other.md:149
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/mips-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:146
+#: src/installation/other.md:150
 msgid ""
 "[mips64-unknown-linux-gnuabi64](https://static.rust-lang.org/rustup/dist/"
 "mips64-unknown-linux-gnuabi64/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:147
+#: src/installation/other.md:151
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/mips64-unknown-linux-"
 "gnuabi64/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:148
+#: src/installation/other.md:152
 msgid ""
 "[mips64el-unknown-linux-gnuabi64](https://static.rust-lang.org/rustup/dist/"
 "mips64el-unknown-linux-gnuabi64/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:149
+#: src/installation/other.md:153
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/mips64el-unknown-"
 "linux-gnuabi64/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:150
+#: src/installation/other.md:154
 msgid ""
 "[mipsel-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/mipsel-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:151
+#: src/installation/other.md:155
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/mipsel-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:152
+#: src/installation/other.md:156
 msgid ""
 "[powerpc-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/powerpc-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:153
+#: src/installation/other.md:157
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:154
+#: src/installation/other.md:158
 msgid ""
 "[powerpc64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
 "powerpc64-unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:155
-msgid ""
-"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64-unknown-"
-"linux-gnu/rustup-init.sha256)"
-msgstr ""
-
-#: src/installation/other.md:156
-msgid ""
-"[powerpc64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
-"powerpc64-unknown-linux-musl/rustup-init)"
-msgstr ""
-
-#: src/installation/other.md:157
-msgid ""
-"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64-unknown-"
-"linux-musl/rustup-init.sha256)"
-msgstr ""
-
-#: src/installation/other.md:158
-msgid ""
-"[powerpc64le-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
-"powerpc64le-unknown-linux-gnu/rustup-init)"
-msgstr ""
-
 #: src/installation/other.md:159
 msgid ""
-"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-"
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64-unknown-"
 "linux-gnu/rustup-init.sha256)"
 msgstr ""
 
 #: src/installation/other.md:160
 msgid ""
-"[powerpc64le-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
-"powerpc64le-unknown-linux-musl/rustup-init)"
+"[powerpc64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"powerpc64-unknown-linux-musl/rustup-init)"
 msgstr ""
 
 #: src/installation/other.md:161
 msgid ""
-"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-"
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64-unknown-"
 "linux-musl/rustup-init.sha256)"
 msgstr ""
 
 #: src/installation/other.md:162
 msgid ""
+"[powerpc64le-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
+"powerpc64le-unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:163
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-"
+"linux-gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:164
+msgid ""
+"[powerpc64le-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"powerpc64le-unknown-linux-musl/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:165
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-"
+"linux-musl/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:166
+msgid ""
+"[riscv64gc-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
+"riscv64gc-unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:167
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/riscv64gc-unknown-"
+"linux-gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:168
+msgid ""
+"[riscv64gc-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"riscv64gc-unknown-linux-musl/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:169
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/riscv64gc-unknown-"
+"linux-musl/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:170
+msgid ""
 "[s390x-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/s390x-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:163
+#: src/installation/other.md:171
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/s390x-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:164
+#: src/installation/other.md:172
 msgid ""
 "[sparcv9-sun-solaris](https://static.rust-lang.org/rustup/dist/sparcv9-sun-"
 "solaris/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:165
+#: src/installation/other.md:173
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/sparcv9-sun-solaris/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:166
+#: src/installation/other.md:174
 msgid ""
 "[x86_64-apple-darwin](https://static.rust-lang.org/rustup/dist/x86_64-apple-"
 "darwin/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:167
+#: src/installation/other.md:175
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-apple-darwin/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:168
+#: src/installation/other.md:176
 msgid ""
 "[x86_64-linux-android](https://static.rust-lang.org/rustup/dist/x86_64-linux-"
 "android/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:169
+#: src/installation/other.md:177
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-linux-android/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:170
+#: src/installation/other.md:178
 msgid ""
 "[x86_64-pc-solaris](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
 "solaris/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:171
+#: src/installation/other.md:179
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-pc-solaris/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:172
+#: src/installation/other.md:180
 msgid ""
 "[x86_64-pc-windows-gnu](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
 "windows-gnu/rustup-init.exe)[^msys2]"
 msgstr ""
 
-#: src/installation/other.md:173
+#: src/installation/other.md:181
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-gnu/"
 "rustup-init.exe.sha256)"
 msgstr ""
 
-#: src/installation/other.md:174
+#: src/installation/other.md:182
 msgid ""
 "[x86_64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
 "windows-msvc/rustup-init.exe)[^msvc]"
 msgstr ""
 
-#: src/installation/other.md:175
+#: src/installation/other.md:183
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-"
 "msvc/rustup-init.exe.sha256)"
 msgstr ""
 
-#: src/installation/other.md:176
+#: src/installation/other.md:184
 msgid ""
 "[x86_64-unknown-freebsd](https://static.rust-lang.org/rustup/dist/x86_64-"
 "unknown-freebsd/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:177
+#: src/installation/other.md:185
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-"
 "freebsd/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:178
+#: src/installation/other.md:186
 msgid ""
 "[x86_64-unknown-illumos](https://static.rust-lang.org/rustup/dist/x86_64-"
 "unknown-illumos/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:179
+#: src/installation/other.md:187
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-"
 "illumos/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:180
+#: src/installation/other.md:188
 msgid ""
 "[x86_64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/x86_64-"
 "unknown-linux-gnu/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:181
+#: src/installation/other.md:189
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-"
 "gnu/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:182
+#: src/installation/other.md:190
 msgid ""
 "[x86_64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/x86_64-"
 "unknown-linux-musl/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:183
+#: src/installation/other.md:191
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-"
 "musl/rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:184
+#: src/installation/other.md:192
 msgid ""
 "[x86_64-unknown-netbsd](https://static.rust-lang.org/rustup/dist/x86_64-"
 "unknown-netbsd/rustup-init)"
 msgstr ""
 
-#: src/installation/other.md:185
+#: src/installation/other.md:193
 msgid ""
 "[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-netbsd/"
 "rustup-init.sha256)"
 msgstr ""
 
-#: src/installation/other.md:189
+#: src/installation/other.md:197
 msgid ""
 "To get a previous version, use `https://static.rust-lang.org/rustup/archive/"
-"{rustup-version}/{target-triple}/rustup-init[.exe]`."
+"{rustup-version}/{target-tuple}/rustup-init[.exe]`."
 msgstr ""
 
-#: src/installation/other.md:192
+#: src/installation/other.md:200
 msgid ""
 "SHA-256 checksums are also available by appending `.sha256` to the link."
 msgstr ""
 
-#: src/installation/other.md:194
+#: src/installation/other.md:202
 msgid ""
 "Windows GNU builds require no additional software for basic use. However, "
 "many library crates will not be able to compile until the full [MSYS2]"
 "(https://www.msys2.org/) with MinGW has been installed."
 msgstr ""
 
-#: src/installation/other.md:200
+#: src/installation/other.md:208
 msgid ""
 "MSVC builds of `rustup` additionally require an [installation of Visual "
 "Studio 2019 or the Visual C++ Build Tools 2019](https://visualstudio."
@@ -655,11 +703,11 @@ msgid ""
 "tools\" and \"Windows 10 SDK\" option."
 msgstr ""
 
-#: src/installation/other.md:206
+#: src/installation/other.md:214
 msgid "Self-compiled installation"
 msgstr ""
 
-#: src/installation/other.md:208
+#: src/installation/other.md:216
 msgid ""
 "To install `rustup` from source, check out the git repository from <https://"
 "github.com/rust-lang/rustup> and run `cargo run --release`. Note that after "
