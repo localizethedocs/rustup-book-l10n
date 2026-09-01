@@ -1,0 +1,2771 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/basics.md:1
+msgid "Basic usage"
+msgstr ""
+
+#: src/basics.md:3
+msgid "Keeping Rust up to date"
+msgstr ""
+
+#: src/basics.md:5
+msgid ""
+"Rust is distributed on three different [release channels](concepts/channels."
+"md): stable, beta, and nightly. `rustup` uses the stable channel by default, "
+"which represents the latest release of Rust. Stable publishes new releases "
+"every six weeks."
+msgstr ""
+
+#: src/basics.md:11
+msgid ""
+"When a new version of Rust is released, simply type `rustup update` to "
+"update:"
+msgstr ""
+
+#: src/basics.md:31
+msgid "Keeping `rustup` up to date"
+msgstr "保持 `rustup` 更新"
+
+#: src/basics.md:33
+msgid ""
+"If your `rustup` was built with the [no-self-update feature](https://github."
+"com/rust-lang/rustup/blob/HEAD/Cargo.toml#L29), it can not update itself. "
+"This is not the default, and only versions of `rustup` built with `--no-"
+"default-features`, or obtained from a third-party distributor who has "
+"disabled it (such as NixOS)."
+msgstr ""
+
+#: src/basics.md:38
+msgid ""
+"Otherwise Rustup can update itself. It is possible to control Rustup's "
+"automatic self update mechanism with the `auto-self-update` configuration "
+"variable. This setting supports three values: `enable` and `disable` and "
+"`check-only`."
+msgstr ""
+
+#: src/basics.md:42
+msgid ""
+"`disable` will ensure that no automatic self updating actions are taken."
+msgstr ""
+
+#: src/basics.md:43
+msgid ""
+"`enable` will mean that `rustup update` and similar commands will also check "
+"for, and install, any update to Rustup."
+msgstr ""
+
+#: src/basics.md:44
+msgid ""
+"`check-only` will cause any automatic self update to check and report on any "
+"updates, but not to automatically install them."
+msgstr ""
+
+#: src/basics.md:46
+msgid ""
+"Whether `auto-self-update` is `enable` or not, you can request that Rustup "
+"update itself to the latest version of `rustup` by running `rustup self "
+"update`. This will not download new toolchains:"
+msgstr ""
+
+#: src/basics.md:56
+msgid "Disabling self updates on a per-invocation basis"
+msgstr "停用每次呼叫時的自我更新"
+
+#: src/basics.md:57
+msgid ""
+"Self updates can also be suppressed on individual invocations of `rustup` by "
+"passing the argument `--no-self-update`  when running `rustup update` or "
+"`rustup toolchain install`."
+msgstr ""
+
+#: src/basics.md:61
+msgid "Help system"
+msgstr ""
+
+#: src/basics.md:63
+msgid ""
+"The `rustup` command-line has a built-in help system that provides more "
+"information about each command. Run `rustup help` for an overview. Detailed "
+"help for each subcommand is also available. For example, run `rustup "
+"toolchain install --help` for specifics on installing [toolchains](concepts/"
+"toolchains.md)."
+msgstr ""
+
+#: src/concepts/index.md:1
+msgid "Concepts"
+msgstr "概念"
+
+#: src/concepts/index.md:3
+msgid "How rustup works"
+msgstr ""
+
+#: src/concepts/index.md:5
+msgid ""
+"`rustup` is a _toolchain multiplexer_. It installs and manages many Rust "
+"toolchains and presents them all through a single set of tools installed to "
+"`~/.cargo/bin`. The [`rustc`](https://doc.rust-lang.org/rustc/) and [`cargo`]"
+"(https://doc.rust-lang.org/cargo/) executables installed in `~/.cargo/bin` "
+"are _[proxies](proxies.md)_ that delegate to the real toolchain. `rustup` "
+"then provides mechanisms to easily change the active toolchain by "
+"reconfiguring the behavior of the proxies."
+msgstr ""
+
+#: src/concepts/index.md:12
+msgid ""
+"So when `rustup` is first installed, running `rustc` will run the proxy in "
+"`$HOME/.cargo/bin/rustc`, which in turn will run the stable compiler. If you "
+"later _change the default toolchain_ to nightly with `rustup default "
+"nightly`, then that same proxy will run the `nightly` compiler instead."
+msgstr ""
+
+#: src/concepts/index.md:17
+msgid ""
+"This is similar to Ruby's [rbenv](https://github.com/rbenv/rbenv), Python's "
+"[pyenv](https://github.com/yyuu/pyenv), or Node's [nvm](https://github.com/"
+"creationix/nvm)."
+msgstr ""
+
+#: src/concepts/index.md:26
+msgid "Terminology"
+msgstr ""
+
+#: src/concepts/index.md:28
+msgid ""
+"**channel** --- Rust is released to three different \"channels\": stable, "
+"beta, and nightly. See the [Channels](channels.md) chapter for more details."
+msgstr ""
+
+#: src/concepts/index.md:31
+msgid ""
+"**toolchain** --- A \"toolchain\" is a complete installation of the Rust "
+"compiler (`rustc`) and related tools (like `cargo`). A [toolchain "
+"specification](toolchains.md) includes the release channel or version, and "
+"the host platform that the toolchain runs on."
+msgstr ""
+
+#: src/concepts/index.md:36
+msgid ""
+"**target** --- `rustc` is capable of generating code for many platforms. The "
+"\"target\" specifies the platform that the code will be generated for. By "
+"default, `cargo` and `rustc` use the host toolchain's platform as the "
+"target. To build for a different target, usually the target's standard "
+"library needs to be installed first via the `rustup target` command. See the "
+"[Cross-compilation](../cross-compilation.md) chapter for more details."
+msgstr ""
+
+#: src/concepts/index.md:43
+msgid ""
+"**component** --- Each release of Rust includes several \"components\", some "
+"of which are required (like `rustc`) and some that are optional (like "
+"[`clippy`](https://github.com/rust-lang/rust-clippy)). See the [Components]"
+"(components.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/index.md:47
+msgid ""
+"**profile** --- In order to make it easier to work with components, a "
+"\"profile\" defines a grouping of components. See the [Profiles](profiles."
+"md) chapter for more details."
+msgstr ""
+
+#: src/concepts/index.md:51
+msgid ""
+"**proxy** ---  A wrapper for a common Rust component (like `rustc`), built "
+"to forward CLI invocations to the active Rust toolchain. See the [Proxies]"
+"(proxies.md) chapter for more details."
+msgstr ""
+
+#: src/concepts/channels.md:1
+msgid "Channels"
+msgstr "通道"
+
+#: src/concepts/channels.md:3
+msgid ""
+"Rust is released to three different \"channels\": stable, beta, and nightly. "
+"The stable releases are made every 6 weeks (with occasional point releases). "
+"Beta releases are the version that will appear in the next stable release. "
+"Nightly releases are made every night. See [The Rust Book](https://doc.rust-"
+"lang.org/book/appendix-07-nightly-rust.html) for more details on Rust's "
+"train release model. The release schedule is posted to the [Rust Forge]"
+"(https://forge.rust-lang.org/). `rustup` assists with installing different "
+"channels, keeping them up-to-date, and easily switching between them."
+msgstr ""
+
+#: src/concepts/channels.md:11
+msgid ""
+"After a release channel has been installed, `rustup` can be used to update "
+"the installed version to the latest release on that channel. See the "
+"[Keeping rust up to date](../basics.md#keeping-rust-up-to-date) section for "
+"more information."
+msgstr ""
+
+#: src/concepts/channels.md:15
+msgid ""
+"`rustup` can also install specific versions of Rust, such as `1.45.2` or "
+"`nightly-2020-07-27`. See the [Toolchains](toolchains.md) chapter for more "
+"information on installing different channels and releases. See the "
+"[Overrides](../overrides.md) chapter for details on switching between "
+"toolchains and pinning your project to a specific toolchain."
+msgstr ""
+
+#: src/concepts/channels.md:26
+msgid "Working with nightly Rust"
+msgstr ""
+
+#: src/concepts/channels.md:28
+msgid ""
+"`rustup` gives you easy access to the nightly compiler and its [experimental "
+"features](https://doc.rust-lang.org/unstable-book/). To add it just run "
+"`rustup toolchain install nightly`:"
+msgstr ""
+
+#: src/concepts/channels.md:50
+msgid ""
+"Now Rust nightly is installed, but not activated. To test it out you can run "
+"a command from the nightly toolchain like"
+msgstr ""
+
+#: src/concepts/channels.md:58
+msgid ""
+"But more likely you want to use it for a while. To switch to nightly "
+"globally, change [the default](../overrides.md#default-toolchain) with "
+"`rustup default nightly`:"
+msgstr ""
+
+#: src/concepts/channels.md:70
+msgid ""
+"Now any time you run `cargo` or `rustc` you will be running the nightly "
+"compiler."
+msgstr ""
+
+#: src/concepts/channels.md:73
+msgid ""
+"With nightly installed any time you run `rustup update`, the nightly channel "
+"will be updated in addition to stable:"
+msgstr ""
+
+#: src/concepts/channels.md:90
+msgid "Nightly availability"
+msgstr ""
+
+#: src/concepts/channels.md:92
+msgid ""
+"Nightly toolchains may fail to build, so for any given date and target "
+"platform there may not be a toolchain available. Furthermore, nightly builds "
+"may be published with missing non-default [components](components.md) (such "
+"as [`clippy`](https://github.com/rust-lang/rust-clippy)). As such, it can be "
+"difficult to find fully-working nightlies. Use the [rustup-components-"
+"history](https://rust-lang.github.io/rustup-components-history/) project to "
+"find the build status of recent nightly toolchains and components."
+msgstr ""
+
+#: src/concepts/channels.md:99
+msgid ""
+"When you attempt to install or update the `nightly` channel, `rustup` will "
+"check if a required or previously installed component is missing. If it is "
+"missing, `rustup` will automatically search for an older release that "
+"contains the required components. There are several ways to change this "
+"behavior:"
+msgstr ""
+
+#: src/concepts/channels.md:104
+msgid ""
+"Use the `--force` flag to `rustup toolchain install` to force it to install "
+"the most recent version even if there is a missing component."
+msgstr ""
+
+#: src/concepts/channels.md:106
+msgid ""
+"Use the `--profile` flag to `rustup toolchain install` to use a different "
+"profile that does not contain the missing component. For example, `--"
+"profile=minimal` should always work, as the minimal set is required to "
+"exist. See the [Profiles](profiles.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/channels.md:110
+msgid ""
+"Install a specific date that contains the components you need. For example, "
+"`rustup toolchain install nightly-2020-07-27`. You can then use [overrides]"
+"(../overrides.md) to pin to that specific release."
+msgstr ""
+
+#: src/concepts/components.md:1
+msgid "Components"
+msgstr ""
+
+#: src/concepts/components.md:3
+msgid ""
+"Each [toolchain](toolchains.md) has several \"components\", some of which "
+"are required (like `rustc`) and some that are optional (like [`clippy`]"
+"(https://github.com/rust-lang/rust-clippy)). The `rustup component` command "
+"is used to manage the installed components. For example, run `rustup "
+"component list` to see a list of available and installed components."
+msgstr ""
+
+#: src/concepts/components.md:9
+msgid ""
+"Components can be added when installing a toolchain with the `--component` "
+"flag. For example:"
+msgstr ""
+
+#: src/concepts/components.md:16
+msgid ""
+"Components can be added to an already-installed toolchain with the `rustup "
+"component` command:"
+msgstr ""
+
+#: src/concepts/components.md:23
+msgid ""
+"To make it easier to choose which components are installed, `rustup` has the "
+"concept of \"profiles\" which provide named groupings of different "
+"components. See the [Profiles](profiles.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/components.md:27
+msgid ""
+"Most components have a target-triple suffix, such as `rustc-x86_64-apple-"
+"darwin`, to signify the platform the component is for."
+msgstr ""
+
+#: src/concepts/components.md:30
+msgid ""
+"The set of available components may vary with different releases and "
+"toolchains. The following is an overview of the different components:"
+msgstr ""
+
+#: src/concepts/components.md:33
+msgid ""
+"`rustc` --- The Rust compiler and [Rustdoc](https://doc.rust-lang.org/"
+"rustdoc/)."
+msgstr ""
+
+#: src/concepts/components.md:34
+msgid ""
+"`cargo` --- [Cargo](https://doc.rust-lang.org/cargo/) is a package manager "
+"and build tool."
+msgstr ""
+
+#: src/concepts/components.md:35
+msgid ""
+"`rustfmt` --- [Rustfmt](https://github.com/rust-lang/rustfmt) is a tool for "
+"automatically formatting code."
+msgstr ""
+
+#: src/concepts/components.md:36
+msgid ""
+"`rust-std` --- This is the Rust [standard library](https://doc.rust-lang.org/"
+"std/). There is a separate `rust-std` component for each target that `rustc` "
+"supports, such as `rust-std-x86_64-pc-windows-msvc`. See the [Cross-"
+"compilation](../cross-compilation.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/components.md:40
+msgid ""
+"`rust-docs` --- This is a local copy of the [Rust documentation](https://doc."
+"rust-lang.org/). Use the `rustup doc` command to open the documentation in a "
+"web browser. Run `rustup doc --help` for more options."
+msgstr ""
+
+#: src/concepts/components.md:43
+msgid ""
+"`rust-analyzer` --- [rust-analyzer](https://rust-analyzer.github.io/) is a "
+"language server that provides support for editors and IDEs."
+msgstr ""
+
+#: src/concepts/components.md:45
+msgid ""
+"`clippy` --- [Clippy](https://github.com/rust-lang/rust-clippy) is a lint "
+"tool that provides extra checks for common mistakes and stylistic choices."
+msgstr ""
+
+#: src/concepts/components.md:47
+msgid ""
+"`miri` --- [Miri](https://github.com/rust-lang/miri/) is an experimental "
+"Rust interpreter, which can be used for checking for undefined-behavior."
+msgstr ""
+
+#: src/concepts/components.md:49
+msgid ""
+"`rust-src` --- This is a local copy of the source code of the Rust standard "
+"library. This can be used by some tools, such as [rust-analyzer](https://"
+"rust-analyzer.github.io/), to provide auto-completion for functions within "
+"the standard library; [Miri](https://github.com/rust-lang/miri/) which is a "
+"Rust interpreter; and Cargo's experimental [build-std](https://doc.rust-lang."
+"org/nightly/cargo/reference/unstable.html#build-std) feature, which allows "
+"you to rebuild the standard library locally."
+msgstr ""
+
+#: src/concepts/components.md:54
+msgid ""
+"`rust-mingw` --- This contains a linker and platform libraries for building "
+"on the `x86_64-pc-windows-gnu` platform."
+msgstr ""
+
+#: src/concepts/components.md:56
+msgid ""
+"`llvm-tools` --- This component contains a collection of [LLVM](https://llvm."
+"org/) tools. **This component has not been stabilized and may change in the "
+"future and is provided as-is.** Availability of individual LLVM tools may "
+"change over LLVM versions (including removal of specific LLVM tools), and "
+"**is not subject to compiler or toolchain stability guarantees**. See "
+"[\\#85658](https://github.com/rust-lang/rust/issues/85658)."
+msgstr ""
+
+#: src/concepts/components.md:62
+msgid ""
+"`rustc-dev` --- This component contains the compiler as a library. Most "
+"users will not need this; it is only needed for development _of_ tools that "
+"link to the compiler, such as making modifications to [Clippy](https://"
+"github.com/rust-lang/rust-clippy)."
+msgstr ""
+
+#: src/concepts/components.md:66
+msgid "Previous components"
+msgstr ""
+
+#: src/concepts/components.md:68
+msgid ""
+"See [here](https://rust-lang.github.io/rustup/devel/concepts/components."
+"html#previous-components) for the latest version of this section."
+msgstr ""
+
+#: src/concepts/components.md:71
+msgid ""
+"These components have been deprecated and are not published in new Rust "
+"releases."
+msgstr ""
+
+#: src/concepts/components.md:73
+msgid ""
+"`rls` --- [RLS](https://github.com/rust-lang/rls) is a language server that "
+"is deprecated and has been replaced by rust-analyzer."
+msgstr ""
+
+#: src/concepts/components.md:75
+msgid ""
+"`rust-analysis` --- Metadata about the standard library, used by [RLS]"
+"(https://github.com/rust-lang/rls)."
+msgstr ""
+
+#: src/concepts/components.md:76
+msgid ""
+"The `wasm32-wasi` target --- It has been [renamed](https://blog.rust-lang."
+"org/2024/04/09/updates-to-rusts-wasi-targets.html) to `wasm32-wasip1`."
+msgstr ""
+
+#: src/concepts/components.md:80
+msgid "Component availability"
+msgstr ""
+
+#: src/concepts/components.md:82
+msgid ""
+"Not all components are available for all toolchains. Especially on the "
+"nightly channel, some components may not be included if they are in a broken "
+"state. The current status of all the components may be found on the [rustup "
+"components history](https://rust-lang.github.io/rustup-components-history/) "
+"page. See the [Nightly availability](channels.md#nightly-availability) "
+"section for more details."
+msgstr ""
+
+#: src/concepts/profiles.md:1
+msgid "Profiles"
+msgstr ""
+
+#: src/concepts/profiles.md:3
+msgid ""
+"`rustup` has the concept of \"profiles\". They are groups of [components]"
+"(components.md) you can choose to download while installing a new Rust "
+"toolchain. The profiles available at this time are `minimal`, `default`, and "
+"`complete`:"
+msgstr ""
+
+#: src/concepts/profiles.md:7
+msgid ""
+"The **minimal** profile includes as few components as possible to get a "
+"working compiler (`rustc`, `rust-std`, and `cargo`). It's recommended to use "
+"this component on Windows systems if you don't use local documentation (the "
+"large number of files can cause issues with some Antivirus systems), and in "
+"CI."
+msgstr ""
+
+#: src/concepts/profiles.md:12
+msgid ""
+"The **default** profile includes all of components in the **minimal** "
+"profile, and adds `rust-docs`, `rustfmt`, and `clippy`. This profile will be "
+"used by `rustup` by default, and it's the one recommended for general use."
+msgstr ""
+
+#: src/concepts/profiles.md:15
+msgid ""
+"The **complete** profile includes all the components available through "
+"`rustup`. This should never be used, as it includes _every_ component ever "
+"included in the metadata and thus will almost always fail. If you are "
+"looking for a way to install devtools such as `miri` or IDE integration "
+"tools (`rust-analyzer`), you should use the `default` profile and install "
+"the needed additional components manually, either by using `rustup component "
+"add` or by using `-c` when installing the toolchain."
+msgstr ""
+
+#: src/concepts/profiles.md:23
+msgid ""
+"To change the profile `rustup install` uses by default, you can use the "
+"`rustup set profile` command. For example, to select the minimal profile you "
+"can use:"
+msgstr ""
+
+#: src/concepts/profiles.md:31
+msgid ""
+"You can also directly select the profile used when installing a toolchain "
+"with:"
+msgstr ""
+
+#: src/concepts/profiles.md:37
+msgid ""
+"It's also possible to choose the default profile when installing `rustup` "
+"for the first time, either interactively by choosing the \"Customize "
+"installation\" option or programmatically by passing the `--profile=<name>` "
+"flag. Profiles will only affect newly installed toolchains: as usual it will "
+"be possible to install individual components later with: `rustup component "
+"add`."
+msgstr ""
+
+#: src/concepts/proxies.md:1
+msgid "Proxies"
+msgstr ""
+
+#: src/concepts/proxies.md:3
+msgid ""
+"`rustup` provides a number of wrappers for common Rust tools. These are "
+"called _proxies_ and represent commands which are provided by the various "
+"[components](components.md)."
+msgstr ""
+
+#: src/concepts/proxies.md:7
+msgid "The list of proxies is currently static in `rustup` and is as follows:"
+msgstr ""
+
+#: src/concepts/proxies.md:11
+msgid ""
+"`rustc` is the compiler for the Rust programming language, provided by the "
+"project itself and comes from the `rustc` component."
+msgstr ""
+
+#: src/concepts/proxies.md:13
+msgid ""
+"`rustdoc` is a tool distributed in the `rustc` component which helps you to "
+"generate documentation for Rust projects."
+msgstr ""
+
+#: src/concepts/proxies.md:15
+msgid ""
+"`cargo` is the Rust package manager which downloads your Rust package’s "
+"dependencies, compiles your packages, makes distributable packages, and "
+"uploads them to crates.io (the Rust community’s package registry). It comes "
+"from the `cargo` component."
+msgstr ""
+
+#: src/concepts/proxies.md:17
+msgid ""
+"`rust-lldb`, `rust-gdb`, and `rust-gdbgui` are simple wrappers around the "
+"`lldb`, `gdb`, and `gdbgui` debuggers respectively. The wrappers enable some "
+"pretty-printing of Rust values and add some convenience features to the "
+"debuggers by means of their scripting interfaces."
+msgstr ""
+"`rust-lldb`、`rust-gdb` 和 `rust-gdbgui` 分別是 `lldb`、`gdb` 和 `gdbgui` 除"
+"錯器的簡單包裝。這些包裝器能夠對 Rust 值進行一些美化列印，並透過其腳本介面為"
+"除錯器增添一些便利功能。"
+
+#: src/concepts/proxies.md:19
+msgid ""
+"`rust-analyzer` is part of the Rust IDE integration tooling. It implements "
+"the language-server protocol to permit IDEs and editors such as Visual "
+"Studio Code, Vim, or Emacs, access to the semantics of the Rust code you are "
+"editing. It comes from the `rust-analyzer` component."
+msgstr ""
+"`rust-analyzer` 是 Rust IDE 整合工具的一部分。它實現了語言伺服器協定，允許 "
+"Visual Studio Code、Vim 或 Emacs 等 IDE 和編輯器存取您正在編輯的 Rust 程式碼"
+"的語義。它來自 `rust-analyzer` 組件。"
+
+#: src/concepts/proxies.md:21
+msgid ""
+"`cargo-clippy` and `clippy-driver` are related to the `clippy` linting tool "
+"which provides extra checks for common mistakes and stylistic choices and it "
+"comes from the `clippy` component."
+msgstr ""
+"`cargo-clippy` 和 `clippy-driver` 與 `clippy` 程式碼梳理工具相關，該工具提供"
+"對常見錯誤和風格選擇的額外檢查，它來自 `clippy` 組件。"
+
+#: src/concepts/proxies.md:23
+msgid ""
+"`cargo-miri` is an experimental interpreter for Rust's mid-level "
+"intermediate representation (MIR) and it comes from the `miri` component."
+msgstr ""
+
+#: src/concepts/proxies.md:25
+msgid ""
+"`rls` is a deprecated IDE tool that has been replaced by `rust-analyzer`. It "
+"comes from the `rls` component."
+msgstr ""
+
+#: src/concepts/toolchains.md:1
+msgid "Toolchains"
+msgstr "工具鏈"
+
+#: src/concepts/toolchains.md:3
+msgid ""
+"Many `rustup` commands deal with _toolchains_, a single installation of the "
+"Rust compiler. `rustup` supports multiple types of toolchains. The most "
+"basic track the official release [channels](channels.md): _stable_, _beta_ "
+"and _nightly_; but `rustup` can also install toolchains from the official "
+"archives, for alternate host platforms, and from local builds."
+msgstr ""
+
+#: src/concepts/toolchains.md:11
+msgid "Toolchain specification"
+msgstr "工具鏈規格"
+
+#: src/concepts/toolchains.md:13
+msgid "Standard release channel toolchain names have the following form:"
+msgstr ""
+
+#: src/concepts/toolchains.md:25
+msgid ""
+"'channel' is a named release channel, a major and minor version number such "
+"as `1.42`, or a fully specified version number, such as `1.42.0`. Channel "
+"names can be optionally appended with an archive date, as in "
+"`nightly-2014-12-18`, in which case the toolchain is downloaded from the "
+"archive for that date."
+msgstr ""
+
+#: src/concepts/toolchains.md:30
+msgid ""
+"Finally, the host may be specified as a target tuple. This is most useful "
+"for installing a 32-bit compiler on a 64-bit platform, or for installing the "
+"[MSVC-based toolchain](https://www.rust-lang.org/tools/install?"
+"platform_override=win) on Windows. For example:"
+msgstr ""
+
+#: src/concepts/toolchains.md:38
+msgid ""
+"For convenience, elements of the target tuple that are omitted will be "
+"inferred, so the above could be written:"
+msgstr ""
+
+#: src/concepts/toolchains.md:45
+msgid ""
+"Toolchain names that don't name a channel instead can be used to name "
+"[custom toolchains](#custom-toolchains)."
+msgstr ""
+
+#: src/concepts/toolchains.md:51
+msgid "Custom toolchains"
+msgstr "自訂工具鏈"
+
+#: src/concepts/toolchains.md:53
+msgid ""
+"For convenience of developers working on Rust itself, `rustup` can manage "
+"local builds of the Rust toolchain. To teach `rustup` about your build, run:"
+msgstr ""
+
+#: src/concepts/toolchains.md:60
+msgid ""
+"For example, on Ubuntu you might clone `rust-lang/rust` into `~/rust`, build "
+"it, and then run:"
+msgstr ""
+
+#: src/concepts/toolchains.md:68
+msgid ""
+"Now you can name `my-toolchain` as any other `rustup` toolchain. Create a "
+"`rustup` toolchain for each of your `rust-lang/rust` workspaces and test "
+"them easily with `rustup run my-toolchain rustc`."
+msgstr ""
+
+#: src/concepts/toolchains.md:72
+msgid ""
+"Because the `rust-lang/rust` tree does not include Cargo, _when `cargo` is "
+"invoked for a custom toolchain and it is not available, `rustup` will "
+"attempt to use `cargo` from one of the release channels_, preferring "
+"'nightly', then 'beta' or 'stable'."
+msgstr ""
+
+#: src/configuration.md:1
+msgid "Configuration"
+msgstr "組態"
+
+#: src/configuration.md:3
+msgid ""
+"Rustup has a [TOML](https://github.com/toml-lang/toml) settings file at "
+"`${RUSTUP_HOME}/settings.toml` (which defaults to `~/.rustup` or "
+"`%USERPROFILE%/.rustup`). The schema for this file is not part of the public "
+"interface for rustup - the rustup CLI should be used to query and set "
+"settings."
+msgstr ""
+
+#: src/configuration.md:8
+msgid ""
+"On Unix operating systems a fallback settings file is consulted for some "
+"settings. This fallback file is located at `/etc/rustup/settings.toml` and "
+"currently can define only `default_toolchain`."
+msgstr ""
+
+#: src/cross-compilation.md:1
+msgid "Cross-compilation"
+msgstr "交叉編譯"
+
+#: src/cross-compilation.md:3
+msgid ""
+"Rust [supports a great number of platforms](https://doc.rust-lang.org/"
+"nightly/rustc/platform-support.html). For many of these platforms The Rust "
+"Project publishes binary releases of the standard library, and for some the "
+"full compiler. `rustup` gives easy access to all of them."
+msgstr ""
+
+#: src/cross-compilation.md:9
+msgid ""
+"When you first install a toolchain, `rustup` installs only the standard "
+"library for your _host_ platform - that is, the architecture and operating "
+"system you are presently running. To compile to other platforms you must "
+"install other _target_ platforms. This is done with the `rustup target add` "
+"command. For example, to add the Android target:"
+msgstr ""
+
+#: src/cross-compilation.md:21
+msgid ""
+"With the `arm-linux-androideabi` target installed you can then build for "
+"Android with Cargo by passing the `--target` flag, as in `cargo build --"
+"target=arm-linux-androideabi`."
+msgstr ""
+
+#: src/cross-compilation.md:25
+msgid ""
+"Note that `rustup target add` only installs the Rust standard library for a "
+"given target. There are typically other tools necessary to cross-compile, "
+"particularly a linker. For example, to cross compile to Android the [Android "
+"NDK](https://developer.android.com/tools/sdk/ndk/index.html) must be "
+"installed. In the future, `rustup` will provide assistance installing the "
+"NDK components as well. See the [target section](https://doc.rust-lang.org/"
+"cargo/reference/config.html#target) of the `cargo` configuration for how to "
+"setup a linker to use for a certain target."
+msgstr ""
+
+#: src/cross-compilation.md:35
+msgid ""
+"To install a target for a toolchain that isn't the default toolchain use the "
+"`--toolchain` argument of `rustup target add`, like so:"
+msgstr ""
+
+#: src/cross-compilation.md:42
+msgid ""
+"To see a list of available targets, `rustup target list`. To remove a "
+"previously-added target, `rustup target remove`."
+msgstr ""
+
+#: src/environment-variables.md:1
+msgid "Environment variables"
+msgstr "環境變數"
+
+#: src/environment-variables.md:3
+msgid ""
+"`RUSTUP_LOG` (default: none). Enables Rustup's \"custom logging mode\". In "
+"this mode, the verbosity of Rustup's log lines can be specified with "
+"`tracing_subscriber`'s [directive syntax](https://docs.rs/tracing-subscriber/"
+"latest/tracing_subscriber/filter/struct.EnvFilter.html#directives). For "
+"example, set `RUSTUP_LOG=rustup=DEBUG` to receive log lines from `rustup` "
+"itself with a maximal verbosity of `DEBUG`."
+msgstr ""
+
+#: src/environment-variables.md:8
+msgid ""
+"`RUSTUP_HOME` (default: `~/.rustup` or `%USERPROFILE%/.rustup`). Sets the "
+"root `rustup` folder, used for storing installed toolchains and "
+"configuration options."
+msgstr ""
+"`RUSTUP_HOME`（默認值：`~/.rustup` 或 `%USERPROFILE%/.rustup`）。設定根 "
+"`rustup` 資料夾，用於儲存已安裝的工具鏈和組態選項。"
+
+#: src/environment-variables.md:12
+msgid ""
+"`RUSTUP_TOOLCHAIN` (default: none). If set, will [override](overrides.md) "
+"the toolchain used for all rust tool invocations. A toolchain with this name "
+"should be installed, or invocations will fail. This can specify custom "
+"toolchains, installable toolchains, or the absolute path to a toolchain."
+msgstr ""
+
+#: src/environment-variables.md:17
+msgid ""
+"`RUSTUP_DIST_SERVER` (default: `https://static.rust-lang.org`). Sets the "
+"root URL for downloading static resources related to Rust. You can change "
+"this to instead use a local mirror, or to test the binaries from the staging "
+"directory."
+msgstr ""
+
+#: src/environment-variables.md:22
+msgid ""
+"~~`RUSTUP_DIST_ROOT`~~ _deprecated_ (default: `https://static.rust-lang.org/"
+"dist`). Use `RUSTUP_DIST_SERVER` instead."
+msgstr ""
+
+#: src/environment-variables.md:25
+msgid ""
+"`RUSTUP_UPDATE_ROOT` (default `https://static.rust-lang.org/rustup`). Sets "
+"the root URL for downloading self-update."
+msgstr ""
+
+#: src/environment-variables.md:28
+msgid ""
+"`RUSTUP_VERSION` (default: none). Overrides the rustup version (e.g. "
+"`1.27.1`) to be downloaded when executing `rustup-init.sh` or `rustup self "
+"update`."
+msgstr ""
+
+#: src/environment-variables.md:31
+msgid ""
+"`RUSTUP_IO_THREADS` _unstable_ (default: reported cpu count, max 8). Sets "
+"the number of threads to perform close IO in. Set to `1` to force single-"
+"threaded IO for troubleshooting, or an arbitrary number to override "
+"automatic detection."
+msgstr ""
+
+#: src/environment-variables.md:36
+msgid ""
+"`RUSTUP_TRACE_DIR` _unstable_ (default: no tracing). Enables tracing and "
+"determines the directory that traces will be written too. Traces are of the "
+"form PID.trace. Traces can be read by the Catapult project [tracing viewer]"
+"(https://github.com/catapult-project/catapult/blob/master/tracing/README.md)."
+msgstr ""
+
+#: src/environment-variables.md:40
+msgid ""
+"`RUSTUP_TERM_COLOR` (default: `auto`). Controls whether colored output is "
+"used in the terminal. Set to `auto` to use colors only in tty streams, to "
+"`always` to always enable colors, or to `never` to disable colors."
+msgstr ""
+
+#: src/environment-variables.md:44
+msgid ""
+"`RUSTUP_UNPACK_RAM` _unstable_ (default: free memory or 500MiB if unable to "
+"tell, min 210MiB). Caps the amount of RAM (in bytes) `rustup` will use for "
+"IO tasks while unpacking."
+msgstr ""
+
+#: src/environment-variables.md:47
+msgid ""
+"`RUSTUP_NO_BACKTRACE`. Disables backtraces on non-panic errors even when "
+"`RUST_BACKTRACE` is set."
+msgstr ""
+
+#: src/environment-variables.md:50
+msgid ""
+"`RUSTUP_PERMIT_COPY_RENAME` _unstable_. When set, allows rustup to fall-back "
+"to copying files if attempts to `rename` result in cross-device link errors. "
+"These errors occur on OverlayFS, which is used by [Docker](https://docs."
+"docker.com/storage/storagedriver/overlayfs-driver/#modifying-files-or-"
+"directories). This feature sacrifices some transactions protections and may "
+"be removed at any point. Linux only."
+msgstr ""
+
+#: src/environment-variables.md:56
+msgid ""
+"`RUSTUP_AUTO_INSTALL` (default: 1) When set to `1`, installs the active "
+"toolchain when it is absent. Set this value to `0` to disable automatic "
+"installation."
+msgstr ""
+
+#: src/environment-variables.md:60
+msgid ""
+"`RUSTUP_HARDLINK_PROXIES` _unstable_. When set, rustup will not attempt to "
+"symlink proxies and instead always use hardlinks. If you find this fixes a "
+"problem, then please report the issue on the [rustup issue tracker](https://"
+"github.com/rust-lang/rustup/issues)."
+msgstr ""
+
+#: src/environment-variables.md:64
+msgid ""
+"`RUSTUP_TERM_PROGRESS_WHEN` (default: `auto`). Controls whether progress "
+"bars are shown or not. Set to `always` to always enable progress bars, and "
+"to `never` to disable them."
+msgstr ""
+
+#: src/environment-variables.md:67
+msgid ""
+"`RUSTUP_TERM_WIDTH` (default: none). Allows to override the terminal width "
+"for progress bars."
+msgstr ""
+
+#: src/environment-variables.md:69
+msgid ""
+"`RUSTUP_DOWNLOAD_TIMEOUT` _unstable_ (default: 180). Allows to override the "
+"default timeout (in seconds) for downloading components."
+msgstr ""
+
+#: src/environment-variables.md:72
+msgid ""
+"`RUSTUP_CONCURRENT_DOWNLOADS` _unstable_ (default: 2). Controls the number "
+"of downloads made concurrently."
+msgstr ""
+"`RUSTUP_CONCURRENT_DOWNLOADS` _不穩定_ （默認值：2）。控制同時進行的下載數"
+"量。"
+
+#: src/environment-variables.md:75
+msgid ""
+"`RUSTUP_TOOLCHAIN_SOURCE` _unstable_. Set by rustup to tell proxied tools "
+"how `RUSTUP_TOOLCHAIN` was determined. Non-rustup tools should not set this "
+"environment variable, except insofar as to mirror an earlier invocation from "
+"rustup."
+msgstr ""
+
+#: src/examples.md:1
+msgid "Examples"
+msgstr "範例"
+
+#: src/examples.md:3
+msgid "Command"
+msgstr "命令"
+
+#: src/examples.md:3
+msgid "Description"
+msgstr "描述"
+
+#: src/examples.md:5
+msgid "`rustup default nightly`"
+msgstr "`rustup default nightly`"
+
+#: src/examples.md:5
+msgid ""
+"Set the [default toolchain](overrides.md#default-toolchain) to the latest "
+"nightly"
+msgstr "將[默認工具鏈](overrides.md#default-toolchain)設定為最新的每夜建置版"
+
+#: src/examples.md:6
+msgid "`rustup set profile minimal`"
+msgstr "`rustup set profile minimal`"
+
+#: src/examples.md:6
+msgid "Set the default [profile](concepts/profiles.md)"
+msgstr ""
+
+#: src/examples.md:7
+msgid "`rustup target list`"
+msgstr ""
+
+#: src/examples.md:7
+msgid ""
+"List all available [targets](cross-compilation.md) for the active toolchain"
+msgstr ""
+
+#: src/examples.md:8
+msgid "`rustup target add arm-linux-androideabi`"
+msgstr ""
+
+#: src/examples.md:8
+msgid "Install the Android target"
+msgstr ""
+
+#: src/examples.md:9
+msgid "`rustup target remove arm-linux-androideabi`"
+msgstr ""
+
+#: src/examples.md:9
+msgid "Remove the Android target"
+msgstr ""
+
+#: src/examples.md:10
+msgid "`rustup run nightly rustc foo.rs`"
+msgstr ""
+
+#: src/examples.md:10
+msgid "Run the nightly regardless of the active toolchain"
+msgstr ""
+
+#: src/examples.md:11
+msgid "`rustc +nightly foo.rs`"
+msgstr ""
+
+#: src/examples.md:11
+msgid ""
+"[Shorthand](overrides.md#toolchain-override-shorthand) way to run a nightly "
+"compiler"
+msgstr ""
+
+#: src/examples.md:12
+msgid "`rustup run nightly bash`"
+msgstr ""
+
+#: src/examples.md:12
+msgid "Run a shell configured for the nightly compiler"
+msgstr "執行一個組態好每夜建置版編譯器的外殼"
+
+#: src/examples.md:13
+msgid "`rustup default stable-msvc`"
+msgstr "`rustup default stable-msvc`"
+
+#: src/examples.md:13
+msgid "On Windows, use the MSVC toolchain instead of GNU"
+msgstr ""
+
+#: src/examples.md:14
+msgid "`rustup override set nightly-2015-04-01`"
+msgstr "`rustup override set nightly-2015-04-01`"
+
+#: src/examples.md:14
+msgid "For the current directory, use a nightly from a specific date"
+msgstr ""
+
+#: src/examples.md:15
+msgid "`rustup toolchain link my-toolchain \"C:\\RustInstallation\"`"
+msgstr ""
+
+#: src/examples.md:15
+msgid "Install a custom toolchain by symlinking an existing installation"
+msgstr ""
+
+#: src/examples.md:16
+msgid "`rustup show`"
+msgstr ""
+
+#: src/examples.md:16
+msgid "Show which toolchain will be used in the current directory"
+msgstr ""
+
+#: src/examples.md:17
+msgid "`rustup toolchain uninstall nightly`"
+msgstr ""
+
+#: src/examples.md:17
+msgid "Uninstall a given toolchain"
+msgstr ""
+
+#: src/examples.md:18
+msgid "`rustup toolchain help`"
+msgstr ""
+
+#: src/examples.md:18
+msgid "Show the `help` page for a subcommand (like `toolchain`)"
+msgstr ""
+
+#: src/examples.md:19
+msgid "`rustup man cargo`"
+msgstr ""
+
+#: src/examples.md:19
+msgid "(_Unix only_) View the man page for a given command (like `cargo`)"
+msgstr ""
+
+#: src/faq.md:1
+msgid "FAQ"
+msgstr "常見問題"
+
+#: src/faq.md:3
+msgid "Is this an official Rust project?"
+msgstr "這是一個官方的 Rust 專案嗎？"
+
+#: src/faq.md:5
+msgid ""
+"Yes. rustup is an official Rust project. It is the recommended way to "
+"install Rust at https://www.rust-lang.org."
+msgstr ""
+"是的。 rustup 是一個官方的 Rust 專案。它是從 https://www.rust-lang.org 安裝 "
+"Rust 的推薦方式。"
+
+#: src/faq.md:8
+msgid "How is this related to multirust?"
+msgstr "這和 multirust 有什麼關係？"
+
+#: src/faq.md:10
+msgid ""
+"rustup is the successor to [multirust](https://github.com/brson/multirust). "
+"rustup began as multirust-rs, a rewrite of multirust from shell script to "
+"Rust, by [Diggory Blake](https://github.com/Diggsey), and is now maintained "
+"by The Rust Project."
+msgstr ""
+"rustup 是 [multirust](https://github.com/brson/multirust) 的繼任者 。 rustup "
+"最初是 multirust-rs，由 [Diggory Blake](https://github.com/Diggsey) 將 "
+"multirust 從外殼腳本重寫為 Rust 版本，現在由 Rust 專案維護。"
+
+#: src/faq.md:17
+msgid "Can rustup download the Rust source code?"
+msgstr "rustup 可以下載 Rust 來源碼嗎？"
+
+#: src/faq.md:19
+msgid ""
+"The source for Rust's standard library can be obtained by running `rustup "
+"component add rust-src`. It will be downloaded to the `<toolchain root>/lib/"
+"rustlib/src/rust` directory of the current toolchain."
+msgstr ""
+"可以透過執行 `rustup component add rust-src` 來取得 Rust 標準程式庫的來源碼。"
+"它將被下載到當前工具鏈的 `<toolchain root>/lib/rustlib/src/rust` 目錄。"
+
+#: src/faq.md:23
+msgid ""
+"The source for the compiler and tools must be obtained from the [Rust "
+"repository](https://github.com/rust-lang/rust/) or the standalone [source "
+"tarballs](https://forge.rust-lang.org/infra/other-installation-methods."
+"html#source-code)."
+msgstr ""
+
+#: src/faq.md:29
+msgid "rustup fails with Windows error 32"
+msgstr ""
+
+#: src/faq.md:31
+msgid ""
+"If `rustup` fails with Windows error 32, it may be due to antivirus scanning "
+"in the background. Disable antivirus scanner and try again."
+msgstr ""
+
+#: src/faq.md:34
+msgid ""
+"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\\\."
+"cargo\\bin\\rustup.exe'\""
+msgstr ""
+
+#: src/faq.md:36
+msgid ""
+"If `rustup` fails to self-update in this way it's usually because RLS is "
+"running (your editor is open and running RLS). The solution is to stop RLS "
+"(by closing your editor) and try again."
+msgstr ""
+
+#: src/faq.md:40
+msgid "rustup exited successfully but I can't run `rustc --version`"
+msgstr ""
+
+#: src/faq.md:42
+msgid ""
+"Restart your shell. This will reload your `PATH` environment variable to "
+"include Cargo's bin directory (`$CARGO_HOME/bin`)."
+msgstr ""
+
+#: src/installation/index.md:1
+msgid "Installation"
+msgstr ""
+
+#: src/installation/index.md:3
+msgid ""
+"Follow the instructions at <https://www.rust-lang.org/tools/install>. If "
+"that doesn't work for you there are [other installation methods](other.md)."
+msgstr ""
+
+#: src/installation/index.md:6
+msgid ""
+"`rustup` installs `rustc`, `cargo`, `rustup` and other standard tools to "
+"Cargo's `bin` directory. On Unix it is located at `$HOME/.cargo/bin` and on "
+"Windows at `%USERPROFILE%\\.cargo\\bin`. This is the same directory that "
+"`cargo install` will install Rust programs and Cargo plugins."
+msgstr ""
+
+#: src/installation/index.md:11
+msgid ""
+"This directory will be in your `$PATH` environment variable, which means you "
+"can run them from the shell without further configuration. Open a _new_ "
+"shell and type the following:"
+msgstr ""
+
+#: src/installation/index.md:19
+msgid ""
+"If you see something like `rustc 1.19.0 (0ade33941 2017-07-17)` then you are "
+"ready to Rust. If you decide Rust isn't your thing, you can completely "
+"remove it from your system by running `rustup self uninstall`."
+msgstr ""
+
+#: src/installation/index.md:25
+msgid "Choosing where to install"
+msgstr ""
+
+#: src/installation/index.md:27
+msgid ""
+"`rustup` allows you to customise your installation by setting the "
+"environment variables `CARGO_HOME` and `RUSTUP_HOME` before running the "
+"`rustup-init` executable. As mentioned in the [Environment Variables](../"
+"environment-variables.md) section, `RUSTUP_HOME` sets the root `rustup` "
+"folder, which is used for storing installed toolchains and configuration "
+"options. `CARGO_HOME` contains cache files used by [cargo](https://doc.rust-"
+"lang.org/cargo/)."
+msgstr ""
+
+#: src/installation/index.md:33
+msgid ""
+"Note that you will need to ensure these environment variables are always set "
+"and that `CARGO_HOME/bin` is in the `$PATH` environment variable when using "
+"the toolchain."
+msgstr ""
+
+#: src/installation/index.md:40
+msgid "Installing nightly"
+msgstr ""
+
+#: src/installation/index.md:42
+msgid ""
+"If you specify the [nightly channel](../concepts/channels.md) when "
+"installing `rustup`, the `rustup-init` script will do a \"forced\" "
+"installation by default. A \"forced\" installation means it will install the "
+"nightly channel regardless of whether it might be missing [components](../"
+"concepts/components.md) that you want. If you want to install rustup with "
+"the nightly channel, and ensure it has the components that you want, you "
+"will need to do this in two phases. For example, if you want to make a fresh "
+"installation of `rustup` and then install `nightly` along with `clippy` or "
+"`miri`, first install `rustup` without a toolchain:"
+msgstr ""
+
+#: src/installation/index.md:51
+msgid ""
+"```console\n"
+"curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain none -y\n"
+"```"
+msgstr ""
+
+#: src/installation/index.md:55
+msgid ""
+"Next you can install `nightly` allowing `rustup` to downgrade until it finds "
+"the components you need:"
+msgstr ""
+
+#: src/installation/index.md:62
+msgid ""
+"This can be used to great effect in CI, to get you a toolchain rapidly which "
+"meets your criteria."
+msgstr ""
+
+#: src/installation/index.md:68
+msgid "Enable tab completion for Bash, Fish, Zsh, or PowerShell"
+msgstr ""
+
+#: src/installation/index.md:70
+msgid ""
+"`rustup` now supports generating completion scripts for Bash, Fish, Zsh, and "
+"PowerShell. See `rustup help completions` for full details, but the gist is "
+"as simple as using one of the following:"
+msgstr ""
+
+#: src/installation/index.md:94
+msgid ""
+"**Note**: you may need to restart your shell in order for the changes to "
+"take effect."
+msgstr ""
+
+#: src/installation/index.md:97
+msgid ""
+"For `zsh`, you must then add the following line in your `~/.zshrc` before "
+"`compinit`:"
+msgstr ""
+
+#: src/installation/index.md:101
+msgid "~/.zfunc"
+msgstr "~/.zfunc"
+
+#: src/installation/index.md:104
+msgid ""
+"In Xonsh you can reuse Fish completion by installing [xontrib-fish-completer]"
+"(https://github.com/xonsh/xontrib-fish-completer)."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:1
+msgid "Already installed Rust?"
+msgstr "已經安裝好 Rust 了嗎？"
+
+#: src/installation/already-installed-rust.md:3
+msgid ""
+"Other package managers also ship Rust, and you may wish to use the packaged "
+"toolchain, such as for distribution package development. You may also wish "
+"to use a `rustup`\\-managed toolchain such as nightly or beta. Normally, "
+"`rustup` will complain that you already have Rust installed in `/usr` and "
+"refuse to install. However, you can install Rust via `rustup` and have it "
+"coexist with your packaged Rust toolchain."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:10
+msgid "Set up rustup with an existing Rust toolchain"
+msgstr "使用現有的 Rust 工具鏈設定 rustup"
+
+#: src/installation/already-installed-rust.md:12
+msgid ""
+"When you initially install Rust with `rustup`, pass the `-y` option to make "
+"it ignore the packaged Rust toolchain and install a `rustup`\\-managed "
+"toolchain into `~/.cargo/bin`. Add that directory to your `$PATH` (or let "
+"`rustup` do it for you by not passing `--no-modify-path`). Then, to tell "
+"`rustup` about your system toolchain, run:"
+msgstr ""
+
+#: src/installation/already-installed-rust.md:22
+msgid ""
+"You can then use \"system\" as a `rustup` toolchain, just like \"nightly\". "
+"For example, using the [toolchain override shorthand](../overrides."
+"md#toolchain-override-shorthand), you can run `cargo +system build` to build "
+"with the system toolchain, or `cargo +nightly build` to build with nightly."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:26
+msgid ""
+"If you wish to develop with the system toolchain (e.g. for distribution "
+"packages), you may want to make it your [default toolchain](../overrides."
+"md#default-toolchain):"
+msgstr ""
+
+#: src/installation/already-installed-rust.md:33
+msgid "Ensure the correct `$PATH` configuration"
+msgstr "確保 `$PATH` 組態正確"
+
+#: src/installation/already-installed-rust.md:35
+msgid ""
+"There are times when the above steps don't work, and you may see strange "
+"error messages when running commands that should have been proxied by "
+"rustup. For example, when running `cargo +stable --version`, you may "
+"encounter the following error:"
+msgstr ""
+
+#: src/installation/already-installed-rust.md:47
+msgid ""
+"This means `cargo` is currently not a `rustup` proxy, and your `$PATH` needs "
+"to be fixed."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:50
+msgid ""
+"In fact, on any machine with rustup installed, you would like to have "
+"**rustup proxies showing up first in `$PATH`**, shadowing any other Rust "
+"installations. Don't worry: these shadowed installations can then be adopted "
+"by rustup with the `rustup toolchain link` command as mentioned above."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:55
+msgid ""
+"The exact steps to be taken to make rustup proxies come first may vary "
+"according to your system environment, but usually it is about changing the "
+"evaluation order of certain lines in your shell configuration file(s)."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:59
+msgid ""
+"To make it clearer, let's look at the example of a Mac with both regular "
+"rustup fetched from [rustup.rs](https://rustup.rs) and homebrew-installed "
+"`rust`. The **right way** to configure `.profile` in this environment would "
+"be:"
+msgstr ""
+
+#: src/installation/already-installed-rust.md:68
+msgid ""
+"In this example, both of these lines _prepend_ to `$PATH`, so the last one "
+"takes over, letting the rustup proxies shadow the homebrew-installed `rust`. "
+"On the other hand, putting these lines the other way around will cause the "
+"aforementioned error."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:73
+msgid ""
+"When in doubt, you can always debug your shell configuration by printing the "
+"status of your current `$PATH` with `echo $PATH | xargs -n1` and paying "
+"attention to the order of `$CARGO_HOME/bin` (which defaults to `$HOME/.cargo/"
+"bin`) compared to your package manager's `bin` directory."
+msgstr ""
+
+#: src/installation/already-installed-rust.md:78
+msgid ""
+"After the fix, the output of `cargo +stable --version` should be similar to "
+"one of the following, depending on whether you have had the `stable` "
+"toolchain installed:"
+msgstr ""
+
+#: src/installation/other.md:1
+msgid "Other installation methods"
+msgstr "其他安裝方式"
+
+#: src/installation/other.md:3
+msgid ""
+"The primary installation method, as described at <https://rustup.rs>, "
+"differs by platform:"
+msgstr ""
+
+#: src/installation/other.md:6
+msgid ""
+"On Windows, download and run the `rustup-init.exe` built for the [`x86_64-pc-"
+"windows-msvc`](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-"
+"msvc/rustup-init.exe) or [`aarch64-pc-windows-msvc`](https://static.rust-"
+"lang.org/rustup/dist/aarch64-pc-windows-msvc/rustup-init.exe) target, "
+"depending on your OS architecture. In general, this is the build of `rustup` "
+"one should install on Windows. This will require [MSVC prerequisites]"
+"(windows-msvc.html). If you would prefer to install GNU toolchains or the "
+"i686 toolchains by default this can be modified at install time, either "
+"interactively, with the `--default-host` flag, or after installation via "
+"`rustup set default-host`."
+msgstr ""
+
+#: src/installation/other.md:14
+msgid ""
+"On Unix, run `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | "
+"sh` in your shell. This downloads and runs [`rustup-init.sh`](https://static."
+"rust-lang.org/rustup/rustup-init.sh), which in turn downloads and runs the "
+"correct version of the `rustup-init` executable for your platform."
+msgstr ""
+
+#: src/installation/other.md:23
+msgid ""
+"`rustup-init` accepts arguments, which can be passed through the shell "
+"script. Some examples:"
+msgstr ""
+
+#: src/installation/other.md:26
+msgid ""
+"```console\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"help\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-"
+"modify-path\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain nightly\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain none\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"profile minimal --default-toolchain nightly\n"
+"```"
+msgstr ""
+"```console\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"help\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-"
+"modify-path\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain nightly\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain none\n"
+"$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"profile minimal --default-toolchain nightly\n"
+"```"
+
+#: src/installation/other.md:35
+msgid "Using a package manager"
+msgstr "使用軟體包管理器"
+
+#: src/installation/other.md:37
+msgid ""
+"Please note that the rustup project is not maintaining any package mentioned "
+"in this section. If you have encountered any problems installing `rustup` "
+"with a package manager, please contact the package maintainer(s) for further "
+"information."
+msgstr ""
+
+#: src/installation/other.md:41
+msgid "General tips"
+msgstr ""
+
+#: src/installation/other.md:43
+msgid ""
+"Different package managers take slightly different approaches towards "
+"managing rustup. After installing rustup with your favorite package manager, "
+"there are usually two possibilities:"
+msgstr ""
+
+#: src/installation/other.md:46
+msgid ""
+"If your package manager has made the `rustup` command available together "
+"with proxies for Rust tools such as `rustc` and `cargo`, picking a default "
+"toolchain (e.g. `stable`) would usually be enough:"
+msgstr ""
+
+#: src/installation/other.md:54
+msgid ""
+"As of 2024/12/23, this is the case for [APT](https://packages.debian.org/"
+"search?searchon=names&keywords=rustup), [homebrew](https://formulae.brew.sh/"
+"formula/rustup) and [pacman](https://wiki.archlinux.org/title/"
+"Rust#Arch_Linux_package)."
+msgstr ""
+
+#: src/installation/other.md:59
+msgid ""
+"If your package manager has only made the `rustup-init` command available, "
+"simply run:"
+msgstr ""
+
+#: src/installation/other.md:65
+msgid ""
+"This will allow you to perform the initial setup of `rustup`, populate all "
+"the proxies managed by rustup, and install a default toolchain."
+msgstr ""
+
+#: src/installation/other.md:68
+msgid ""
+"As of 2024/12/23, this is the case for [DNF](https://developer.fedoraproject."
+"org/tech/languages/rust/further-reading.html)."
+msgstr ""
+
+#: src/installation/other.md:71
+msgid ""
+"When the installation is completed, please make sure that the rustup proxies "
+"(usually under `$HOME/.cargo/bin`) are [correctly exposed](./already-"
+"installed-rust.html#ensure-the-correct-path-configuration) via your `$PATH`, "
+"and you should be able to run `rustup`, `rustc`, `cargo`, etc. normally."
+msgstr ""
+
+#: src/installation/other.md:77
+msgid "APT"
+msgstr ""
+
+#: src/installation/other.md:79
+msgid ""
+"Starting from Debian 13 (trixie) and Ubuntu 24.04 (noble), you may use `apt` "
+"to install `rustup`:"
+msgstr ""
+
+#: src/installation/other.md:86
+msgid "Homebrew"
+msgstr ""
+
+#: src/installation/other.md:88
+msgid "You can use `brew` to install `rustup`[^not-rust]:"
+msgstr ""
+
+#: src/installation/other.md:94
+msgid ""
+"Please note that Rust tools like `rustc` and `cargo` are not available via "
+"`$PATH` by default in this `rustup` distribution (see [homebrew-core#177582]"
+"(https://github.com/Homebrew/homebrew-core/pull/177582) for more details). "
+"You might want to add `$(brew --prefix rustup)/bin` to `$PATH` to make them "
+"easier to access."
+msgstr ""
+
+#: src/installation/other.md:99
+msgid ""
+"This is not to be confused with the `rust` package, which is a `brew`\\-"
+"managed `rust` toolchain installation."
+msgstr ""
+
+#: src/installation/other.md:102
+msgid "Manual installation"
+msgstr ""
+
+#: src/installation/other.md:104
+msgid ""
+"You can manually download `rustup-init` for a given target from `https://"
+"static.rust-lang.org/rustup/dist/{target-triple}/rustup-init[.exe]`[^msys2] "
+"[^msvc]."
+msgstr ""
+
+#: src/installation/other.md:110
+msgid ""
+"[aarch64-apple-darwin](https://static.rust-lang.org/rustup/dist/aarch64-"
+"apple-darwin/rustup-init)"
+msgstr ""
+"[aarch64-apple-darwin](https://static.rust-lang.org/rustup/dist/aarch64-"
+"apple-darwin/rustup-init)"
+
+#: src/installation/other.md:111
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-apple-darwin/"
+"rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/aarch64-apple-darwin/"
+"rustup-init.sha256)"
+
+#: src/installation/other.md:112
+msgid ""
+"[aarch64-linux-android](https://static.rust-lang.org/rustup/dist/aarch64-"
+"linux-android/rustup-init)"
+msgstr ""
+"[aarch64-linux-android](https://static.rust-lang.org/rustup/dist/aarch64-"
+"linux-android/rustup-init)"
+
+#: src/installation/other.md:113
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-linux-android/"
+"rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/aarch64-linux-android/"
+"rustup-init.sha256)"
+
+#: src/installation/other.md:114
+msgid ""
+"[aarch64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/aarch64-"
+"pc-windows-msvc/rustup-init.exe)"
+msgstr ""
+"[aarch64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/aarch64-"
+"pc-windows-msvc/rustup-init.exe)"
+
+#: src/installation/other.md:115
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-"
+"msvc/rustup-init.exe.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-"
+"msvc/rustup-init.exe.sha256)"
+
+#: src/installation/other.md:116
+msgid ""
+"[aarch64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/aarch64-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+"[aarch64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/aarch64-"
+"unknown-linux-gnu/rustup-init)"
+
+#: src/installation/other.md:117
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:118
+msgid ""
+"[aarch64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"aarch64-unknown-linux-musl/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:119
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-"
+"musl/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:120
+msgid ""
+"[arm-linux-androideabi](https://static.rust-lang.org/rustup/dist/arm-linux-"
+"androideabi/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:121
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/arm-linux-androideabi/"
+"rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:122
+msgid ""
+"[arm-unknown-linux-gnueabi](https://static.rust-lang.org/rustup/dist/arm-"
+"unknown-linux-gnueabi/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:123
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/arm-unknown-linux-"
+"gnueabi/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:124
+msgid ""
+"[arm-unknown-linux-gnueabihf](https://static.rust-lang.org/rustup/dist/arm-"
+"unknown-linux-gnueabihf/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:125
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/arm-unknown-linux-"
+"gnueabihf/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:126
+msgid ""
+"[armv7-linux-androideabi](https://static.rust-lang.org/rustup/dist/armv7-"
+"linux-androideabi/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:127
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/armv7-linux-"
+"androideabi/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:128
+msgid ""
+"[armv7-unknown-linux-gnueabihf](https://static.rust-lang.org/rustup/dist/"
+"armv7-unknown-linux-gnueabihf/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:129
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-"
+"gnueabihf/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:130
+msgid ""
+"[i686-apple-darwin](https://static.rust-lang.org/rustup/dist/i686-apple-"
+"darwin/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:131
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/i686-apple-darwin/"
+"rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:132
+msgid ""
+"[i686-linux-android](https://static.rust-lang.org/rustup/dist/i686-linux-"
+"android/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:133
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/i686-linux-android/"
+"rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:134
+msgid ""
+"[i686-pc-windows-gnu](https://static.rust-lang.org/rustup/dist/i686-pc-"
+"windows-gnu/rustup-init.exe)[^msys2]"
+msgstr ""
+
+#: src/installation/other.md:135
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/"
+"rustup-init.exe.sha256)"
+msgstr ""
+
+#: src/installation/other.md:136
+msgid ""
+"[i686-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/i686-pc-"
+"windows-msvc/rustup-init.exe)[^msvc]"
+msgstr ""
+
+#: src/installation/other.md:137
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/i686-pc-windows-msvc/"
+"rustup-init.exe.sha256)"
+msgstr ""
+
+#: src/installation/other.md:138
+msgid ""
+"[i686-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/i686-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:139
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/i686-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:140
+msgid ""
+"[loongarch64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
+"loongarch64-unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:141
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/loongarch64-unknown-"
+"linux-gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:142
+msgid ""
+"[loongarch64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"loongarch64-unknown-linux-musl/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:143
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/loongarch64-unknown-"
+"linux-musl/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:144
+msgid ""
+"[mips-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/mips-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:145
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/mips-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:146
+msgid ""
+"[mips64-unknown-linux-gnuabi64](https://static.rust-lang.org/rustup/dist/"
+"mips64-unknown-linux-gnuabi64/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:147
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/mips64-unknown-linux-"
+"gnuabi64/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:148
+msgid ""
+"[mips64el-unknown-linux-gnuabi64](https://static.rust-lang.org/rustup/dist/"
+"mips64el-unknown-linux-gnuabi64/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:149
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/mips64el-unknown-"
+"linux-gnuabi64/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:150
+msgid ""
+"[mipsel-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/mipsel-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:151
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/mipsel-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:152
+msgid ""
+"[powerpc-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/powerpc-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:153
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:154
+msgid ""
+"[powerpc64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
+"powerpc64-unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:155
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64-unknown-"
+"linux-gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:156
+msgid ""
+"[powerpc64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"powerpc64-unknown-linux-musl/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:157
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64-unknown-"
+"linux-musl/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:158
+msgid ""
+"[powerpc64le-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/"
+"powerpc64le-unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:159
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-"
+"linux-gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:160
+msgid ""
+"[powerpc64le-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/"
+"powerpc64le-unknown-linux-musl/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:161
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-"
+"linux-musl/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:162
+msgid ""
+"[s390x-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/s390x-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:163
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/s390x-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:164
+msgid ""
+"[sparcv9-sun-solaris](https://static.rust-lang.org/rustup/dist/sparcv9-sun-"
+"solaris/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:165
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/sparcv9-sun-solaris/"
+"rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:166
+msgid ""
+"[x86_64-apple-darwin](https://static.rust-lang.org/rustup/dist/x86_64-apple-"
+"darwin/rustup-init)"
+msgstr ""
+
+#: src/installation/other.md:167
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-apple-darwin/"
+"rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-apple-darwin/"
+"rustup-init.sha256)"
+
+#: src/installation/other.md:168
+msgid ""
+"[x86_64-linux-android](https://static.rust-lang.org/rustup/dist/x86_64-linux-"
+"android/rustup-init)"
+msgstr ""
+"[x86_64-linux-android](https://static.rust-lang.org/rustup/dist/x86_64-linux-"
+"android/rustup-init)"
+
+#: src/installation/other.md:169
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-linux-android/"
+"rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-linux-android/"
+"rustup-init.sha256)"
+
+#: src/installation/other.md:170
+msgid ""
+"[x86_64-pc-solaris](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
+"solaris/rustup-init)"
+msgstr ""
+"[x86_64-pc-solaris](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
+"solaris/rustup-init)"
+
+#: src/installation/other.md:171
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-pc-solaris/"
+"rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-pc-solaris/"
+"rustup-init.sha256)"
+
+#: src/installation/other.md:172
+msgid ""
+"[x86_64-pc-windows-gnu](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
+"windows-gnu/rustup-init.exe)[^msys2]"
+msgstr ""
+"[x86_64-pc-windows-gnu](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
+"windows-gnu/rustup-init.exe)[^msys2]"
+
+#: src/installation/other.md:173
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-gnu/"
+"rustup-init.exe.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-gnu/"
+"rustup-init.exe.sha256)"
+
+#: src/installation/other.md:174
+msgid ""
+"[x86_64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
+"windows-msvc/rustup-init.exe)[^msvc]"
+msgstr ""
+"[x86_64-pc-windows-msvc](https://static.rust-lang.org/rustup/dist/x86_64-pc-"
+"windows-msvc/rustup-init.exe)[^msvc]"
+
+#: src/installation/other.md:175
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-"
+"msvc/rustup-init.exe.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-"
+"msvc/rustup-init.exe.sha256)"
+
+#: src/installation/other.md:176
+msgid ""
+"[x86_64-unknown-freebsd](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-freebsd/rustup-init)"
+msgstr ""
+"[x86_64-unknown-freebsd](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-freebsd/rustup-init)"
+
+#: src/installation/other.md:177
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-"
+"freebsd/rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-unknown-"
+"freebsd/rustup-init.sha256)"
+
+#: src/installation/other.md:178
+msgid ""
+"[x86_64-unknown-illumos](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-illumos/rustup-init)"
+msgstr ""
+"[x86_64-unknown-illumos](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-illumos/rustup-init)"
+
+#: src/installation/other.md:179
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-"
+"illumos/rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-unknown-"
+"illumos/rustup-init.sha256)"
+
+#: src/installation/other.md:180
+msgid ""
+"[x86_64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-linux-gnu/rustup-init)"
+msgstr ""
+"[x86_64-unknown-linux-gnu](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-linux-gnu/rustup-init)"
+
+#: src/installation/other.md:181
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-"
+"gnu/rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-"
+"gnu/rustup-init.sha256)"
+
+#: src/installation/other.md:182
+msgid ""
+"[x86_64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-linux-musl/rustup-init)"
+msgstr ""
+"[x86_64-unknown-linux-musl](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-linux-musl/rustup-init)"
+
+#: src/installation/other.md:183
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-"
+"musl/rustup-init.sha256)"
+msgstr ""
+"[sha256 檔案](https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-"
+"musl/rustup-init.sha256)"
+
+#: src/installation/other.md:184
+msgid ""
+"[x86_64-unknown-netbsd](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-netbsd/rustup-init)"
+msgstr ""
+"[x86_64-unknown-netbsd](https://static.rust-lang.org/rustup/dist/x86_64-"
+"unknown-netbsd/rustup-init)"
+
+#: src/installation/other.md:185
+msgid ""
+"[sha256 file](https://static.rust-lang.org/rustup/dist/x86_64-unknown-netbsd/"
+"rustup-init.sha256)"
+msgstr ""
+
+#: src/installation/other.md:189
+msgid ""
+"To get a previous version, use `https://static.rust-lang.org/rustup/archive/"
+"{rustup-version}/{target-triple}/rustup-init[.exe]`."
+msgstr ""
+
+#: src/installation/other.md:192
+msgid ""
+"SHA-256 checksums are also available by appending `.sha256` to the link."
+msgstr ""
+
+#: src/installation/other.md:194
+msgid ""
+"Windows GNU builds require no additional software for basic use. However, "
+"many library crates will not be able to compile until the full [MSYS2]"
+"(https://www.msys2.org/) with MinGW has been installed."
+msgstr ""
+
+#: src/installation/other.md:200
+msgid ""
+"MSVC builds of `rustup` additionally require an [installation of Visual "
+"Studio 2019 or the Visual C++ Build Tools 2019](https://visualstudio."
+"microsoft.com/downloads/). For Visual Studio, make sure to check the \"C++ "
+"tools\" and \"Windows 10 SDK\" option."
+msgstr ""
+
+#: src/installation/other.md:206
+msgid "Self-compiled installation"
+msgstr ""
+
+#: src/installation/other.md:208
+msgid ""
+"To install `rustup` from source, check out the git repository from <https://"
+"github.com/rust-lang/rustup> and run `cargo run --release`. Note that after "
+"installation the `rustup` toolchains will supersede any pre-existing "
+"toolchains by prepending `~/.cargo/bin` to the `PATH` environment variable."
+msgstr ""
+
+#: src/installation/windows.md:1
+msgid "Windows"
+msgstr ""
+
+#: src/installation/windows.md:3
+msgid ""
+"`rustup` works the same on Windows as it does on Unix, but there are some "
+"special considerations for Rust developers on Windows. As [mentioned on the "
+"Rust download page](https://www.rust-lang.org/tools/install?"
+"platform_override=win), there are two [ABIs](https://en.wikipedia.org/wiki/"
+"Application_binary_interface) in use on Windows: the native (MSVC) ABI used "
+"by [Visual Studio](https://visualstudio.microsoft.com/), and the GNU ABI "
+"used by the [GCC toolchain](https://gcc.gnu.org/). Which version of Rust you "
+"need depends largely on what C/C++ libraries you want to interoperate with: "
+"for interop with software produced by Visual Studio use the MSVC build of "
+"Rust; for interop with GNU software built using the [MinGW/MSYS2 toolchain]"
+"(https://www.msys2.org/) use the GNU build."
+msgstr ""
+
+#: src/installation/windows.md:12
+msgid ""
+"When targeting the MSVC ABI, Rust additionally requires an [installation of "
+"Visual Studio](windows-msvc.html) so `rustc` can use its linker and "
+"libraries."
+msgstr ""
+
+#: src/installation/windows.md:15
+msgid ""
+"When targeting the GNU ABI, no additional software is strictly required for "
+"basic use. However, many library crates will not be able to compile until "
+"the full [MSYS2](https://www.msys2.org/) with MinGW has been installed."
+msgstr ""
+
+#: src/installation/windows.md:18
+msgid ""
+"By default `rustup` on Windows configures Rust to target the MSVC ABI, that "
+"is a target tuple of either `i686-pc-windows-msvc`, `x86_64-pc-windows-"
+"msvc`, or `aarch64-pc-windows-msvc` depending on the CPU architecture of the "
+"host Windows OS. The toolchains that `rustup` chooses to install, unless "
+"told otherwise through the [toolchain specification](../concepts/toolchains."
+"md#toolchain-specification), will be compiled to run on that target tuple "
+"host and will target that triple by default."
+msgstr ""
+
+#: src/installation/windows.md:25
+msgid ""
+"You can change this behavior with `rustup set default-host` or during "
+"installation."
+msgstr ""
+
+#: src/installation/windows.md:28
+msgid "For example, to explicitly select the 32-bit MSVC host:"
+msgstr ""
+
+#: src/installation/windows.md:34
+msgid "Or to choose the 64 bit GNU toolchain:"
+msgstr ""
+
+#: src/installation/windows.md:40
+msgid ""
+"Since the MSVC ABI provides the best interoperation with other Windows "
+"software it is recommended for most purposes. The GNU toolchain is always "
+"available, even if you don't use it by default. Just install it with `rustup "
+"toolchain install`:"
+msgstr ""
+
+#: src/installation/windows.md:49
+msgid ""
+"You don't need to switch toolchains to support all windows targets though; a "
+"single toolchain supports all four x86 windows targets:"
+msgstr ""
+"您無需切換工具鏈即可支援所有 Windows 目標平臺；單一工具鏈即可支援所有四個 "
+"x86 Windows 目標平臺："
+
+#: src/installation/windows.md:59
+msgid ""
+"See the [Cross-compilation](../cross-compilation.md) chapter for more "
+"details on specifying different targets with the same compiler."
+msgstr ""
+
+#: src/installation/windows-msvc.md:1
+msgid "MSVC prerequisites"
+msgstr ""
+
+#: src/installation/windows-msvc.md:3
+msgid ""
+"To compile programs into an exe file, Rust requires a linker, libraries and "
+"Windows API import libraries. For `msvc` targets these can be acquired "
+"through Visual Studio."
+msgstr ""
+
+#: src/installation/windows-msvc.md:6
+msgid "Automatic install"
+msgstr "自動安裝"
+
+#: src/installation/windows-msvc.md:8
+msgid ""
+"If you don't have Visual Studio already installed then [rustup-init](https://"
+"rustup.rs) will offer to automatically install the prerequisites. Doing so "
+"means you can skip the rest of this page. However, it installs Visual Studio "
+"Community edition which may not be appropriate for all users. It is free for "
+"individuals, academic and open source use, but not for other uses, such as "
+"in proprietary enterprise software. Users should ask their organisation "
+"which edition is right for them. See [licensing terms](https://visualstudio."
+"microsoft.com/license-terms/) for more details."
+msgstr ""
+
+#: src/installation/windows-msvc.md:15
+msgid "WinGet"
+msgstr ""
+
+#: src/installation/windows-msvc.md:17
+msgid ""
+"Alternatively Visual Studio can be installed via the [WinGet](https://learn."
+"microsoft.com/en-us/windows/package-manager/winget/) package manager, which "
+"should be available by default on recent versions of Windows. Run the "
+"following command in powershell or the command prompt:"
+msgstr ""
+
+#: src/installation/windows-msvc.md:20
+msgid ""
+"```\n"
+"winget install --id Microsoft.VisualStudio.2022.Community --source winget --"
+"force --override \"--add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --"
+"add Microsoft.VisualStudio.Component.VC.Tools.ARM64 --add Microsoft."
+"VisualStudio.Component.Windows11SDK.22621 --addProductLang En-us\"\n"
+"```"
+msgstr ""
+
+#: src/installation/windows-msvc.md:24
+msgid ""
+"You can replace \"Community\" with \"BuildTools\" in the above command if "
+"you already have a Visual Studio license."
+msgstr ""
+
+#: src/installation/windows-msvc.md:26
+msgid "Missing Windows SDK"
+msgstr ""
+
+#: src/installation/windows-msvc.md:28
+msgid ""
+"If after running the above command the Windows 11 SDK is missing then you "
+"may need to manually install it, which can also be done via WinGet. First "
+"search for the available versions:"
+msgstr ""
+
+#: src/installation/windows-msvc.md:35
+msgid "This should display a table of results. that will look like this:"
+msgstr ""
+
+#: src/installation/windows-msvc.md:45
+msgid ""
+"Pick the Id with the latest version and install that via `winget install`. "
+"For example, to install `Microsoft.WindowsSDK.10.0.26100` run:"
+msgstr ""
+
+#: src/installation/windows-msvc.md:54
+msgid "Manual install"
+msgstr ""
+
+#: src/installation/windows-msvc.md:56
+msgid ""
+"[Download Visual Studio](https://visualstudio.microsoft.com/downloads/). "
+"Rust supports Visual Studio 2017 and later but it is recommended that you "
+"use the latest version (currently 2022) for new projects. You can opt to "
+"download only the Build Tools for Visual Studio, which does not include the "
+"IDE. However this requires you already have a license to the Community, "
+"Professional or Enterprise edition."
+msgstr ""
+
+#: src/installation/windows-msvc.md:61
+msgid ""
+"Once you've downloaded and started the installer, the easiest way to get "
+"everything installed is to select \"Desktop Development with C++\". This "
+"will include the necessary components. On the \"Language Packs\" tab, make "
+"sure the English language pack is installed in addition to your preferred "
+"language."
+msgstr ""
+
+#: src/installation/windows-msvc.md:65
+msgid ""
+"If you want more details on the installation process or want to further "
+"customize the install then follow the walkthrough below. Otherwise complete "
+"the Visual Studio install and continue with installing Rust."
+msgstr ""
+
+#: src/installation/windows-msvc.md:68
+msgid "Walkthrough: Installing Visual Studio 2022"
+msgstr ""
+
+#: src/installation/windows-msvc.md:70
+msgid ""
+"This walkthrough uses the Community edition of Visual Studio but the "
+"Professional, Enterprise and the Build Tools all work the same way."
+msgstr ""
+
+#: src/installation/windows-msvc.md:72
+msgid ""
+"The installer will start by linking to the [license](https://visualstudio."
+"microsoft.com/license-terms/) and for your edition of Visual Studio and then "
+"preparing the installer."
+msgstr ""
+
+#: src/installation/windows-msvc.md:74
+msgid ""
+"![Accept the license](images/step1.png) ![Installing the installer](images/"
+"step2.png)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:77
+msgid ""
+"Once this finishes, you can then select the components to be installed. Here "
+"we use the \"Workload\" tab to select the \"Desktop Development with C++\" "
+"workload. This will includes all needed components for Rust: ![Select the C+"
+"+ Workload](images/step3.png)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:82
+msgid "Installing only the required components (optional)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:84
+msgid ""
+"If you'd like a more minimal install (and won't be doing C++ development) "
+"then you can use the \"Individual Components\" tab to select just the "
+"essentials, which are:"
+msgstr ""
+
+#: src/installation/windows-msvc.md:86
+msgid "MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:87
+msgid "Windows 11 SDK (10.0.22621.0)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:89
+msgid ""
+"Note that the specific version of the Windows SDK doesn't matter for pure "
+"Rust code but if using C++ as well you'll likely want either the latest or "
+"whichever version is required by the C++ project (or both)."
+msgstr ""
+
+#: src/installation/windows-msvc.md:91
+msgid ""
+"![Select the latest MSVC component](images/component-msvc.png) ![Select the "
+"Windows 11 SDK component](images/component-sdk.png)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:94
+msgid "Adding Language Packs (optional)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:96
+msgid ""
+"After choosing the components, you may also want to select the language "
+"packs to install. Switch to the \"Language Packs\" tab and add the "
+"languages. It is recommended that you add the English language pack in "
+"addition to your preferred language. This will provide English language "
+"error messages, which may help when reporting errors."
+msgstr ""
+
+#: src/installation/windows-msvc.md:101
+msgid "![Add the English language](images/step4.png)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:103
+msgid "Completing the install"
+msgstr ""
+
+#: src/installation/windows-msvc.md:105
+msgid ""
+"Finally click the install button and wait for everything to be installed."
+msgstr ""
+
+#: src/installation/windows-msvc.md:107
+msgid "![Wait for the install to complete](images/step5.png)"
+msgstr ""
+
+#: src/installation/windows-msvc.md:109
+msgid "Once finished, you can continue on to installing Rust."
+msgstr ""
+
+#: src/index.md:1
+msgid "Introduction"
+msgstr ""
+
+#: src/index.md:3
+msgid ""
+"_rustup_ installs [The Rust Programming Language](https://www.rust-lang.org) "
+"from the official release channels, enabling you to easily switch between "
+"stable, beta, and nightly compilers and keep them updated. It makes cross-"
+"compiling simpler with binary builds of the standard library for common "
+"platforms. And it runs on all platforms Rust supports."
+msgstr ""
+
+#: src/index.md:9
+msgid ""
+"Check out the [Concepts](concepts/index.md) chapter for an overview of how "
+"rustup works and some of the terminology it uses. The [Installation]"
+"(installation/index.md) chapter covers installing rustup and getting started."
+msgstr ""
+
+#: src/index.md:13
+msgid ""
+"The source code of rustup and this manual may be found at <https://github."
+"com/rust-lang/rustup>. If you find a problem, check out the [issue tracker]"
+"(https://github.com/rust-lang/rustup/issues)."
+msgstr ""
+
+#: src/index.md:17
+msgid ""
+"Release notes for rustup may be found in the [CHANGELOG](https://github.com/"
+"rust-lang/rustup/blob/HEAD/CHANGELOG.md)."
+msgstr ""
+
+#: src/network-proxies.md:1
+msgid "Network proxies"
+msgstr ""
+
+#: src/network-proxies.md:3
+msgid ""
+"Enterprise networks often don't have direct outside HTTP access, but enforce "
+"the use of proxies. If you're on such a network, you can request that "
+"`rustup` uses a proxy by setting its URL in the environment. In most cases, "
+"setting `https_proxy` should be sufficient. Commands may differ between "
+"different systems and shells:"
+msgstr ""
+
+#: src/network-proxies.md:9
+msgid "On a Unix-like system with a shell like **bash** or **zsh**:"
+msgstr ""
+
+#: src/network-proxies.md:11 src/network-proxies.md:15
+msgid "socks5://proxy.example.com:1080"
+msgstr "socks5://proxy.example.com:1080"
+
+#: src/network-proxies.md:13
+msgid ""
+"On Windows [**Command Prompt (cmd)**](https://en.wikipedia.org/wiki/Cmd.exe):"
+msgstr ""
+
+#: src/network-proxies.md:17
+msgid ""
+"On Windows [**PowerShell**](https://en.wikipedia.org/wiki/PowerShell) (or "
+"**PowerShell Core**):"
+msgstr ""
+
+#: src/network-proxies.md:19
+msgid "\"socks5://proxy.example.com:1080\""
+msgstr "\"socks5://proxy.example.com:1080\""
+
+#: src/network-proxies.md:21
+msgid ""
+"Replace `socks5://proxy.example.com:1080` with `http://proxy.example."
+"com:8080` when an HTTP proxy is used instead."
+msgstr ""
+
+#: src/network-proxies.md:24
+msgid ""
+"If you need a more complex setup, `rustup` supports the convention used by "
+"the **curl** program, documented in the ENVIRONMENT section of [its manual "
+"page](https://curl.se/docs/manpage.html#:~:text=Environment,-"
+"The%20environment%20variables)."
+msgstr ""
+
+#: src/network-proxies.md:28
+msgid ""
+"The use of `curl` is presently **deprecated**, however it can still be used "
+"by providing the `RUSTUP_USE_CURL` environment variable, for example:"
+msgstr ""
+
+#: src/network-proxies.md:32
+msgid "1"
+msgstr ""
+
+#: src/network-proxies.md:35
+msgid ""
+"Note that some versions of `libcurl` apparently require you to drop the "
+"`http://` or `https://` prefix in environment variables. For example, "
+"`export http_proxy=proxy.example.com:1080` (and likewise for HTTPS). If you "
+"are getting an SSL `unknown protocol` error from `rustup` via `libcurl` but "
+"the command-line `curl` command works fine, this may be the problem."
+msgstr ""
+
+#: src/overrides.md:1
+msgid "Overrides"
+msgstr ""
+
+#: src/overrides.md:3
+msgid ""
+"`rustup` automatically determines which [toolchain](concepts/toolchains.md) "
+"to use when one of the installed commands like `rustc` is executed. There "
+"are several ways to control and override which toolchain is used:"
+msgstr ""
+
+#: src/overrides.md:7
+msgid ""
+"A [toolchain override shorthand](#toolchain-override-shorthand) used on the "
+"command-line, such as `cargo +beta`."
+msgstr ""
+
+#: src/overrides.md:9
+msgid "The `RUSTUP_TOOLCHAIN` environment variable."
+msgstr "`RUSTUP_TOOLCHAIN` 環境變數。"
+
+#: src/overrides.md:10
+msgid ""
+"A [directory override](#directory-overrides), set with the `rustup override` "
+"command."
+msgstr ""
+
+#: src/overrides.md:11
+msgid "The [`rust-toolchain.toml`](#the-toolchain-file) file."
+msgstr "[`rust-toolchain.toml`](#the-toolchain-file) 檔案。"
+
+#: src/overrides.md:12
+msgid "The [default toolchain](#default-toolchain)."
+msgstr "[默認工具鏈](#default-toolchain)。"
+
+#: src/overrides.md:14
+msgid ""
+"The toolchain is chosen in the order listed above, using the first one that "
+"is specified. There is one exception though: directory overrides and the "
+"`rust-toolchain.toml` file are also preferred by their proximity to the "
+"current directory. That is, these two override methods are discovered by "
+"walking up the directory tree toward the filesystem root, and a `rust-"
+"toolchain.toml` file that is closer to the current directory will be "
+"preferred over a directory override that is further away."
+msgstr ""
+
+#: src/overrides.md:22
+msgid "To verify which toolchain is active, you can use `rustup show`."
+msgstr ""
+
+#: src/overrides.md:30
+msgid "Toolchain override shorthand"
+msgstr ""
+
+#: src/overrides.md:32
+msgid ""
+"The `rustup` toolchain proxies can be instructed directly to use a specific "
+"toolchain, a convenience for developers who often test different toolchains. "
+"If the first argument to `cargo`, `rustc` or other tools in the toolchain "
+"begins with `+`, it will be interpreted as a `rustup` toolchain name, and "
+"that toolchain will be preferred, as in"
+msgstr ""
+
+#: src/overrides.md:42
+msgid "Directory overrides"
+msgstr ""
+
+#: src/overrides.md:44
+msgid ""
+"Directories can be assigned their own Rust toolchain with `rustup override`. "
+"When a directory has an override then any time `rustc` or `cargo` is run "
+"inside that directory, or one of its child directories, the override "
+"toolchain will be invoked."
+msgstr ""
+
+#: src/overrides.md:49
+msgid "To use to a specific nightly for a directory:"
+msgstr ""
+
+#: src/overrides.md:55
+msgid "Or a specific stable release:"
+msgstr ""
+
+#: src/overrides.md:61
+msgid ""
+"To see the active toolchain use `rustup show`. To remove the override and "
+"use the default toolchain again, `rustup override unset`."
+msgstr ""
+
+#: src/overrides.md:64
+msgid ""
+"The per-directory overrides are stored in [a configuration file]"
+"(configuration.md) in `rustup`'s home directory."
+msgstr ""
+
+#: src/overrides.md:69
+msgid "The toolchain file"
+msgstr "工具鏈檔案"
+
+#: src/overrides.md:71
+msgid ""
+"Some projects find themselves 'pinned' to a specific release of Rust and "
+"want this information reflected in their source repository. This is most "
+"often the case for nightly-only software that pins to a revision from the "
+"release archives."
+msgstr ""
+
+#: src/overrides.md:76
+msgid ""
+"In these cases the toolchain can be named in the project's directory in a "
+"file called `rust-toolchain.toml` or `rust-toolchain`. If both files are "
+"present in a directory, the latter is used for backwards compatibility. The "
+"files use the [TOML](https://toml.io/) format and have the following layout:"
+msgstr ""
+
+#: src/overrides.md:83
+msgid ""
+"```toml\n"
+"[toolchain]\n"
+"channel = \"nightly-2020-07-10\"\n"
+"components = [ \"rustfmt\", \"rustc-dev\" ]\n"
+"targets = [ \"wasm32-unknown-unknown\", \"thumbv2-none-eabi\" ]\n"
+"profile = \"minimal\"\n"
+"```"
+msgstr ""
+
+#: src/overrides.md:91
+msgid ""
+"The `[toolchain]` section is mandatory, and at least one property must be "
+"specified. `channel` and `path` are mutually exclusive."
+msgstr ""
+
+#: src/overrides.md:94
+msgid ""
+"For backwards compatibility, `rust-toolchain` files also support a legacy "
+"format that only contains a toolchain name without any TOML encoding, e.g. "
+"just `nightly-2021-01-21`. The file has to be encoded in US-ASCII in this "
+"case (if you are on Windows, check the encoding and that it does not start "
+"with a BOM). The legacy format is not available in `rust-toolchain.toml` "
+"files."
+msgstr ""
+
+#: src/overrides.md:100
+msgid ""
+"If you see the following error (when running `rustc`, `cargo` or other "
+"command)"
+msgstr ""
+
+#: src/overrides.md:106
+msgid ""
+"it means you're running `rustup` pre-1.23.0 and trying to interact with a "
+"project that uses the new TOML encoding in the `rust-toolchain` file. You "
+"need to upgrade `rustup` to 1.23.0+."
+msgstr ""
+
+#: src/overrides.md:110
+msgid ""
+"The `rust-toolchain.toml`/`rust-toolchain` files are suitable to check in to "
+"source control. If that's done, `Cargo.lock` should probably be tracked too "
+"if the toolchain is pinned to a specific release, to avoid potential "
+"compatibility issues with dependencies."
+msgstr ""
+
+#: src/overrides.md:115
+msgid "Toolchain file settings"
+msgstr "工具鏈檔案設定"
+
+#: src/overrides.md:117
+msgid "channel"
+msgstr ""
+
+#: src/overrides.md:119
+msgid ""
+"The `channel` setting specifies which [toolchain](concepts/toolchains.md) to "
+"use. The value is a string in the following form:"
+msgstr ""
+
+#: src/overrides.md:133
+msgid "path"
+msgstr ""
+
+#: src/overrides.md:135
+msgid ""
+"The `path` setting allows a custom toolchain to be used. The value is an "
+"absolute path string."
+msgstr ""
+
+#: src/overrides.md:138
+msgid ""
+"Since a `path` directive directly names a local toolchain, other options "
+"like `components`, `targets`, and `profile` have no effect."
+msgstr ""
+
+#: src/overrides.md:141
+msgid ""
+"`channel` and `path` are mutually exclusive, since a `path` already points "
+"to a specific toolchain."
+msgstr ""
+
+#: src/overrides.md:144
+msgid "profile"
+msgstr ""
+
+#: src/overrides.md:146
+msgid ""
+"The `profile` setting names a group of components to be installed. The value "
+"is a string. The valid options are: `minimal`, `default`, and `complete`. "
+"See [profiles](concepts/profiles.md) for details of each."
+msgstr ""
+
+#: src/overrides.md:150
+msgid ""
+"Note that if not specified, the `default` profile is not necessarily used, "
+"as a different default profile might have been set with `rustup set profile`."
+msgstr ""
+
+#: src/overrides.md:156
+msgid "components"
+msgstr ""
+
+#: src/overrides.md:158
+msgid ""
+"The `components` setting contains a list of additional components to "
+"install. The value is a list of strings. See [components](concepts/"
+"components.md) for a list of components. Note that different toolchains may "
+"have different components available."
+msgstr ""
+
+#: src/overrides.md:163
+msgid "The components listed here are additive with the current profile."
+msgstr ""
+
+#: src/overrides.md:167
+msgid "targets"
+msgstr ""
+
+#: src/overrides.md:169
+msgid ""
+"The `targets` setting contains a list of platforms to install for [cross-"
+"compilation](https://rust-lang.github.io/rustup/cross-compilation.html). The "
+"value is a list of strings."
+msgstr ""
+
+#: src/overrides.md:172
+msgid ""
+"The host platform is automatically included; the targets listed here are "
+"additive."
+msgstr ""
+
+#: src/overrides.md:177
+msgid "Default toolchain"
+msgstr ""
+
+#: src/overrides.md:179
+msgid ""
+"If no other overrides are set, the global default toolchain will be used. "
+"This default can be chosen when `rustup` is [installed](installation/index."
+"md). The `rustup default` command can be used to set and query the current "
+"default. Run `rustup default` without any arguments to print the current "
+"default. Specify a toolchain as an argument to change the default:"
+msgstr ""
+
+#: src/security.md:1
+msgid "Security"
+msgstr ""
+
+#: src/security.md:3
+msgid ""
+"`rustup` is secure enough for most people, but it [still needs work](https://"
+"github.com/rust-lang/rustup/issues?q=is%3Aopen+is%3Aissue+label%3Asecurity). "
+"`rustup` performs all downloads over HTTPS, but does not yet validate "
+"signatures of downloads."
+msgstr ""
+
+#: src/security.md:9
+msgid ""
+"File modes on installation honor umask as of 1.18.4, use umask if very tight "
+"controls are desired."
+msgstr ""
+
+#: src/security.md:12
+msgid ""
+"If you wish to report a security issue, please follow the [Rust security "
+"policy](https://www.rust-lang.org/policies/security)."
+msgstr ""
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr ""
