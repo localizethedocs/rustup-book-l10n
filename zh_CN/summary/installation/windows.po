@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/installation/windows.md:1
+msgid "Windows"
+msgstr "Windows系统"
+
+#: src/installation/windows.md:3
+msgid ""
+"`rustup` works the same on Windows as it does on Unix, but there are some "
+"special considerations for Rust developers on Windows. As [mentioned on the "
+"Rust download page](https://www.rust-lang.org/tools/install?"
+"platform_override=win), there are two [ABIs](https://en.wikipedia.org/wiki/"
+"Application_binary_interface) in use on Windows: the native (MSVC) ABI used "
+"by [Visual Studio](https://visualstudio.microsoft.com/), and the GNU ABI "
+"used by the [GCC toolchain](https://gcc.gnu.org/). Which version of Rust you "
+"need depends largely on what C/C++ libraries you want to interoperate with: "
+"for interop with software produced by Visual Studio use the MSVC build of "
+"Rust; for interop with GNU software built using the [MinGW/MSYS2 toolchain]"
+"(https://www.msys2.org/) use the GNU build."
+msgstr ""
+"`rustup` 在Windows上和Unix上相同，但是对于Windows上的Rust 开发者有一些特殊的"
+"考虑。 正如[在Rust下载页面上提到的](https://www.rust-lang.org/tools/install?"
+"platform_override=win), Windows上有两种 [ABIs](https://en.wikipedia.org/wiki/"
+"Application_binary_interface)：[Visual Studio](https://visualstudio."
+"microsoft.com/)使用的原生(MSVC) ABI， 和 GNU ABI 使用 [海湾合作委员会工具链] "
+"(https://gcc.gnu.org/)。 你需要哪种版本的Rust在很大程度上取决于你想要与哪些C/"
+"C++ 库相互作用: 因为与Visual Studio生产的软件互换使用MSVC building of Rus; 对"
+"于使用 [MinGW/MSYS2 工具链] (https://www.msys2.org/建立的 GNU 软件的互联，请"
+"使用 GNU 构建。"
+
+#: src/installation/windows.md:12
+msgid ""
+"When targeting the MSVC ABI, Rust additionally requires an [installation of "
+"Visual Studio](windows-msvc.html) so `rustc` can use its linker and "
+"libraries."
+msgstr ""
+"当针对MSVC ABI时，Rust 还需要一个[安装Visual Studio](windows-msvc.html)，因此"
+"`rustc` 可以使用它的链接和库。"
+
+#: src/installation/windows.md:15
+msgid ""
+"When targeting the GNU ABI, no additional software is strictly required for "
+"basic use. However, many library crates will not be able to compile until "
+"the full [MSYS2](https://www.msys2.org/) with MinGW has been installed."
+msgstr ""
+"Windows GNU 构建不需要额外的软件进行基本使用。 然而，许多库箱将无法编译，直到"
+"安装完满的 [MSYS2](https://www.msys2.org/)。"
+
+#: src/installation/windows.md:18
+msgid ""
+"By default `rustup` on Windows configures Rust to target the MSVC ABI, that "
+"is a target tuple of either `i686-pc-windows-msvc`, `x86_64-pc-windows-"
+"msvc`, or `aarch64-pc-windows-msvc` depending on the CPU architecture of the "
+"host Windows OS. The toolchains that `rustup` chooses to install, unless "
+"told otherwise through the [toolchain specification](../concepts/toolchains."
+"md#toolchain-specification), will be compiled to run on that target tuple "
+"host and will target that triple by default."
+msgstr ""
+"在 Windows 上默认`rustup` 配置Rust来瞄准MSVC ABI 时，它是一个 `i686-pc-"
+"windows-msvc` 的目标管, `x86_64-pc-windows-msvc`, 或 `aarch64-pc-windows-"
+"msvc` 取决于主机 Windows OS 的 CPU 结构。 `rustup` 选择安装的工具链，除非通"
+"过 [toolchain 规格](../concepts/toolchains.md#toolchain-specification) 将被编"
+"译在目标管主页上运行，并默认以此为目标主机。"
+
+#: src/installation/windows.md:25
+msgid ""
+"You can change this behavior with `rustup set default-host` or during "
+"installation."
+msgstr "您可以使用 \"rusup 设置默认主机\" 或在安装过程中更改此行为。"
+
+#: src/installation/windows.md:28
+msgid "For example, to explicitly select the 32-bit MSVC host:"
+msgstr "例如，要明确选择32位 MSVC 主机："
+
+#: src/installation/windows.md:34
+msgid "Or to choose the 64 bit GNU toolchain:"
+msgstr "或者选择64 位 GNU 工具链："
+
+#: src/installation/windows.md:40
+msgid ""
+"Since the MSVC ABI provides the best interoperation with other Windows "
+"software it is recommended for most purposes. The GNU toolchain is always "
+"available, even if you don't use it by default. Just install it with `rustup "
+"toolchain install`:"
+msgstr ""
+"由于MSVC ABI提供了与其他Windows软件的最佳交互功能，建议它用于大多数目的。 "
+"GNU 工具链总是可用的，即使您默认不使用它。只需安装`rusup toolchain 安装'："
+
+#: src/installation/windows.md:49
+msgid ""
+"You don't need to switch toolchains to support all windows targets though; a "
+"single toolchain supports all four x86 windows targets:"
+msgstr ""
+"您不需要切换工具链来支持所有窗口目标；单个工具链支持所有四个x86窗口目标："
+
+#: src/installation/windows.md:59
+msgid ""
+"See the [Cross-compilation](../cross-compilation.md) chapter for more "
+"details on specifying different targets with the same compiler."
+msgstr ""
+"用同一编译器指定不同目标的更多详细信息，请参阅 [Cross-compilation](../cross-"
+"compilation.md)。"
