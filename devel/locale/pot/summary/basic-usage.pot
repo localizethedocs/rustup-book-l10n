@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The rustup book\n"
-"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"POT-Creation-Date: 2026-09-01T13:22:33Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/basics.md:1
@@ -82,18 +82,18 @@ msgstr ""
 msgid "Disabling self updates on a per-invocation basis"
 msgstr ""
 
-#: src/basics.md:57
+#: src/basics.md:58
 msgid ""
 "Self updates can also be suppressed on individual invocations of `rustup` by "
-"passing the argument `--no-self-update`  when running `rustup update` or "
+"passing the argument `--no-self-update` when running `rustup update` or "
 "`rustup toolchain install`."
 msgstr ""
 
-#: src/basics.md:61
+#: src/basics.md:62
 msgid "Help system"
 msgstr ""
 
-#: src/basics.md:63
+#: src/basics.md:64
 msgid ""
 "The `rustup` command-line has a built-in help system that provides more "
 "information about each command. Run `rustup help` for an overview. Detailed "
