@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/index.md:1
+msgid "Concepts"
+msgstr "概念"
+
+#: src/concepts/index.md:3
+msgid "How rustup works"
+msgstr "Rustup 的工作原理"
+
+#: src/concepts/index.md:5
+msgid ""
+"`rustup` is a _toolchain multiplexer_. It installs and manages many Rust "
+"toolchains and presents them all through a single set of tools installed to "
+"`~/.cargo/bin`. The [`rustc`](https://doc.rust-lang.org/rustc/) and [`cargo`]"
+"(https://doc.rust-lang.org/cargo/) executables installed in `~/.cargo/bin` "
+"are _[proxies](proxies.md)_ that delegate to the real toolchain. `rustup` "
+"then provides mechanisms to easily change the active toolchain by "
+"reconfiguring the behavior of the proxies."
+msgstr ""
+"`rustup`是一个用于管理多个 Rust 工具链的多路器。它负责安装和管理这些工具链，"
+"并通过一组安装在了`~/.cargo/bin`下的工具来统一调用这些工具链。[`rustc`]"
+"(https://doc.rust-lang.org/rustc/)和`cargo`这两个可执行文件被安装到了`~/."
+"cargo/bin`目录下，它们实际上都是用来代理调用真实工具链的代理程序。`rustup`还"
+"提供了机制，可以通过重新配置这些代理程序来轻松切换当前使用的工具链。"
+
+#: src/concepts/index.md:12
+msgid ""
+"So when `rustup` is first installed, running `rustc` will run the proxy in "
+"`$HOME/.cargo/bin/rustc`, which in turn will run the stable compiler. If you "
+"later _change the default toolchain_ to nightly with `rustup default "
+"nightly`, then that same proxy will run the `nightly` compiler instead."
+msgstr ""
+"因此，当 `rustup` 首次安装后，运行 `rustc` 将会调用位于 `$HOME/.cargo/bin/"
+"rustc` 目录下的编译器。而一旦你之后通过 `rustup default nightly` 将默认使用的"
+"编译器设置为 `nightly` 版本，那么同样的代理程序就会用来运行 `nightly` 版本的"
+"编译器了。"
+
+#: src/concepts/index.md:17
+msgid ""
+"This is similar to Ruby's [rbenv](https://github.com/rbenv/rbenv), Python's "
+"[pyenv](https://github.com/yyuu/pyenv), or Node's [nvm](https://github.com/"
+"creationix/nvm)."
+msgstr ""
+"这类似于 Ruby 的[rbenv](https://github.com/rbenv/rbenv)、Python 的[pyenv]"
+"(https://github.com/yyuu/pyenv)，或者 Node 的[nvm](https://github.com/"
+"creationix/nvm)。"
+
+#: src/concepts/index.md:26
+msgid "Terminology"
+msgstr "术语表"
+
+#: src/concepts/index.md:28
+msgid ""
+"**channel** --- Rust is released to three different \"channels\": stable, "
+"beta, and nightly. See the [Channels](channels.md) chapter for more details."
+msgstr ""
+"**频道**——Rust 有三个不同的发布渠道：稳定版、测试版和最新版本。更多详细信息请"
+"参考[频道设置](channels.md)章节"
+
+#: src/concepts/index.md:31
+msgid ""
+"**toolchain** --- A \"toolchain\" is a complete installation of the Rust "
+"compiler (`rustc`) and related tools (like `cargo`). A [toolchain "
+"specification](toolchains.md) includes the release channel or version, and "
+"the host platform that the toolchain runs on."
+msgstr ""
+"**工具链**——所谓“工具链”，指的是完整的 Rust 编译器（`rustc`）及相关工具（如"
+"`cargo`）的安装环境。工具链的规格说明中通常会包含相关的发布渠道、版本信息，以"
+"及该工具链运行所需的平台。"
+
+#: src/concepts/index.md:36
+msgid ""
+"**target** --- `rustc` is capable of generating code for many platforms. The "
+"\"target\" specifies the platform that the code will be generated for. By "
+"default, `cargo` and `rustc` use the host toolchain's platform as the "
+"target. To build for a different target, usually the target's standard "
+"library needs to be installed first via the `rustup target` command. See the "
+"[Cross-compilation](../cross-compilation.md) chapter for more details."
+msgstr ""
+"**目标平台**——`rustc`能够生成适用于多种平台的代码。这里的“目标平台”指的是代码"
+"将被生成的平台。默认情况下，`cargo`和`rustc`会使用主机上的工具链平台作为目标"
+"平台。如果想要为不同的目标平台构建代码，通常需要先通过`rustup target`命令安装"
+"该目标平台的标准库。更多细节请参考[交叉编译](../cross-compilation.md)章节。"
+
+#: src/concepts/index.md:43
+msgid ""
+"**component** --- Each release of Rust includes several \"components\", some "
+"of which are required (like `rustc`) and some that are optional (like "
+"[`clippy`](https://github.com/rust-lang/rust-clippy)). See the [Components]"
+"(components.md) chapter for more detail."
+msgstr ""
+"**组件**——每个版本的 Rust 都包含多个“组件”，其中一些是必需的（如`rustc`），而"
+"另一些则是可选的（如[`clippy`](https://github.com/rust-lang/rust-clippy)）。"
+"更多详细信息请参考[组件部分](components.md)。"
+
+#: src/concepts/index.md:47
+msgid ""
+"**profile** --- In order to make it easier to work with components, a "
+"\"profile\" defines a grouping of components. See the [Profiles](profiles."
+"md) chapter for more details."
+msgstr ""
+"**配置文件**——为了便于管理组件，会定义一种“配置文件”来分组组件。更多细节请参"
+"考[配置文件](profiles.md)章节。"
+
+#: src/concepts/index.md:51
+msgid ""
+"**proxy** ---  A wrapper for a common Rust component (like `rustc`), built "
+"to forward CLI invocations to the active Rust toolchain. See the [Proxies]"
+"(proxies.md) chapter for more details."
+msgstr ""
+"**代理**——是一种针对常见 Rust 组件（如`rustc`）的封装层，旨在将 CLI 接口调用"
+"转发到活跃的 Rust 工具链中。更多细节请参考[代理机制](proxies.md)章节。"
