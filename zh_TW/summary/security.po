@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/security.md:1
+msgid "Security"
+msgstr ""
+
+#: src/security.md:3
+msgid ""
+"`rustup` is secure enough for most people, but it [still needs work](https://"
+"github.com/rust-lang/rustup/issues?q=is%3Aopen+is%3Aissue+label%3Asecurity). "
+"`rustup` performs all downloads over HTTPS, but does not yet validate "
+"signatures of downloads."
+msgstr ""
+
+#: src/security.md:9
+msgid ""
+"File modes on installation honor umask as of 1.18.4, use umask if very tight "
+"controls are desired."
+msgstr ""
+
+#: src/security.md:12
+msgid ""
+"If you wish to report a security issue, please follow the [Rust security "
+"policy](https://www.rust-lang.org/policies/security)."
+msgstr ""
