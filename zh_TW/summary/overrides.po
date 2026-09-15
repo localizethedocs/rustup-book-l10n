@@ -1,0 +1,274 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/overrides.md:1
+msgid "Overrides"
+msgstr ""
+
+#: src/overrides.md:3
+msgid ""
+"`rustup` automatically determines which [toolchain](concepts/toolchains.md) "
+"to use when one of the installed commands like `rustc` is executed. There "
+"are several ways to control and override which toolchain is used:"
+msgstr ""
+
+#: src/overrides.md:7
+msgid ""
+"A [toolchain override shorthand](#toolchain-override-shorthand) used on the "
+"command-line, such as `cargo +beta`."
+msgstr ""
+
+#: src/overrides.md:9
+msgid "The `RUSTUP_TOOLCHAIN` environment variable."
+msgstr "`RUSTUP_TOOLCHAIN` 環境變數。"
+
+#: src/overrides.md:10
+msgid ""
+"A [directory override](#directory-overrides), set with the `rustup override` "
+"command."
+msgstr ""
+
+#: src/overrides.md:11
+msgid "The [`rust-toolchain.toml`](#the-toolchain-file) file."
+msgstr "[`rust-toolchain.toml`](#the-toolchain-file) 檔案。"
+
+#: src/overrides.md:12
+msgid "The [default toolchain](#default-toolchain)."
+msgstr "[默認工具鏈](#default-toolchain)。"
+
+#: src/overrides.md:14
+msgid ""
+"The toolchain is chosen in the order listed above, using the first one that "
+"is specified. There is one exception though: directory overrides and the "
+"`rust-toolchain.toml` file are also preferred by their proximity to the "
+"current directory. That is, these two override methods are discovered by "
+"walking up the directory tree toward the filesystem root, and a `rust-"
+"toolchain.toml` file that is closer to the current directory will be "
+"preferred over a directory override that is further away."
+msgstr ""
+
+#: src/overrides.md:22
+msgid "To verify which toolchain is active, you can use `rustup show`."
+msgstr ""
+
+#: src/overrides.md:30
+msgid "Toolchain override shorthand"
+msgstr ""
+
+#: src/overrides.md:32
+msgid ""
+"The `rustup` toolchain proxies can be instructed directly to use a specific "
+"toolchain, a convenience for developers who often test different toolchains. "
+"If the first argument to `cargo`, `rustc` or other tools in the toolchain "
+"begins with `+`, it will be interpreted as a `rustup` toolchain name, and "
+"that toolchain will be preferred, as in"
+msgstr ""
+
+#: src/overrides.md:42
+msgid "Directory overrides"
+msgstr ""
+
+#: src/overrides.md:44
+msgid ""
+"Directories can be assigned their own Rust toolchain with `rustup override`. "
+"When a directory has an override then any time `rustc` or `cargo` is run "
+"inside that directory, or one of its child directories, the override "
+"toolchain will be invoked."
+msgstr ""
+
+#: src/overrides.md:49
+msgid "To use to a specific nightly for a directory:"
+msgstr ""
+
+#: src/overrides.md:55
+msgid "Or a specific stable release:"
+msgstr ""
+
+#: src/overrides.md:61
+msgid ""
+"To see the active toolchain use `rustup show`. To remove the override and "
+"use the default toolchain again, `rustup override unset`."
+msgstr ""
+
+#: src/overrides.md:64
+msgid ""
+"The per-directory overrides are stored in [a configuration file]"
+"(configuration.md) in `rustup`'s home directory."
+msgstr ""
+
+#: src/overrides.md:69
+msgid "The toolchain file"
+msgstr "工具鏈檔案"
+
+#: src/overrides.md:71
+msgid ""
+"Some projects find themselves 'pinned' to a specific release of Rust and "
+"want this information reflected in their source repository. This is most "
+"often the case for nightly-only software that pins to a revision from the "
+"release archives."
+msgstr ""
+
+#: src/overrides.md:76
+msgid ""
+"In these cases the toolchain can be named in the project's directory in a "
+"file called `rust-toolchain.toml` or `rust-toolchain`. If both files are "
+"present in a directory, the latter is used for backwards compatibility. The "
+"files use the [TOML](https://toml.io/) format and have the following layout:"
+msgstr ""
+
+#: src/overrides.md:83
+msgid ""
+"```toml\n"
+"[toolchain]\n"
+"channel = \"nightly-2020-07-10\"\n"
+"components = [ \"rustfmt\", \"rustc-dev\" ]\n"
+"targets = [ \"wasm32-unknown-unknown\", \"thumbv2-none-eabi\" ]\n"
+"profile = \"minimal\"\n"
+"```"
+msgstr ""
+
+#: src/overrides.md:91
+msgid ""
+"The `[toolchain]` section is mandatory, and at least one property must be "
+"specified. `channel` and `path` are mutually exclusive."
+msgstr ""
+
+#: src/overrides.md:94
+msgid ""
+"For backwards compatibility, `rust-toolchain` files also support a legacy "
+"format that only contains a toolchain name without any TOML encoding, e.g. "
+"just `nightly-2021-01-21`. The file has to be encoded in US-ASCII in this "
+"case (if you are on Windows, check the encoding and that it does not start "
+"with a BOM). The legacy format is not available in `rust-toolchain.toml` "
+"files."
+msgstr ""
+
+#: src/overrides.md:100
+msgid ""
+"If you see the following error (when running `rustc`, `cargo` or other "
+"command)"
+msgstr ""
+
+#: src/overrides.md:106
+msgid ""
+"it means you're running `rustup` pre-1.23.0 and trying to interact with a "
+"project that uses the new TOML encoding in the `rust-toolchain` file. You "
+"need to upgrade `rustup` to 1.23.0+."
+msgstr ""
+
+#: src/overrides.md:110
+msgid ""
+"The `rust-toolchain.toml`/`rust-toolchain` files are suitable to check in to "
+"source control. If that's done, `Cargo.lock` should probably be tracked too "
+"if the toolchain is pinned to a specific release, to avoid potential "
+"compatibility issues with dependencies."
+msgstr ""
+
+#: src/overrides.md:115
+msgid "Toolchain file settings"
+msgstr "工具鏈檔案設定"
+
+#: src/overrides.md:117
+msgid "channel"
+msgstr ""
+
+#: src/overrides.md:119
+msgid ""
+"The `channel` setting specifies which [toolchain](concepts/toolchains.md) to "
+"use. The value is a string in the following form:"
+msgstr ""
+
+#: src/overrides.md:133
+msgid "path"
+msgstr ""
+
+#: src/overrides.md:135
+msgid ""
+"The `path` setting allows a custom toolchain to be used. The value is an "
+"absolute path string."
+msgstr ""
+
+#: src/overrides.md:138
+msgid ""
+"Since a `path` directive directly names a local toolchain, other options "
+"like `components`, `targets`, and `profile` have no effect."
+msgstr ""
+
+#: src/overrides.md:141
+msgid ""
+"`channel` and `path` are mutually exclusive, since a `path` already points "
+"to a specific toolchain."
+msgstr ""
+
+#: src/overrides.md:144
+msgid "profile"
+msgstr ""
+
+#: src/overrides.md:146
+msgid ""
+"The `profile` setting names a group of components to be installed. The value "
+"is a string. The valid options are: `minimal`, `default`, and `complete`. "
+"See [profiles](concepts/profiles.md) for details of each."
+msgstr ""
+
+#: src/overrides.md:150
+msgid ""
+"Note that if not specified, the `default` profile is not necessarily used, "
+"as a different default profile might have been set with `rustup set profile`."
+msgstr ""
+
+#: src/overrides.md:156
+msgid "components"
+msgstr ""
+
+#: src/overrides.md:158
+msgid ""
+"The `components` setting contains a list of additional components to "
+"install. The value is a list of strings. See [components](concepts/"
+"components.md) for a list of components. Note that different toolchains may "
+"have different components available."
+msgstr ""
+
+#: src/overrides.md:163
+msgid "The components listed here are additive with the current profile."
+msgstr ""
+
+#: src/overrides.md:167
+msgid "targets"
+msgstr ""
+
+#: src/overrides.md:169
+msgid ""
+"The `targets` setting contains a list of platforms to install for [cross-"
+"compilation](https://rust-lang.github.io/rustup/cross-compilation.html). The "
+"value is a list of strings."
+msgstr ""
+
+#: src/overrides.md:172
+msgid ""
+"The host platform is automatically included; the targets listed here are "
+"additive."
+msgstr ""
+
+#: src/overrides.md:177
+msgid "Default toolchain"
+msgstr ""
+
+#: src/overrides.md:179
+msgid ""
+"If no other overrides are set, the global default toolchain will be used. "
+"This default can be chosen when `rustup` is [installed](installation/index."
+"md). The `rustup default` command can be used to set and query the current "
+"default. Run `rustup default` without any arguments to print the current "
+"default. Specify a toolchain as an argument to change the default:"
+msgstr ""
