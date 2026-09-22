@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/components.md:1
+msgid "Components"
+msgstr ""
+
+#: src/concepts/components.md:3
+msgid ""
+"Each [toolchain](toolchains.md) has several \"components\", some of which "
+"are required (like `rustc`) and some that are optional (like [`clippy`]"
+"(https://github.com/rust-lang/rust-clippy)). The `rustup component` command "
+"is used to manage the installed components. For example, run `rustup "
+"component list` to see a list of available and installed components."
+msgstr ""
+
+#: src/concepts/components.md:9
+msgid ""
+"Components can be added when installing a toolchain with the `--component` "
+"flag. For example:"
+msgstr ""
+
+#: src/concepts/components.md:16
+msgid ""
+"Components can be added to an already-installed toolchain with the `rustup "
+"component` command:"
+msgstr ""
+
+#: src/concepts/components.md:23
+msgid ""
+"To make it easier to choose which components are installed, `rustup` has the "
+"concept of \"profiles\" which provide named groupings of different "
+"components. See the [Profiles](profiles.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/components.md:27
+msgid ""
+"Most components have a target-triple suffix, such as `rustc-x86_64-apple-"
+"darwin`, to signify the platform the component is for."
+msgstr ""
+
+#: src/concepts/components.md:30
+msgid ""
+"The set of available components may vary with different releases and "
+"toolchains. The following is an overview of the different components:"
+msgstr ""
+
+#: src/concepts/components.md:33
+msgid ""
+"`rustc` --- The Rust compiler and [Rustdoc](https://doc.rust-lang.org/"
+"rustdoc/)."
+msgstr ""
+
+#: src/concepts/components.md:34
+msgid ""
+"`cargo` --- [Cargo](https://doc.rust-lang.org/cargo/) is a package manager "
+"and build tool."
+msgstr ""
+
+#: src/concepts/components.md:35
+msgid ""
+"`rustfmt` --- [Rustfmt](https://github.com/rust-lang/rustfmt) is a tool for "
+"automatically formatting code."
+msgstr ""
+
+#: src/concepts/components.md:36
+msgid ""
+"`rust-std` --- This is the Rust [standard library](https://doc.rust-lang.org/"
+"std/). There is a separate `rust-std` component for each target that `rustc` "
+"supports, such as `rust-std-x86_64-pc-windows-msvc`. See the [Cross-"
+"compilation](../cross-compilation.md) chapter for more detail."
+msgstr ""
+
+#: src/concepts/components.md:40
+msgid ""
+"`rust-docs` --- This is a local copy of the [Rust documentation](https://doc."
+"rust-lang.org/). Use the `rustup doc` command to open the documentation in a "
+"web browser. Run `rustup doc --help` for more options."
+msgstr ""
+
+#: src/concepts/components.md:43
+msgid ""
+"`rust-analyzer` --- [rust-analyzer](https://rust-analyzer.github.io/) is a "
+"language server that provides support for editors and IDEs."
+msgstr ""
+
+#: src/concepts/components.md:45
+msgid ""
+"`clippy` --- [Clippy](https://github.com/rust-lang/rust-clippy) is a lint "
+"tool that provides extra checks for common mistakes and stylistic choices."
+msgstr ""
+
+#: src/concepts/components.md:47
+msgid ""
+"`miri` --- [Miri](https://github.com/rust-lang/miri/) is an experimental "
+"Rust interpreter, which can be used for checking for undefined-behavior."
+msgstr ""
+
+#: src/concepts/components.md:49
+msgid ""
+"`rust-src` --- This is a local copy of the source code of the Rust standard "
+"library. This can be used by some tools, such as [rust-analyzer](https://"
+"rust-analyzer.github.io/), to provide auto-completion for functions within "
+"the standard library; [Miri](https://github.com/rust-lang/miri/) which is a "
+"Rust interpreter; and Cargo's experimental [build-std](https://doc.rust-lang."
+"org/nightly/cargo/reference/unstable.html#build-std) feature, which allows "
+"you to rebuild the standard library locally."
+msgstr ""
+
+#: src/concepts/components.md:54
+msgid ""
+"`rust-mingw` --- This contains a linker and platform libraries for building "
+"on the `x86_64-pc-windows-gnu` platform."
+msgstr ""
+
+#: src/concepts/components.md:56
+msgid ""
+"`llvm-tools` --- This component contains a collection of [LLVM](https://llvm."
+"org/) tools. **This component has not been stabilized and may change in the "
+"future and is provided as-is.** Availability of individual LLVM tools may "
+"change over LLVM versions (including removal of specific LLVM tools), and "
+"**is not subject to compiler or toolchain stability guarantees**. See "
+"[\\#85658](https://github.com/rust-lang/rust/issues/85658)."
+msgstr ""
+
+#: src/concepts/components.md:62
+msgid ""
+"`rustc-dev` --- This component contains the compiler as a library. Most "
+"users will not need this; it is only needed for development _of_ tools that "
+"link to the compiler, such as making modifications to [Clippy](https://"
+"github.com/rust-lang/rust-clippy)."
+msgstr ""
+
+#: src/concepts/components.md:66
+msgid "Previous components"
+msgstr ""
+
+#: src/concepts/components.md:68
+msgid ""
+"See [here](https://rust-lang.github.io/rustup/devel/concepts/components."
+"html#previous-components) for the latest version of this section."
+msgstr ""
+
+#: src/concepts/components.md:71
+msgid ""
+"These components have been deprecated and are not published in new Rust "
+"releases."
+msgstr ""
+
+#: src/concepts/components.md:73
+msgid ""
+"`rls` --- [RLS](https://github.com/rust-lang/rls) is a language server that "
+"is deprecated and has been replaced by rust-analyzer."
+msgstr ""
+
+#: src/concepts/components.md:75
+msgid ""
+"`rust-analysis` --- Metadata about the standard library, used by [RLS]"
+"(https://github.com/rust-lang/rls)."
+msgstr ""
+
+#: src/concepts/components.md:76
+msgid ""
+"The `wasm32-wasi` target --- It has been [renamed](https://blog.rust-lang."
+"org/2024/04/09/updates-to-rusts-wasi-targets.html) to `wasm32-wasip1`."
+msgstr ""
+
+#: src/concepts/components.md:80
+msgid "Component availability"
+msgstr ""
+
+#: src/concepts/components.md:82
+msgid ""
+"Not all components are available for all toolchains. Especially on the "
+"nightly channel, some components may not be included if they are in a broken "
+"state. The current status of all the components may be found on the [rustup "
+"components history](https://rust-lang.github.io/rustup-components-history/) "
+"page. See the [Nightly availability](channels.md#nightly-availability) "
+"section for more details."
+msgstr ""

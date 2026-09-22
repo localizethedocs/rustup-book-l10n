@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/network-proxies.md:1
+msgid "Network proxies"
+msgstr ""
+
+#: src/network-proxies.md:3
+msgid ""
+"Enterprise networks often don't have direct outside HTTP access, but enforce "
+"the use of proxies. If you're on such a network, you can request that "
+"`rustup` uses a proxy by setting its URL in the environment. In most cases, "
+"setting `https_proxy` should be sufficient. Commands may differ between "
+"different systems and shells:"
+msgstr ""
+
+#: src/network-proxies.md:9
+msgid "On a Unix-like system with a shell like **bash** or **zsh**:"
+msgstr ""
+
+#: src/network-proxies.md:11 src/network-proxies.md:15
+msgid "socks5://proxy.example.com:1080"
+msgstr "socks5://proxy.example.com:1080"
+
+#: src/network-proxies.md:13
+msgid ""
+"On Windows [**Command Prompt (cmd)**](https://en.wikipedia.org/wiki/Cmd.exe):"
+msgstr ""
+
+#: src/network-proxies.md:17
+msgid ""
+"On Windows [**PowerShell**](https://en.wikipedia.org/wiki/PowerShell) (or "
+"**PowerShell Core**):"
+msgstr ""
+
+#: src/network-proxies.md:19
+msgid "\"socks5://proxy.example.com:1080\""
+msgstr "\"socks5://proxy.example.com:1080\""
+
+#: src/network-proxies.md:21
+msgid ""
+"Replace `socks5://proxy.example.com:1080` with `http://proxy.example."
+"com:8080` when an HTTP proxy is used instead."
+msgstr ""
+
+#: src/network-proxies.md:24
+msgid ""
+"If you need a more complex setup, `rustup` supports the convention used by "
+"the **curl** program, documented in the ENVIRONMENT section of [its manual "
+"page](https://curl.se/docs/manpage.html#:~:text=Environment,-"
+"The%20environment%20variables)."
+msgstr ""
+
+#: src/network-proxies.md:28
+msgid ""
+"The use of `curl` is presently **deprecated**, however it can still be used "
+"by providing the `RUSTUP_USE_CURL` environment variable, for example:"
+msgstr ""
+
+#: src/network-proxies.md:32
+msgid "1"
+msgstr ""
+
+#: src/network-proxies.md:35
+msgid ""
+"Note that some versions of `libcurl` apparently require you to drop the "
+"`http://` or `https://` prefix in environment variables. For example, "
+"`export http_proxy=proxy.example.com:1080` (and likewise for HTTPS). If you "
+"are getting an SSL `unknown protocol` error from `rustup` via `libcurl` but "
+"the command-line `curl` command works fine, this may be the problem."
+msgstr ""
