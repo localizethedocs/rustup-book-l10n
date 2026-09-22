@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-09-22 08:04:12 +0000",
+      "hash" : "96f5c1c92b2ab0eeb6fe0ed3de61483a3d9f3d46",
+      "title" : "refactor(windows): manage process handles with OwnedHandle"
     }
   },
   "type" : "branch",
