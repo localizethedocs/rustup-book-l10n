@@ -1,0 +1,1112 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The rustup book</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        <script type="text/javascript" src="ltd-provenance.js"></script>
+        <script type="text/javascript" src="ltd-current.js"></script>
+        <script type="text/javascript" src="../../ltd-config.js"></script>
+        <script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-f55e1af7.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-e407beb9.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The rustup book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/rust-lang/rustup/tree/HEAD/doc/user-guide" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="引言"><a class="header" href="#引言">引言</a></h1>
+<p>_rustup_installs <a href="https://www.rust-lang.org">Rust Programming Language</a> 使您能够轻松地在稳定、贝塔和夜间编译器之间切换并随时更新。 它使交叉编译更加简单，使用普通平台标准库的二进制构建。它运行在所有平台上。Rust 支持。</p>
+<p>查看 [Concepts](concepts/index.md章，以了解生死是如何工作的，以及它使用的一些术语。 [Installation](installation/index.md章涉及安装程序和启动程序。</p>
+<p>Rustup 及其使用手册的源代码可以在以下地址找到：<a href="https://github.com/rust-lang/rustup">https://github.com/rust-lang/rustup</a>。如果您发现任何问题，请访问<a href="https://github.com/rust-lang/rustup/issues">问题跟踪系统</a>。</p>
+<p>Rustup的发布说明可以在<a href="https://github.com/rust-lang/rustup/blob/HEAD/CHANGELOG.md">CHANGELOG</a>中找到。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="安装"><a class="header" href="#安装">安装</a></h1>
+<p>请按照 <a href="https://www.rust-lang.org/tools/install">https://www.rust-lang.org/tools/install</a> 中的说明进行操作。如果那样做仍然无法解决问题，还有[其他安装方法]可供选择。</p>
+<p><code>rustup</code>负责将<code>rustc</code>、<code>cargo</code>以及<code>rustup</code>等其他标准工具安装到 Cargo 的<code>bin</code>目录下。在 Unix 系统中，该目录位于<code>$HOME/.cargo/bin</code>；在 Windows 系统中则位于<code>%USERPROFILE%\.cargo\bin</code>。正是这个目录，也是<code>cargo install</code>用于安装 Rust 程序和 Cargo 插件的目标目录。</p>
+<p>这个目录将存在于你的 <code>$PATH</code> 环境变量中，这意味着你可以无需额外配置就从 shell 中运行它们。打开一个新的 shell，然后输入以下内容：</p>
+<pre><code class="language-console">rustc --version
+</code></pre>
+<p>如果你看到类似 <code>rustc 1.19.0 (0ade33941 2017-07-17)</code> 这样的内容，那么你就已经准备好开始使用 Rust 了。如果你觉得 Rust 不适合你，可以通过运行 <code>rustup self uninstall</code> 来完全从你的系统中移除它。</p>
+<h2 id="选择安装位置"><a class="header" href="#选择安装位置">选择安装位置</a></h2>
+<p><code>rustup</code>允许你通过设置<code>CARGO_HOME</code>和<code>RUSTUP_HOME</code>这两个环境变量来自定义你的安装过程。在运行<code>rustup-init</code>脚本之前，就可以进行这些设置。如<a href="#环境变量">环境变量配置</a>部分所述，<code>RUSTUP_HOME</code>变量用于指定<code>rustup</code>程序的根目录，该目录用于存储安装好的工具链和配置选项。<code>CARGO_HOME</code>变量则包含由<a href="https://doc.rust-lang.org/cargo/">cargo</a>使用的缓存文件。</p>
+<p>请注意，在使用工具链时，必须确保这些环境变量始终被设置，并且 <code>CARGO_HOME/bin</code> 位于 <code>$PATH</code> 环境变量中。</p>
+<h2 id="安装最新版本"><a class="header" href="#安装最新版本">安装最新版本</a></h2>
+<p>如果在安装<code>rustup</code>时指定了<a href="#频道">夜间更新的频道</a>，那么<code>rustup-init</code>脚本会默认进行“强制安装”。所谓“强制安装”意味着会安装该夜间更新的频道，而不会考虑是否缺少你需要的<a href="#组件">组件</a>。如果你希望安装带有夜间更新频道的<code>rustup</code>，并且确保它包含了你需要的组件，那么你需要分两步来完成这个过程。例如，如果你想进行全新安装的话</p>
+<pre><code class="language-console">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain none -y
+</code></pre>
+<p>接下来，你可以安装 <code>nightly</code>，从而让 <code>rustup</code> 降级，直到找到你需要的组件。</p>
+<pre><code class="language-console">rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+</code></pre>
+<p>这在持续集成过程中可以发挥重要作用，能够快速为您提供符合您要求的工具链。</p>
+<h2 id="启用-bashfishzsh-或-powershell-的tab键补全功能"><a class="header" href="#启用-bashfishzsh-或-powershell-的tab键补全功能">启用 Bash、Fish、Zsh 或 PowerShell 的Tab键补全功能</a></h2>
+<p><code>rustup</code> 现在支持为 Bash、Fish、Zsh 和 PowerShell 生成补全脚本。有关详细信息，请参阅 <code>rustup help completions</code>，其原理很简单，只需使用以下其中一种方式即可。</p>
+<pre><code class="language-console"># Bash
+$ rustup completions bash &gt; ~/.local/share/bash-completion/completions/rustup
+
+# Bash (macOS/Homebrew)
+$ rustup completions bash &gt; $(brew --prefix)/etc/bash_completion.d/rustup.bash-completion
+
+# Fish
+$ mkdir -p ~/.config/fish/completions
+$ rustup completions fish &gt; ~/.config/fish/completions/rustup.fish
+
+# Zsh
+$ rustup completions zsh &gt; ~/.zfunc/_rustup
+
+# PowerShell v5.0+
+$ rustup completions powershell &gt;&gt; $PROFILE.CurrentUserCurrentHost
+# or
+$ rustup completions powershell | Out-String | Invoke-Expression
+</code></pre>
+<p><strong>注意</strong>：可能需要重新启动你的终端窗口，以便这些更改生效。</p>
+<p>对于 <code>zsh</code>，您需要在 <code>~/.zshrc</code> 中添加以下行，然后才能使用 <code>compinit</code>：</p>
+<pre><code class="language-zsh">fpath+=~/.zfunc
+</code></pre>
+<p>在 Xonsh 中，你可以通过安装<a href="https://github.com/xonsh/xontrib-fish-completer">xontrib-fish-completer</a>来重新使用 Fish 补全功能。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="windows系统"><a class="header" href="#windows系统">Windows系统</a></h1>
+<p><code>rustup</code> 在Windows上和Unix上相同，但是对于Windows上的Rust 开发者有一些特殊的考虑。 正如<a href="https://www.rust-lang.org/tools/install?platform_override=win">在Rust下载页面上提到的</a>, Windows上有两种 <a href="https://en.wikipedia.org/wiki/Application_binary_interface">ABIs</a>：<a href="https://visualstudio.microsoft.com/">Visual Studio</a>使用的原生(MSVC) ABI， 和 GNU ABI 使用 [海湾合作委员会工具链] (https://gcc.gnu.org/)。 你需要哪种版本的Rust在很大程度上取决于你想要与哪些C/C++ 库相互作用: 因为与Visual Studio生产的软件互换使用MSVC building of Rus; 对于使用 [MinGW/MSYS2 工具链] (https://www.msys2.org/建立的 GNU 软件的互联，请使用 GNU 构建。</p>
+<p>当针对MSVC ABI时，Rust 还需要一个<a href="#msvc-前置条件">安装Visual Studio</a>，因此<code>rustc</code> 可以使用它的链接和库。</p>
+<p>Windows GNU 构建不需要额外的软件进行基本使用。 然而，许多库箱将无法编译，直到安装完满的 <a href="https://www.msys2.org/">MSYS2</a>。</p>
+<p>在 Windows 上默认<code>rustup</code> 配置Rust来瞄准MSVC ABI 时，它是一个 <code>i686-pc-windows-msvc</code> 的目标管, <code>x86_64-pc-windows-msvc</code>, 或 <code>aarch64-pc-windows-msvc</code> 取决于主机 Windows OS 的 CPU 结构。 <code>rustup</code> 选择安装的工具链，除非通过 <a href="#toolchain-specification">toolchain 规格</a> 将被编译在目标管主页上运行，并默认以此为目标主机。</p>
+<p>您可以使用 “rusup 设置默认主机” 或在安装过程中更改此行为。</p>
+<p>例如，要明确选择32位 MSVC 主机：</p>
+<pre><code class="language-console">$ rustup set default-host i686-pc-windows-msvc
+</code></pre>
+<p>或者选择64 位 GNU 工具链：</p>
+<pre><code class="language-console">$ rustup set default-host x86_64-pc-windows-gnu
+</code></pre>
+<p>由于MSVC ABI提供了与其他Windows软件的最佳交互功能，建议它用于大多数目的。 GNU 工具链总是可用的，即使您默认不使用它。只需安装`rusup toolchain 安装’：</p>
+<pre><code class="language-console">$ rustup toolchain install stable-gnu
+</code></pre>
+<p>您不需要切换工具链来支持所有窗口目标；单个工具链支持所有四个x86窗口目标：</p>
+<pre><code class="language-console">$ rustup target add x86_64-pc-windows-msvc
+$ rustup target add x86_64-pc-windows-gnu
+$ rustup target add i686-pc-windows-msvc
+$ rustup target add i686-pc-windows-gnu
+</code></pre>
+<p>用同一编译器指定不同目标的更多详细信息，请参阅 <a href="#交叉编译">Cross-compilation</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="msvc-前置条件"><a class="header" href="#msvc-前置条件">MSVC 前置条件</a></h1>
+<p>若要将程序编译为exe 文件，Rust 需要链接、库和 Windows API 导入库。 对于<code>msvc</code>目标，这些可以通过 Visual Studio 获得。</p>
+<h2 id="自动安装"><a class="header" href="#自动安装">自动安装</a></h2>
+<p>如果您尚未安装 Visual Studio，那么 <a href="https://rustup.rs">rustup-init</a> 将自动安装先决条件。 这意味着您可以跳过此页面的其余部分。 然而，它安装了可能不适合所有用户的 Visual Studio 社区版本。 它对个人、学术界和开放源码的使用是免费的，但对其他用途，如专利企业软件则是免费的。 用户应该询问他们组织哪个版本对他们是正确的。详情请参阅<a href="https://visualstudio.microsoft.com/license-terms/">许可证条款</a>。</p>
+<h2 id="winget"><a class="header" href="#winget">WinGet</a></h2>
+<p>或者，可以通过<a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">WinGet</a>包管理器来安装Visual Studio，这一工具在最新版本的Windows系统中应该是默认可用的。在PowerShell或命令提示符中运行以下命令：</p>
+<pre><code>winget install --id Microsoft.VisualStudio.2022.Community --source winget --force --override "--add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64 --add Microsoft.VisualStudio.Component.Windows11SDK.22621 --addProductLang En-us"
+</code></pre>
+<p>如果你已经拥有 Visual Studio 的许可证，可以在上述命令中将“Community”替换为“BuildTools”。</p>
+<h3 id="缺少windows-sdk"><a class="header" href="#缺少windows-sdk">缺少Windows SDK</a></h3>
+<p>如果运行上述命令后，Windows 11 SDK仍然缺失，那么您可能需要手动安装它。这一操作也可以通过WinGet来完成。首先，请搜索可用的版本。</p>
+<pre><code>winget search --source winget --id Microsoft.WindowsSDK.
+</code></pre>
+<p>这应该会显示一个结果表格，看起来就像这样：</p>
+<pre><code>Name                                                       Id                              Version
+----------------------------------------------------------------------------------------------------------
+Windows Software Development Kit                           Microsoft.WindowsSDK.10.0.22000 10.0.22000.832
+Windows Software Development Kit - Windows 10.0.22621.2428 Microsoft.WindowsSDK.10.0.22621 10.0.22621.2428
+Windows Software Development Kit - Windows 10.0.26100.4188 Microsoft.WindowsSDK.10.0.26100 10.0.26100.4188
+</code></pre>
+<p>请选择最新版本的Id，并通过 <code>winget install</code> 进行安装。例如，要安装 <code>Microsoft.WindowsSDK.10.0.26100</code>，请执行以下操作：</p>
+<pre><code>winget install --source winget --id Microsoft.WindowsSDK.10.0.26100 
+</code></pre>
+<h2 id="手动安装"><a class="header" href="#手动安装">手动安装</a></h2>
+<p><a href="https://visualstudio.microsoft.com/downloads/">下载 Visual Studio</a>。 Rust 支持 Visual Studio 2017 及更高版本，但建议您使用最新版本 (当前为2022) 进行新项目。 您可以选择仅下载不包含 IDE 的 Visual Studio 构建工具。 然而，这需要您已经拥有社区、专业或企业版本的许可证。</p>
+<p>一旦你下载并开始安装，所有安装的最简单的方法是选择“桌面开发C++“。 这将包含必要的组件。在“语言包”选项卡中，请确保除了您的首选语言外，还安装了英语包。</p>
+<p>如果您想要安装过程的更多详细信息，或想要进一步定制安装，请跟随下面的步行。 否则请安装 Visual Studio 并继续安装 Rust。</p>
+<h2 id="安装-visual-studio-2022-的教程"><a class="header" href="#安装-visual-studio-2022-的教程">安装 Visual Studio 2022 的教程</a></h2>
+<p>此演示使用的是 Visual Studio 的社区版，不过 Professional、Enterprise 以及 Build Tools 版本的功能都是相同的。</p>
+<p>安装程序将通过链接到 <a href="https://visualstudio.microsoft.com/license-terms/">license</a>以及您的 Visual Studio 版本，然后准备安装程序。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/step1.png" alt="接受许可"><span class="img-wrapper"><img src="installation/images/step1.png" alt="接受许可"></span></label> <label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/step2.png" alt="安装安装"><span class="img-wrapper"><img src="installation/images/step2.png" alt="安装安装"></span></label></p>
+<p>完成这些步骤后，您可以选择要安装的组件。在这里，我们使用“Workload”选项卡来选择“Desktop Development with C++”工作负载。这将包含所有所需的Rust组件：<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/step3.png" alt="选择C++工作负载"><span class="img-wrapper"><img src="installation/images/step3.png" alt="选择C++工作负载"></span></label></p>
+<h3 id="仅安装所需的组件可选"><a class="header" href="#仅安装所需的组件可选">仅安装所需的组件（可选）</a></h3>
+<p>如果您希望采用更精简的安装方式（并且不需要进行C++开发），那么可以使用“单个组件”选项卡来仅选择必要的组件，这些组件包括：</p>
+<ul>
+<li>MSVC v143 - VS 2022 C++ x64/x86 构建工具(Latet)MSVC v143 - VS 2022 C++ 64 位/86 位构建工具（旧版本）</li>
+<li>Windows 11 SDK (10.0.22621.0)Windows 11 SDK（10.0.22621.0）</li>
+</ul>
+<p>请注意，对于纯Rust代码来说，Windows SDK的具体版本并不重要，但如果你同时使用C++语言，那么你可能需要使用最新版本的Windows SDK，或者至少是C++项目所要求的那个版本（或者两者都需要）。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/component-msvc.png" alt="选择最新的 MSVC 组件"><span class="img-wrapper"><img src="installation/images/component-msvc.png" alt="选择最新的 MSVC 组件"></span></label> <label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/component-sdk.png" alt="选择Windows 11 SDK 组件"><span class="img-wrapper"><img src="installation/images/component-sdk.png" alt="选择Windows 11 SDK 组件"></span></label> </p>
+<h3 id="添加语言包可选"><a class="header" href="#添加语言包可选">添加语言包(可选)</a></h3>
+<p>在选择组件后，您也可能想要选择要安装的语言包。切换到“语言包”选项卡并添加语言。 建议您在首选语言之外添加英语包。 这将提供英文错误消息，这可能有助于报告错误。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/step4.png" alt="添加英文"><span class="img-wrapper"><img src="installation/images/step4.png" alt="添加英文"></span></label></p>
+<h3 id="完成安装"><a class="header" href="#完成安装">完成安装</a></h3>
+<p>最后单击安装按钮，等待安装一切。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="installation/images/step5.png" alt="等待安装完成"><span class="img-wrapper"><img src="installation/images/step5.png" alt="等待安装完成"></span></label></p>
+<p>完成后，您可以继续安装 Rust。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="其他安装方法"><a class="header" href="#其他安装方法">其他安装方法</a></h1>
+<p>主要的安装方法，如 <a href="https://rustup.rs">https://rustup.rs</a> 中所述，因平台不同而有所差异：</p>
+<ul>
+<li>在Windows系统中，根据您的操作系统架构，下载并运行为<a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe"><code>x86_64-pc-windows-msvc</code></a>或<a href="https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-msvc/rustup-init.exe"><code>aarch64-pc-windows-msvc</code></a>目标版本构建的 <code>rustup-init.exe</code> 程序。通常，这种构建版本是应该在Windows上安装的 <code>rustup</code>。这需要使用<a href="#msvc-前置条件">MSVC prerequisites</a>。如果您希望默认安装GNU工具链或i686工具链，可以在安装时通过 <code>--default-host</code> 标志进行交互式修改，或者在安装后通过 <code>rustup set default-host</code> 进行修改。</li>
+<li>在Unix系统中，在您的shell中运行 <code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code>。这会下载并运行<a href="https://static.rust-lang.org/rustup/rustup-init.sh"><code>rustup-init.sh</code></a>，而后者又会下载并运行适合您平台的 <code>rustup-init</code> 可执行文件的正确版本。</li>
+</ul>
+<p><code>rustup-init</code>支持传递参数，这些参数可以通过 shell 脚本来传递。以下是一些示例：</p>
+<pre><code class="language-console">$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --help
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-modify-path
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain nightly
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain none
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile minimal --default-toolchain nightly
+</code></pre>
+<h2 id="使用包管理器"><a class="header" href="#使用包管理器">使用包管理器</a></h2>
+<blockquote>
+<p>请注意，rustup项目并不维护本部分中提到的任何包。如果您在通过包管理器安装 <code>rustup</code> 时遇到任何问题，请联系该包的维护者以获取更多信息。</p>
+</blockquote>
+<h3 id="通用提示"><a class="header" href="#通用提示">通用提示</a></h3>
+<p>不同的包管理器在管理 rustup 时采取的方法略有不同。使用你喜欢的包管理器安装 rustup 之后，通常有两种可能性：</p>
+<ul>
+<li>
+<p>如果你的包管理器已经提供了 <code>rustup</code> 命令，同时还提供了对 Rust 工具的代理选项，比如 <code>rustc</code> 和 <code>cargo</code>，那么通常只需要选择一个默认的工具链（例如 <code>stable</code>）即可。</p>
+<pre><code class="language-sh">$ rustup default stable
+</code></pre>
+<blockquote>
+<p>截至 2024 年 12 月 23 日，以下软件的情况也是如此：<a href="https://packages.debian.org/search?searchon=names&amp;keywords=rustup">APT</a>、<a href="https://formula.brew.sh/formula/rustup">homebrew</a>以及<a href="https://wiki.archlinux.org/title/Rust#Arch_Linux_package">pacman</a>。</p>
+</blockquote>
+</li>
+<li>
+<p>如果你的包管理器只提供了<code>rustup-init</code>命令，那么只需运行该命令即可。</p>
+<pre><code class="language-sh">$ rustup-init
+</code></pre>
+<p>这将使你能够完成<code>rustup</code>的初始设置，配置由<code>rustup</code>管理的所有代理服务器，并安装默认的工具链。</p>
+<blockquote>
+<p>截至 2024 年 12 月 23 日，<a href="https://developer.fedoraproject.org/tech/languages/rust/further-reading.html">DNF</a>就是这种情况。</p>
+</blockquote>
+</li>
+</ul>
+<p>安装完成后，请确保 rustup 代理程序（通常位于 <code>$HOME/.cargo/bin</code> 目录下）能够通过 <code>$PATH</code> 环境变量被正确访问。这样一来，你就可以正常运行 <code>rustup</code>、<code>rustc</code>、<code>cargo</code> 等命令了。</p>
+<h3 id="apt"><a class="header" href="#apt">APT</a></h3>
+<p>从 Debian 13（trixie）和 Ubuntu 24.04（noble）版本开始，你可以使用<code>apt</code>来安装<code>rustup</code>：</p>
+<pre><code class="language-sh">$ sudo apt install rustup
+</code></pre>
+<h3 id="homebrew"><a class="header" href="#homebrew">Homebrew</a></h3>
+<p>你可以使用 <code>brew</code> 来安装 <code>rustup</code>[^不是rust]：</p>
+<pre><code class="language-sh">$ brew install rustup
+</code></pre>
+<p>请注意，在这个<code>rustup</code>发行版中，像<code>rustc</code>和<code>cargo</code>这样的 Rust 工具默认并不通过<code>$PATH</code>路径可用（更多细节请参考<a href="https://github.com/Homebrew/homebrew-core/pull/177582">homebrew-core#177582</a>）。您可能需要将<code>$(brew --prefix rustup)/bin</code>添加到<code>$PATH</code>中，以便更容易访问这些工具。</p>
+<h2 id="手动安装-1"><a class="header" href="#手动安装-1">手动安装</a></h2>
+<p>你可以手动下载特定目标平台的<code>rustup-init</code>文件，下载链接为：<code>https://static.rust-lang.org/rustup/dist/{target-triple}/rustup-init[.exe]</code><sup class="footnote-reference" id="fr-msys2-1"><a href="#footnote-msys2">1</a></sup> <sup class="footnote-reference" id="fr-msvc-1"><a href="#footnote-msvc">2</a></sup>。</p>
+<details>
+<summary>Direct links</summary>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-apple-darwin/rustup-init">aarch64-apple-darwin</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-apple-darwin/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-linux-android/rustup-init">aarch64-linux-android</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-linux-android/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-msvc/rustup-init.exe">aarch64-pc-windows-msvc</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-pc-windows-msvc/rustup-init.exe.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-gnu/rustup-init">aarch64-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-gnu/rustup-init.sha256">SHA256 哈希文件</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-musl/rustup-init">aarch64-unknown-linux-musl</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-unknown-linux-musl/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/arm-linux-androideabi/rustup-init">arm-linux-androideabi</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/arm-linux-androideabi/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/arm-unknown-linux-gnueabi/rustup-init">arm-unknown-linux-gnueabi</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/arm-unknown-linux-gnueabi/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/arm-unknown-linux-gnueabihf/rustup-init">arm-unknown-linux-gnueabihf</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/arm-unknown-linux-gnueabihf/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/armv7-linux-androideabi/rustup-init">armv7-linux-androideabi</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/armv7-linux-androideabi/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-gnueabihf/rustup-init">armv7-unknown-linux-gnueabihf</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-gnueabihf/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-apple-darwin/rustup-init">i686-apple-darwin</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-apple-darwin/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-linux-android/rustup-init">i686-linux-android</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-linux-android/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">i686-pc-windows-gnu</a><sup class="footnote-reference" id="fr-msys2-2"><a href="#footnote-msys2">1</a></sup>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-msvc/rustup-init.exe">i686-pc-windows-msvc</a><sup class="footnote-reference" id="fr-msvc-2"><a href="#footnote-msvc">2</a></sup>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-msvc/rustup-init.exe.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-unknown-linux-gnu/rustup-init">i686-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/i686-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/loongarch64-unknown-linux-gnu/rustup-init">loongarch64-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/loongarch64-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/loongarch64-unknown-linux-musl/rustup-init">loongarch64-unknown-linux-musl</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/loongarch64-unknown-linux-musl/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/mips-unknown-linux-gnu/rustup-init">mips-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/mips-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/mips64-unknown-linux-gnuabi64/rustup-init">mips64-unknown-linux-gnuabi64</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/mips64-unknown-linux-gnuabi64/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/mips64el-unknown-linux-gnuabi64/rustup-init">mips64el-unknown-linux-gnuabi64</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/mips64el-unknown-linux-gnuabi64/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/mipsel-unknown-linux-gnu/rustup-init">mipsel-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/mipsel-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc-unknown-linux-gnu/rustup-init">powerpc-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64-unknown-linux-gnu/rustup-init">powerpc64-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64-unknown-linux-gnu/rustup-init.sha256">sha256 file</a><a href="https://static.rust-lang.org/rustup/dist/powerpc64-unknown-linux-gnu/rustup-init.sha256">SHA256 文件</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/aarch64-linux-android/rustup-init">aarch64-linux-android</a> <a href="https://static.rust-lang.org/rustup/dist/aarch64-linux-android/rustup-init.sha256">SHA256文件</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64-unknown-linux-musl/rustup-init.sha256">sha256 文件</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-linux-gnu/rustup-init">powerpc64le-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-linux-musl/rustup-init">powerpc64le-unknown-linux-musl</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/powerpc64le-unknown-linux-musl/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/s390x-unknown-linux-gnu/rustup-init">s390x-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/s390x-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/sparcv9-sun-solaris/rustup-init">sparcv9-sun-solaris</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/sparcv9-sun-solaris/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-apple-darwin/rustup-init">x86_64-apple-darwin</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-apple-darwin/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-linux-android/rustup-init">x86_64-linux-android</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-linux-android/rustup-init.sha256">sha256 file</a><a href="https://static.rust-lang.org/rustup/dist/powerpc64-unknown-linux-gnu/rustup-init.sha256">SHA256 文件</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-solaris/rustup-init">x86_64-pc-solaris</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-solaris/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-gnu/rustup-init.exe">x86_64-pc-windows-gnu</a><sup class="footnote-reference" id="fr-msys2-3"><a href="#footnote-msys2">1</a></sup>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-gnu/rustup-init.exe.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe">x86_64-pc-windows-msvc</a><sup class="footnote-reference" id="fr-msvc-3"><a href="#footnote-msvc">2</a></sup>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-freebsd/rustup-init">x86_64-unknown-freebsd</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-freebsd/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-illumos/rustup-init">x86_64-unknown-illumos</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-illumos/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init">x86_64-unknown-linux-gnu</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-musl/rustup-init">x86_64-unknown-linux-musl</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-musl/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-netbsd/rustup-init">x86_64-unknown-netbsd</a>
+<ul>
+<li><a href="https://static.rust-lang.org/rustup/dist/x86_64-unknown-netbsd/rustup-init.sha256">sha256 file</a></li>
+</ul>
+</li>
+</ul>
+</details>
+<p>要获取旧版本，可以使用以下链接访问相关文件：<code>https://static.rust-lang.org/rustup/archive/{rustup-version}/{target-triple}/rustup-init[.exe]</code>。</p>
+<p>SHA-256校验和也可通过附加<code>.sha256</code>链接获取。</p>
+<h2 id="自编译安装"><a class="header" href="#自编译安装">自编译安装</a></h2>
+<p>要从源代码安装 <code>rustup</code>，请访问来自 <a href="https://github.com/rust-lang/rustup">https://github.com/rust-lang/rustup</a> 的 Git 仓库，并运行 <code>cargo run --release</code>。请注意，安装后，<code>rustup</code> 工具链会在 <code>PATH</code> 环境变量前添加 <code>~/.cargo/bin</code>，从而覆盖任何已存在的工具链。</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-msys2">
+<p>Windows GNU 构建不需要额外的软件进行基本使用。 然而，许多库箱将无法编译，直到安装完满的 <a href="https://www.msys2.org/">MSYS2</a>。 <a href="#fr-msys2-1">↩</a> <a href="#fr-msys2-2">↩2</a> <a href="#fr-msys2-3">↩3</a></p>
+</li>
+<li id="footnote-msvc">
+<p>MSVC 版本的 <code>rustup</code> 额外需要<a href="https://visualstudio.microsoft.com/downloads/">安装Visual Studio 2019 或 Visual C++ 构建工具2019</a>。 对于Visual Studio，请确保检查 “C++ 工具” 和 “Windows 10 SDK” 选项。 <a href="#fr-msvc-1">↩</a> <a href="#fr-msvc-2">↩2</a> <a href="#fr-msvc-3">↩3</a></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="已经安装了rust吗"><a class="header" href="#已经安装了rust吗">已经安装了Rust吗？</a></h1>
+<p>其他包管理器也提供了Rust版本，您可能希望使用这些打包的工具链，例如用于分发包的开发。您也可以选择使用由 <code>rustup</code> 管理的工具链，比如nightly或beta版本。通常情况下， <code>rustup</code> 会提示您已经安装了Rust，并拒绝进行安装。不过，您可以通过 <code>rustup</code> 来安装Rust，使其与您已使用的打包Rust工具链共存。</p>
+<h2 id="使用现有的rust工具链来安装rustup"><a class="header" href="#使用现有的rust工具链来安装rustup">使用现有的Rust工具链来安装rustup</a></h2>
+<p>当你首次使用 <code>rustup</code> 安装 Rust 时，需要传递 <code>-y</code> 选项，使其忽略已打包的 Rust 工具链，并安装一个由 <code>rustup</code> 管理的工具链，将其安装到 <code>~/.cargo/bin</code> 中。将那个目录添加到你的 <code>$PATH</code> 中（或者让 <code>rustup</code> 帮你完成，无需传递 <code>--no-modify-path</code>）。然后，为了告诉 <code>rustup</code> 你的系统工具链的位置，请运行：</p>
+<pre><code class="language-console">rustup toolchain link system /usr
+</code></pre>
+<p>你可以将“system”当作一个工具链来使用，就像使用“nightly”一样。例如，使用<a href="#toolchain-override-shorthand">工具链快捷方式</a>，你可以运行 <code>cargo +system build</code> 来使用系统工具链进行构建，或者运行 <code>cargo +nightly build</code> 来使用 nightly 版本进行构建。</p>
+<p>如果您想要开发系统工具链(例如发行软件包)，您可能想要将其变成您的<a href="#default-toolchain">默认工具链</a>：</p>
+<pre><code class="language-console">rustup default system
+</code></pre>
+<h2 id="确保正确的-path-配置"><a class="header" href="#确保正确的-path-配置">确保正确的 <code>$PATH</code> 配置</a></h2>
+<p>有时候，上述步骤可能无法正常工作，在运行本应被 rustup 代理的命令时，你可能会看到奇怪的错误信息。例如，在运行 <code>cargo +stable --version</code> 时，你可能会遇到以下错误：</p>
+<pre><code class="language-text">error: no such command: `+stable`
+
+        Cargo does not handle `+toolchain` directives.
+        Did you mean to invoke `cargo` through `rustup` instead?
+</code></pre>
+<p>这意味着 <code>cargo</code> 目前并不是一个 <code>rustup</code> 的代理，而你的 <code>$PATH</code> 需要被修复。</p>
+<p>事实上，在任何安装了rustup的机器上，您都希望**rustup代理在<code>$PATH</code>**中首先显示，并覆盖任何其他Rust安装。别担心：如上所述，这些阴影安装可以通过使用“rustup toolchain link”命令的rustup来采用。</p>
+<p>首先需要采取的确切步骤来制作rusup proxies 可能会根据您的系统环境而变化。 但通常是为了更改您的 shell 配置文件(s) 中某些行的评估顺序。</p>
+<p>使之更加清晰， 让我们看看一个Mac 的例子，这个Mac 同时从 <a href="https://rustup.rs">rustup.rs</a> 和自制安装的 “rust” 中获取了正常的生成。 <strong>正确的方式</strong> 在这个环境中配置 <code>.profile</code> 的方式是：</p>
+<pre><code class="language-bash">eval $(/opt/homebrew/bin/brew shellenv)
+. $HOME/.cargo/env
+</code></pre>
+<p>在这个示例中，这两行代码都位于 <code>$PATH</code> 之前，因此最后那一行会优先执行，使得 rustup 代理能够覆盖 homebrew 安装的 <code>rust</code>。另一方面，如果将这些代码的位置颠倒，就会引发上述错误。</p>
+<p>如果不确定，你可以通过打印当前 <code>$PATH</code> 的 status，并使用 <code>echo $PATH | xargs -n1</code> 来调试你的 shell 配置，同时注意 <code>$CARGO_HOME/bin</code> 的排序（默认是 <code>$HOME/.cargo/bin</code>）与你的包管理器中的 <code>bin</code> 目录的排序是否一致。</p>
+<p>在修复之后， <code>cargo +stable --version</code> 的输出结果应该与以下其中一种情况类似，具体取决于您是否安装了 <code>stable</code> 工具链。</p>
+<ul>
+<li>
+<pre><code class="language-text">cargo 1.85.1 (d73d2caf9 2024-12-31)
+</code></pre>
+</li>
+<li>
+<pre><code class="language-text">error: toolchain 'stable' is not installed
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="概念"><a class="header" href="#概念">概念</a></h1>
+<h2 id="rustup-的工作原理"><a class="header" href="#rustup-的工作原理">Rustup 的工作原理</a></h2>
+<p><code>rustup</code>是一个用于管理多个 Rust 工具链的多路器。它负责安装和管理这些工具链，并通过一组安装在了<code>~/.cargo/bin</code>下的工具来统一调用这些工具链。<a href="https://doc.rust-lang.org/rustc/"><code>rustc</code></a>和<code>cargo</code>这两个可执行文件被安装到了<code>~/.cargo/bin</code>目录下，它们实际上都是用来代理调用真实工具链的代理程序。<code>rustup</code>还提供了机制，可以通过重新配置这些代理程序来轻松切换当前使用的工具链。</p>
+<p>因此，当 <code>rustup</code> 首次安装后，运行 <code>rustc</code> 将会调用位于 <code>$HOME/.cargo/bin/rustc</code> 目录下的编译器。而一旦你之后通过 <code>rustup default nightly</code> 将默认使用的编译器设置为 <code>nightly</code> 版本，那么同样的代理程序就会用来运行 <code>nightly</code> 版本的编译器了。</p>
+<p>这类似于 Ruby 的<a href="https://github.com/rbenv/rbenv">rbenv</a>、Python 的<a href="https://github.com/yyuu/pyenv">pyenv</a>，或者 Node 的<a href="https://github.com/creationix/nvm">nvm</a>。</p>
+<h2 id="术语表"><a class="header" href="#术语表">术语表</a></h2>
+<ul>
+<li>
+<p><strong>频道</strong>——Rust 有三个不同的发布渠道：稳定版、测试版和最新版本。更多详细信息请参考<a href="#频道">频道设置</a>章节</p>
+</li>
+<li>
+<p><strong>工具链</strong>——所谓“工具链”，指的是完整的 Rust 编译器（<code>rustc</code>）及相关工具（如<code>cargo</code>）的安装环境。工具链的规格说明中通常会包含相关的发布渠道、版本信息，以及该工具链运行所需的平台。</p>
+</li>
+<li>
+<p><strong>目标平台</strong>——<code>rustc</code>能够生成适用于多种平台的代码。这里的“目标平台”指的是代码将被生成的平台。默认情况下，<code>cargo</code>和<code>rustc</code>会使用主机上的工具链平台作为目标平台。如果想要为不同的目标平台构建代码，通常需要先通过<code>rustup target</code>命令安装该目标平台的标准库。更多细节请参考<a href="#交叉编译">交叉编译</a>章节。</p>
+</li>
+<li>
+<p><strong>组件</strong>——每个版本的 Rust 都包含多个“组件”，其中一些是必需的（如<code>rustc</code>），而另一些则是可选的（如<a href="https://github.com/rust-lang/rust-clippy"><code>clippy</code></a>）。更多详细信息请参考<a href="#组件">组件部分</a>。</p>
+</li>
+<li>
+<p><strong>配置文件</strong>——为了便于管理组件，会定义一种“配置文件”来分组组件。更多细节请参考<a href="#配置文件">配置文件</a>章节。</p>
+</li>
+<li>
+<p><strong>代理</strong>——是一种针对常见 Rust 组件（如<code>rustc</code>）的封装层，旨在将 CLI 接口调用转发到活跃的 Rust 工具链中。更多细节请参考<a href="#代理服务器">代理机制</a>章节。</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="频道"><a class="header" href="#频道">频道</a></h1>
+<p>Rust 被释放到三种不同的“通道”：稳定、贝塔和夜晚。稳定释放每6周（偶尔发布点数）。 测试版发布是将出现在下一次稳定版本中。夜间发布是每晚发布一次。 请参阅<a href="https://doc.rust-lang.org/book/appendix-07-nightly-rust.html">Rust Book</a>关于Rust的火车发布模型的更多详细信息。发布计划已张贴到<a href="https://forge.rust-lang.org/">Rust Forge</a>。 <code>rustup</code> 有助于安装不同的频道，随时更新，并且易于在它们之间切换。</p>
+<p>在安装了发布通道之后，可以使用 <code>rustup</code> 将已安装的版本更新到该通道上最新的版本。更多详细信息，请参见 <a href="#keeping-rust-up-to-date">保持 Rust 的更新</a>部分。</p>
+<p><code>rustup</code> 也可以安装特定版本的 Rust, 例如<code>1.45.2</code> 或 <code>夜间-2020-07-27</code>。 请参阅 [Toolchains](toolchains.md章，以了解安装不同频道和发布版本的更多信息。 请参阅 [Overrides](../overrides.md章，以了解工具链之间切换和将您的项目置于特定的工具链中的详细信息。</p>
+<h2 id="每晚使用-rust"><a class="header" href="#每晚使用-rust">每晚使用 Rust</a></h2>
+<p><code>rustup</code> 可以让您轻松地访问每夜编译器及其<a href="https://doc.rust-lang.org/unstable-book/">实验功能</a>。要添加它，只需要运行 `rustup toolchain 夜间安装’：</p>
+<pre><code class="language-console">$ rustup toolchain install nightly
+info: syncing channel updates for 'nightly'
+info: downloading toolchain manifest
+info: downloading component 'rustc'
+info: downloading component 'rust-std'
+info: downloading component 'rust-docs'
+info: downloading component 'cargo'
+info: installing component 'rustc'
+info: installing component 'rust-std'
+info: installing component 'rust-docs'
+info: installing component 'cargo'
+
+  nightly installed: rustc 1.9.0-nightly (02310fd31 2016-03-19)
+
+</code></pre>
+<p>现在必须每晚安装一次，但没有激活。要测试它，您可以从每晚的工具链中运行一个命令。</p>
+<pre><code class="language-console">$ rustup run nightly rustc --version
+rustc 1.9.0-nightly (02310fd31 2016-03-19)
+</code></pre>
+<p>但你想要在一段时间内使用它的可能性更大。要切换到全局夜晚，请使用 <code>rusup default 夜晚</code> 来更改 <a href="#default-toolchain">默认</a> ：</p>
+<pre><code class="language-console">$ rustup default nightly
+info: using existing install for 'nightly'
+info: default toolchain set to 'nightly'
+
+  nightly unchanged: rustc 1.9.0-nightly (02310fd31 2016-03-19)
+
+</code></pre>
+<p>现在你运行<code>cargo</code>或<code>rustc</code>时，你将运行夜间编译器。</p>
+<p>每运行一次<code>rustup update</code>后，夜间版软件也会随之更新。除了稳定版之外，夜间版软件也会得到更新。</p>
+<pre><code class="language-console">$ rustup update
+info: syncing channel updates for 'stable'
+info: syncing channel updates for 'nightly'
+info: checking for self-update
+info: downloading self-update
+
+   stable unchanged: rustc 1.7.0 (a5d1e7a59 2016-02-29)
+  nightly unchanged: rustc 1.9.0-nightly (02310fd31 2016-03-19)
+
+</code></pre>
+<h2 id="每晚可用"><a class="header" href="#每晚可用">每晚可用</a></h2>
+<p>每晚工具链可能无法构建，因此对于任何给定的日期和目标平台，可能没有可用的工具链。 此外，夜间构建可能会发布缺少非默认的 <a href="#组件">components</a> (例如<a href="https://github.com/rust-lang/rust-clippy"><code>clippy</code></a>)。 因此，很难找到正常工作的夜晚。 使用 <a href="https://rust-lang.github.io/rustup-components-history/">rustup-components-history</a> 项目来查找最近夜间工具链和组件的构建状态。</p>
+<p>当你尝试安装或更新 <code>夜间</code> 通道时，<code>rustup</code> 将检查是否缺少所需或以前安装过的组件。 如果缺失，<code>rustup</code> 将自动搜索包含所需组件的旧版本。有几种方法可以改变这种行为：</p>
+<ul>
+<li>使用 “–force” 标志来<code>rusup toolchain install</code> 来强制它安装最新版本，即使缺少一个组件。</li>
+<li>使用 “–profile” 标志来使用 “rusup toolchain install” 来使用一个不包含缺失组件的不同配置文件。 例如，<code>--profile=minimal</code> 应该始终能够运行，因为最小的集是需要存在的。更多详细信息请参阅 <a href="#配置文件">Profiles</a>。</li>
+<li>安装包含您需要的组件的特定日期。例如，“rusup toolchain new 2020-07-27”。 然后您可以使用 <a href="#覆盖">overrides</a> 引脚到指定的版本。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="工具链"><a class="header" href="#工具链">工具链</a></h1>
+<p>许多<code>rustup</code>命令处理的 <em>toolchains</em>，Rust编译器的单一安装。<code>rustup</code> 支持多种类型的工具链。 官方发布的最基本的音轨 <a href="#频道">channels</a>: <em>stable</em>, <em>beta</em> 和 <em>nightly</em>; 但<code>rustup</code> 也可以从官方档案中为备用主机平台和本地建筑安装工具链。</p>
+<h2 id="工具链规范"><a class="header" href="#工具链规范">工具链规范</a></h2>
+<p>标准发行频道工具链名称有以下表单：</p>
+<pre><code>&lt;channel&gt;[-&lt;date&gt;][-&lt;host&gt;]
+
+&lt;channel&gt;       = stable|beta|nightly|&lt;versioned&gt;[-&lt;prerelease&gt;]
+&lt;versioned&gt;     = &lt;major.minor&gt;|&lt;major.minor.patch&gt;
+&lt;prerelease&gt;    = beta[.&lt;number&gt;]
+&lt;date&gt;          = YYYY-MM-DD
+&lt;host&gt;          = &lt;target-triple&gt;
+</code></pre>
+<p>“通道”是一个命名的发布频道，一个主要和次要的版本号，如<code>1.42</code>，或一个完全指定的版本号，如<code>1.42.0</code>。 频道名称可选择附加归档日期，比如“2014-12-18晚”， 在这种情况下，将从该日期的归档中下载工具链。</p>
+<p>最后，主机可以指定为目标管。 这对于在 64 位平台上安装 32 位编译器或在 Windows 上安装 <a href="https://www.rust-lang.org/tools/install?platform_override=win">基于 MSVC 的工具链</a>最有用。例如：</p>
+<pre><code class="language-console">$ rustup toolchain install stable-x86_64-pc-windows-msvc
+</code></pre>
+<p>为方便起见，将推断被遗漏的目标管道的要素，因此可以写上：</p>
+<pre><code class="language-console">$ rustup toolchain install stable-msvc
+</code></pre>
+<p>没有给频道命名的工具链名称可以用来命名<a href="#custom-toolchains">自定义工具链</a>。</p>
+<h2 id="自定义工具链接"><a class="header" href="#自定义工具链接">自定义工具链接</a></h2>
+<p>为了方便从事 Rust 开发的开发者，rustup 可以负责管理 Rust 工具链的本地构建工作。如果你想向 rustup 说明你的构建过程，可以运行以下命令：</p>
+<pre><code class="language-console">$ rustup toolchain link my-toolchain path/to/my/toolchain/sysroot
+</code></pre>
+<p>例如，在 Ubuntu 系统中，你可以将 <code>rust-lang/rust</code> 克隆到 <code>~/rust</code> 中，然后构建它，最后运行：</p>
+<pre><code class="language-console">$ rustup toolchain link my-toolchain ~/rust/build/x86_64-unknown-linux-gnu/stage2/
+$ rustup default my-toolchain
+</code></pre>
+<p>现在，你可以将 <code>my-toolchain</code> 命名为任何其他 <code>rustup</code> 工具链。为你的每个 <code>rust-lang/rust</code> 工作区创建一个 <code>rustup</code> 工具链，并可以使用 <code>rustup run my-toolchain rustc</code> 轻松测试它们。</p>
+<p>因为 <code>rust-lang/rust</code> 这个工具树并不包含 Cargo，<em>当为自定义工具链调用 <code>cargo</code> 且无法使用时， <code>rustup</code> 会尝试从某个发布渠道使用 <code>cargo</code></em>，优先选择 ‘nightly’，然后是 ‘beta’ 或 ‘stable’。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="组件"><a class="header" href="#组件">组件</a></h1>
+<p>每个 <a href="#工具链">toolchain</a> 有几个“组件”，其中一些是必需的(例如<code>rustc</code>)，还有一些是可选的(例如<a href="https://github.com/rust-lang/rust-clippy"><code>clippy</code></a>)。 <code>rusup component</code> 命令用于管理已安装的组件。 例如，运行 <code>rusup 组件列表</code> 以查看可用和已安装组件的列表。</p>
+<p>在安装 “–component” 标志的工具链时可以添加组件。例如：</p>
+<pre><code class="language-console">rustup toolchain install nightly --component rust-docs
+</code></pre>
+<p>组件可以添加到已安装的 “rusup 组件” 命令的工具链中：</p>
+<pre><code class="language-console">rustup component add rust-docs
+</code></pre>
+<p>为了更容易选择哪些组件被安装，<code>rustup</code>具有“配置文件“的概念，提供不同组件的命名组合。 更多细节请参阅 <a href="#配置文件">Profiles</a>。</p>
+<p>大多数组件有目标三重后缀，例如<code>rustc-x86_64-apple-darwin</code>，表示组件所要使用的平台。</p>
+<p>现有组件的组别可能因不同的版本和工具链而不同。</p>
+<ul>
+<li><code>rustc</code> — Rust编译器和 <a href="https://doc.rust-lang.org/rustdoc/">Rustdoc</a>。 </li>
+<li><code>cargo</code> — <a href="https://doc.rust-lang.org/cargo/">Cargo</a> 是一个软件包管理器和构建工具。</li>
+<li><code>rustfmt</code> — <a href="https://github.com/rust-lang/rustfmt">Rustfmt</a> 是自动格式化代码的工具。</li>
+<li><code>rust-std</code> — 这是Rust <a href="https://doc.rust-lang.org/std/">标准库</a>。 <code>rustc</code>支持的每个目标都有一个单独的<code>rust-std</code>组件，如<code>rust-std-x86_64-pc-winds-msvc</code>。 更多细节请参阅 <a href="#交叉编译">Cross-compilation</a>。</li>
+<li><code>rust-docs</code> - 这是[Rust文档]的本地副本(https://doc.rust-lang.org/)。 使用 “rusup doc” 命令在 web 浏览器中打开文档。运行 “rusup doc –help” 获取更多选项。</li>
+<li><code>rust-analyzer</code> — <a href="https://rust-analyzer.github.io/">rust-analyzer</a> 是一个语言服务器，为编辑器和 IDE 提供支持。</li>
+<li><code>clippy</code> - <a href="https://github.com/rust-lang/rust-clippy">Clippy</a> 是一个直线工具，为常见错误和风格选择提供额外的检查。</li>
+<li><code>miri</code> - <a href="https://github.com/rust-lang/miri/">Miri</a> 是一个实验性的Rust 解释器，可以用于检查未定义的行为。</li>
+<li><code>rust-src</code> — 这是Rust标准库源代码的本地副本。 这可以通过一些工具来使用，例如 <a href="https://rust-analyzer.github.io/">rust-analyzer</a>，为标准库中的功能提供自动完成； <a href="https://github.com/rust-lang/miri/">Miri</a> 是Rust解释器； 和 Cargo 的实验 <a href="https://doc.rust-lang.org/nightly/cargo/reference/unstable.html#build-std">build-std</a>功能，允许您在本地重建标准库。</li>
+<li><code>rust-mingw</code> — — 它包含一个链接库和平台库，用于在 <code>x86_64-pc-winds-gnu</code> 平台上建造。</li>
+<li><code>llvm-tools</code> — 此组件包含了一个 <a href="https://llvm.org/">LLVM</a>工具集。 **这个组件尚未稳定下来，可能会在将来改变，并且是按原样提供。 * 单独的LVM工具的可用性可能会随着LLVM版本而改变(包括移除具体的LLVM工具)。 <strong>不受编译器或工具链稳定性保证的约束</strong>。 请参阅<a href="https://github.com/rust-lang/rust/issues/85658">#85658</a>。</li>
+<li><code>rustc-dev</code> — — 这个组件包含编译器作为库。 大多数用户将不需要这样做； 它仅用于连接到编译器的开发_of_工具，如修改 <a href="https://github.com/rust-lang/rust-clippy">Clippy</a>。</li>
+</ul>
+<h3 id="之前的组件"><a class="header" href="#之前的组件">之前的组件</a></h3>
+<blockquote>
+<p>本节的最新版本请参阅 <a href="https://rust-lang.github.io/rustup/devel/concepts/components.html#previous-components">here</a>。 </p>
+</blockquote>
+<p>这些组件已被弃用，并且不会在新的Rust 版本中发布。</p>
+<ul>
+<li><code>rls</code> — <a href="https://github.com/rust-lang/rls">RLS</a> 是一个已废弃的语言服务器，已被生利分析器所替代。</li>
+<li><code>rust-analysis</code> — 关于标准库的元数据，被<a href="https://github.com/rust-lang/rls">RLS</a>所使用。</li>
+<li>“wasm32-wasi”目标版本已经<a href="https://blog.rust-lang.org/2024/04/09/updates-to-rusts-wasi-targets.html">更名为</a>“wasm32-wasip1”。</li>
+</ul>
+<h2 id="组件可用性"><a class="header" href="#组件可用性">组件可用性</a></h2>
+<p>并非所有组件都适用于所有的工具链。 特别是在夜间频道上，如果某些组件处于故障状态，它们可能不会被包含。 所有组件的当前状态可以在 <a href="https://rust-lang.github.io/rustup-components-history/">rusup 组件历史</a> 页面找到。 详情请查看<a href="#nightly-availability">每晚可用性</a>部分。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="配置文件"><a class="header" href="#配置文件">配置文件</a></h1>
+<p><code>rustup</code> 的概念是“profiles”。 他们属于 <a href="#组件">components</a>组，您可以在安装新的Rust 工具链时选择下载。 此时可用的配置文件是 <code>minimal</code> 、 <code>default</code> 和 <code>complete</code>：</p>
+<ul>
+<li><strong>最小化</strong> 配置文件包含尽可能少的组件来获取一个工作编译器(<code>rustc</code>, <code>rust-std</code>, 和 <code>cargo</code>)。 如果您不使用本地文档，建议在Windows系统上使用此组件(大量文件可能会导致某些抗病毒系统的问题)， and in CI。</li>
+<li><strong>默认</strong> 配置文件包含所有组件在 <strong>最小</strong> 配置文件中，并添加 <code>rust-docs</code> 、 <code>rustfmt</code> 和 <code>clippy</code> 。 默认情况下，这个配置文件将被 <code>rustup</code> 使用，它是推荐给一般使用的配置文件。</li>
+<li><strong>完整</strong> 配置文件包括所有通过“rustup”提供的组件。 永远不应使用，因为它包含了包含在元数据中的 <em>every</em> 组件，因此几乎总是失败。 如果您正在寻找安装诸如<code>miri</code> 或 IDE 集成工具(<code>rust-analyzer</code>)的方法， 您应该使用 “默认” 配置文件并手动安装所需的附加组件。 通过使用 “rusup component add” 或使用 “-c” 安装工具链。</li>
+</ul>
+<p>要更改默认使用的配置文件 <code>rusup install</code> ，您可以使用 <code>rusup set profile</code> 命令。 例如，要选择您可以使用的最小配置文件：</p>
+<pre><code class="language-console">rustup set profile minimal
+</code></pre>
+<p>您也可以直接选择安装工具链时使用的配置文件：</p>
+<pre><code class="language-console">rustup install --profile &lt;name&gt;
+</code></pre>
+<p>第一次安装 <code>rustup</code> 时，也可以选择默认配置文件 通过选择 “定制安装” 选项交互，或通过通过 “–profile=<name>” 标志编程。 配置文件只会影响新安装的工具链：通常可以稍后安装个别组件： <code>rusup 组件添加</code> 。</name></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="代理服务器"><a class="header" href="#代理服务器">代理服务器</a></h1>
+<p><code>rustup</code> 为通用的Rust工具提供了一些包装器。 这些被称为_proxies_ 并代表由各种 <a href="#组件">components</a>提供的命令。</p>
+<p>代理服务器列表目前在 <code>rustup</code> 中静态，如下所示：</p>
+<ul>
+<li>
+<p><code>rustc</code>是Rustc编程语言的编译器，由项目本身提供，来自<code>rustc</code>组件’。</p>
+</li>
+<li>
+<p><code>rustdoc</code>是一个在 <code>rustc</code> 组件中分配的工具，它帮助您生成Rust项目的文档。</p>
+</li>
+<li>
+<p><code>cargo</code>是Rust 包管理器，它下载你的包依赖，编译你的包，提供可分发的包，并将它们上传到箱子。 o (Rust Community的软件包注册表)。它来自于“cargo”组件。</p>
+</li>
+<li>
+<p><code>rust-lldb</code>、<code>rust-gdbb</code>、<code>rust-gdbgui</code>分别是<code>lldb</code>、<code>gdb</code>和<code>gdbgui</code>的包裹。 封装程序可以让一些预印Rust值，并通过其脚本接口为调试器添加一些便利功能。</p>
+</li>
+<li>
+<p><code>rust-analyzer</code> 是Rust IDE 集成工具的一部分。 它执行语言服务器协议以允许IDEs和编辑，例如Visual Studio代码。 Vim, 或 Emacs, 访问你正在编辑的Rust 代码的语义。 它来自<code>rust-analyzer</code>组件’。</p>
+</li>
+<li>
+<p><code>cargo-clipppy</code>和<code>clippy-driver</code>都与<code>clippy</code>工具相关，它为常见错误和风格选择提供额外的检查，它来自<code>clippy</code>组件’。</p>
+</li>
+<li>
+<p><code>cargo-miri</code> 是Rust中级代表制的实验性解释器，它来自<code>miri</code> 部分。</p>
+</li>
+<li>
+<p><code>rls</code> 是一个废弃的 IDE 工具，它已被<code>rt-analyzer</code>所替代。它来自<code>rls</code>组件。</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="基本使用"><a class="header" href="#基本使用">基本使用</a></h1>
+<h2 id="保持-rust-的更新状态"><a class="header" href="#保持-rust-的更新状态">保持 Rust 的更新状态</a></h2>
+<p>Rust 分布在三个不同的不同的<a href="#频道">发行频道</a>：稳定、贝塔和夜间。 <code>rustup</code> 默认使用稳定通道，代表最新版本的 Rustup。稳定每六周发布一次新版本。</p>
+<p>当发行新版本Rust时，只需输入<code>rustup update</code>以更新：</p>
+<pre><code class="language-console">$ rustup update
+info: syncing channel updates for 'stable'
+info: downloading component 'rustc'
+info: downloading component 'rust-std'
+info: downloading component 'rust-docs'
+info: downloading component 'cargo'
+info: installing component 'rustc'
+info: installing component 'rust-std'
+info: installing component 'rust-docs'
+info: installing component 'cargo'
+info: checking for self-update
+info: downloading self-update
+
+  stable updated: rustc 1.7.0 (a5d1e7a59 2016-02-29)
+
+</code></pre>
+<h2 id="保持rustup更新"><a class="header" href="#保持rustup更新">保持<code>rustup</code>更新</a></h2>
+<p>如果你的 <code>rustup</code> 是用<a href="https://github.com/rust-lang/rustup/blob/HEAD/Cargo.toml#L29">没有自我更新功能</a>构建的，它不能自动更新。 这不是默认，只有<code>--no-default-features</code>构建的 <code>rustup</code> 版本， 或从已禁用它的第三方经销商(如NixOS)获取。</p>
+<p>否则Rusup可以更新自己。可以使用 “自动自更新” 配置变量来控制Rustup自动更新机制。 此设置支持三个值：<code>enable</code> 和 <code>disabl</code> 和 <code>chec-only check</code> 。</p>
+<ul>
+<li><code>disable</code> 将确保不会自动进行自我更新操作。</li>
+<li><code>enable</code>表示<code>rustup update</code>和类似命令也会检查并安装到Rustup上的任何更新。</li>
+<li>“只勾选“会导致任何自动更新来检查和报告任何更新，但不会自动安装它们。</li>
+</ul>
+<p>无论<code>自动更新</code> 是否为<code>enable</code> ，你都可以通过运行 <code>rustup 自我更新</code> 来请求Rustup更新自己到最新版本的 <code>rustup</code> 。 这将不会下载新的工具链：</p>
+<pre><code class="language-console">$ rustup self update
+info: checking for self-update
+info: downloading self-update
+</code></pre>
+<h3 id="在每次调用的基础上禁用自我更新"><a class="header" href="#在每次调用的基础上禁用自我更新">在每次调用的基础上禁用自我更新</a></h3>
+<blockquote>
+<p>在运行 <code>rustup update</code> 或 <code>rustup toolchain install</code> 时，也可以通过 <code>--no-self-update</code> 传递参数来抑制自身的更新。</p>
+</blockquote>
+<h2 id="帮助系统"><a class="header" href="#帮助系统">帮助系统</a></h2>
+<p><code>rustup</code>命令行有一个内置的帮助系统，提供更多关于每个命令的信息。运行 <code>rustup help</code> 以获取概述。 每个子命令的详细帮助也是可用的。例如，运行 “rusup toolchain install –help” 以获取安装 <a href="#工具链">toolchains</a>。 </p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="覆盖"><a class="header" href="#覆盖">覆盖</a></h1>
+<p><code>rustup</code>在执行像<code>rustc</code>这样的已安装命令时，会自动确定使用哪个[工具链]。有几种方法可以控制和覆盖所使用的工具链：</p>
+<ol>
+<li>在命令行上使用的<a href="#toolchain-override-shorthand">工具链覆盖短语</a>，例如“cargo + beta“。</li>
+<li>环境变量 <code>RUSTUP_TOOLCHAIN</code>。</li>
+<li>一个<a href="#directory-overrides">目录覆盖</a>，使用 <code>rusup override</code> 命令设置。</li>
+<li>[<code>rust-toolchain.toml</code>] 文件。</li>
+<li>默认的工具链。</li>
+</ol>
+<p>工具链的选择按照上述顺序进行，首先选择第一个被指定的工具链。不过有一个例外：目录覆盖和<code>rust-toolchain.toml</code>文件由于更接近当前目录，因此也被优先选择。也就是说，这两种覆盖方法是通过遍历目录树来发现的，而距离当前目录更近的<code>rust-toolchain.toml</code>文件会被优先选择，而不是距离更远的目录覆盖方式。</p>
+<p>为了验证哪个工具链是活跃的，你可以使用 <code>rustup show</code>。</p>
+<h2 id="工具链覆盖的简写方式"><a class="header" href="#工具链覆盖的简写方式">工具链覆盖的简写方式</a></h2>
+<p>可以直接指定 <code>rustup</code> 工具链代理使用特定的工具链，这对于经常测试不同工具链的开发者来说非常方便。如果 <code>cargo</code>、 <code>rustc</code> 或其他工具链中的第一个参数以 <code>+</code> 开头，那么它将被解释为 <code>rustup</code> 工具链的名称，并且会优先使用该工具链。</p>
+<pre><code class="language-console">cargo +beta test
+</code></pre>
+<h2 id="目录覆盖"><a class="header" href="#目录覆盖">目录覆盖</a></h2>
+<p>目录可以被分配给自己的 Rust 工具链，使用 <code>rusup override</code> 。 当一个目录有覆盖时，任何时候都会在该目录内运行 <code>rustc</code> 或 <code>cargo</code> 。 或者它的子目录之一将被调用。</p>
+<p>为某个目录使用特定的夜间版本：</p>
+<pre><code class="language-console">rustup override set nightly-2014-12-18
+</code></pre>
+<p>或者某个特定的稳定版本：</p>
+<pre><code class="language-console">rustup override set 1.0.0
+</code></pre>
+<p>要查看正在使用的工具链，请使用 <code>rustup show</code>。若想移除覆盖设置并重新使用默认工具链，请使用 <code>rustup override unset</code>。</p>
+<p>每个目录的覆盖都存储在<code>rustup</code>的主目录中<a href="#配置">一个配置文件</a>。</p>
+<h2 id="工具链文件"><a class="header" href="#工具链文件">工具链文件</a></h2>
+<p>有些项目被“固定”在Rust的特定版本上，希望这些信息能在它们的源代码仓库中得到反映。这种情况最常见的是那些仅适用于夜间版本的软件，它们会将自己绑定到发布归档中的特定版本。</p>
+<p>在这些情况下，工具链可以在项目目录中命名为<code>rust-toolchain.toml</code>或<code>rust-toolchain</code>。 如果两个文件都存在于目录中，则后者用于向后兼容性。 文件使用 [TOML](https://toml.io/格式，并有以下布局：</p>
+<pre><code class="language-toml">[toolchain]
+channel = "nightly-2020-07-10"
+components = [ "rustfmt", "rustc-dev" ]
+targets = [ "wasm32-unknown-unknown", "thumbv2-none-eabi" ]
+profile = "minimal"
+</code></pre>
+<p><code>[toolchain]</code>»这一部分是必填项，至少需要指定一个属性。«<code>channel</code>»和«<code>path</code>»是互斥的。</p>
+<p>为了向后兼容， <code>rust-toolchain</code> 文件还支持一种旧格式，该格式仅包含工具链名称，且未使用 TOML 编码，例如仅为 <code>nightly-2021-01-21</code>。在这种情况下，文件必须使用 US-ASCII 编码（如果您在 Windows 系统上，请检查编码并确保其不以 BOM 开头）。 <code>rust-toolchain.toml</code> 文件不支持这种旧格式。</p>
+<p>如果您在运行 <code>rustc</code>、 <code>cargo</code> 或其他命令时看到以下错误，请按如下方式处理：</p>
+<pre><code>error: invalid channel name '[toolchain]' in '/PATH/TO/DIRECTORY/rust-toolchain'
+</code></pre>
+<p>这意味着您正在运行 <code>rustup</code> 版本，且低于 1.23.0 版本，同时试图与一个在 <code>rust-toolchain</code> 版本中使用新 TOML 编码格式的项目进行交互。您需要将<code>rustup</code> 版本升级到 1.23.0 及以上版本。</p>
+<p>这些 <code>rust-toolchain.toml</code>/<code>rust-toolchain</code> 文件适合提交到源代码控制。如果已经完成了这一步，那么如果工具链被固定在一个特定的版本上，也应该对 <code>Cargo.lock</code> 进行跟踪，以避免与依赖项出现兼容性问题。</p>
+<h3 id="工具链文件设置"><a class="header" href="#工具链文件设置">工具链文件设置</a></h3>
+<h4 id="频道-1"><a class="header" href="#频道-1">频道</a></h4>
+<p>“通道”设置指定了要使用的 <a href="#工具链">toolchain</a>。该值是一个字符串，其形式如下：</p>
+<pre><code>(&lt;channel&gt;[-&lt;date&gt;])|&lt;custom toolchain name&gt;
+
+&lt;channel&gt;       = stable|beta|nightly|&lt;versioned&gt;[-&lt;prerelease&gt;]
+&lt;versioned&gt;     = &lt;major.minor&gt;|&lt;major.minor.patch&gt;
+&lt;prerelease&gt;    = beta[.&lt;number&gt;]
+&lt;date&gt;          = YYYY-MM-DD
+</code></pre>
+<h4 id="路径"><a class="header" href="#路径">路径</a></h4>
+<p>设置 <code>path</code> 允许使用自定义的工具链。该值是一个绝对路径字符串。</p>
+<p>由于 <code>path</code> 指令直接指定了一个本地工具链，因此其他选项，比如 <code>components</code>、 <code>targets</code> 和 <code>profile</code> 则没有任何效果。</p>
+<p><code>channel</code> 和 <code>path</code> 是互斥的，因为 <code>path</code> 已经指向了特定的工具链。</p>
+<h4 id="个人资料"><a class="header" href="#个人资料">个人资料</a></h4>
+<p>“配置文件“设置要安装的组件组。值是一个字符串。 有效的选项是：<code>最小化</code>, <code>default</code>, 和 <code>complete</code>。每个选项的详细信息见 <a href="#配置文件">profiles</a>。</p>
+<p>请注意，如果没有指定，则不一定会使用 <code>default</code> 配置，因为可能已设置了不同的默认配置，即 <code>rustup set profile</code>。</p>
+<h4 id="组件-1"><a class="header" href="#组件-1">组件</a></h4>
+<p><code>components</code>设置中包含需要安装的额外组件列表。该值是一个字符串列表。有关组件的列表，请参见<a href="#组件">components</a>部分。请注意，不同的工具链可能提供不同的组件。</p>
+<p>这里列出的组件会与当前配置一起被添加。</p>
+<h4 id="目标"><a class="header" href="#目标">目标</a></h4>
+<p><code>targets</code>设置包含要为 <a href="https://rust-lang.github.io/rustup/cross-compilation.html">cross-compilation</a>安装的平台列表。该值是字符串列表。</p>
+<p>主机平台会自动被包含进来；这里列出的目标都是可选的。</p>
+<h2 id="默认工具链"><a class="header" href="#默认工具链">默认工具链</a></h2>
+<p>如果没有其他覆盖设置，将使用全局默认的工具链。这种默认设置可以在安装 <code>rustup</code> 时选择。可以使用 <code>rustup default</code> 命令来设置和查询当前的默认设置。无需任何参数地运行 <code>rustup default</code> 即可打印当前的默认设置。可以通过指定工具链作为参数来更改默认设置。</p>
+<pre><code class="language-console">rustup default nightly-2020-07-27
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="交叉编译"><a class="header" href="#交叉编译">交叉编译</a></h1>
+<p>Rust 支持大量的平台<a href="https://doc.rust-lang.org/nightly/rustc/platform-support.html">支持情况</a>。对于这些平台中的许多类型，Rust 项目会发布标准库的二进制版本；而对于某些平台，则会发布完整的编译器版本。而<code>rustup</code>工具则能够方便地访问所有这些版本。</p>
+<p>当你第一次安装一个工具链时，<code>rustup</code> 只为你的 <em>host</em> 平台安装标准库，也就是说： 您正在运行的架构和操作系统。 要编译到其他平台，您必须安装其他 <em>target</em> 平台。 使用 “rusup targetadd” 命令完成。例如，添加安卓目标：</p>
+<pre><code class="language-console">$ rustup target add arm-linux-androideabi
+info: downloading component 'rust-std' for 'arm-linux-androideabi'
+info: installing component 'rust-std' for 'arm-linux-androideabi'
+</code></pre>
+<p>使用 <code>arm-linux-androideabi</code> 目标安装后，您就可以通过 <code>--target</code> 标志来构建安卓系统，如在 <code>cargo building --target=arm-Linux-androideabi</code> 中。</p>
+<p>请注意，<code>rustup target add</code>仅会为特定目标平台安装 Rust 标准库。通常还需要其他工具来进行交叉编译，比如链接器。例如，要将其编译为 Android 版本，就必须安装<a href="https://developer.android.com/tools/sdk/ndk/index.html">Android NDK</a>。未来，<code>rustup</code>将会提供关于如何安装 NDK 组件的帮助。更多详细信息请参考<code>cargo</code>配置文件的<a href="https://doc.rust-lang.org/cargo/reference/config.html#target">目标部分</a>。</p>
+<p>如果要为工具链添加目标，且该工具链并非默认工具链，可以使用<code>rustup target add</code>命令中的<code>--toolchain</code>参数来实现，具体步骤如下：</p>
+<pre><code class="language-console">$ rustup target add --toolchain &lt;toolchain&gt; &lt;target&gt;...
+</code></pre>
+<p>要查看可用的目标列表，请执行 <code>rustup target list</code> 命令。如果要删除已添加的目标，可以使用 <code>rustup target remove</code> 命令。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="环境变量"><a class="header" href="#环境变量">环境变量</a></h1>
+<ul>
+<li>
+<p><code>RUSTUP_LOG</code>（默认：无）。启用 Rustup 的“自定义日志模式”。在这种模式下，可以通过 <code>tracing_subscriber</code> 的<a href="https://docs.rs/tracing-subscriber/latest/tracing_subscriber/filter/struct.EnvFilter.html#directives">指令语法</a>来指定 Rustup 日志行的详细程度。例如，将 <code>RUSTUP_LOG=rustup=DEBUG</code> 设置为接收来自 <code>rustup</code> 本身的日志行，并且最大详细程度为 <code>DEBUG</code>。</p>
+</li>
+<li>
+<p><code>RUSTUP_HOME</code>（默认值为 <code>~/.rustup</code> 或 <code>%USERPROFILE%/.rustup</code>）。设置根文件夹为 <code>rustup</code>，用于存储已安装的工具链和配置选项。</p>
+</li>
+<li>
+<p><code>RUSTUP_TOOLCHAIN</code>（默认值为空）。如果设置此选项，将<a href="#覆盖">覆盖</a>所有Rust工具调用所使用的工具链。必须安装具有此名称的工具链，否则工具调用将会失败。该选项可以指定自定义工具链、可安装的工具链，或者工具链的绝对路径。</p>
+</li>
+<li>
+<p><code>RUSTUP_DIST_SERVER</code> (默认值为 <code>https://static.rust-lang.org</code>)。用于下载与Rust相关的静态资源的根URL。你可以将其更改为使用本地镜像，或者从 staging 目录中测试二进制文件。</p>
+</li>
+<li>
+<p><del><code>RUSTUP_DIST_ROOT</code></del> <em>已不再推荐使用</em> (默认: <code>https://static.rust-lang.org/dist</code>)。建议使用 <code>RUSTUP_DIST_SERVER</code>。</p>
+</li>
+<li>
+<p><code>RUSTUP_UPDATE_ROOT</code> (默认 <code>https://static.rust-lang.org/rustup</code>)。设置用于下载自更新内容的根URL。</p>
+</li>
+<li>
+<p><code>RUSTUP_VERSION</code>（默认：无）。当执行 <code>rustup-init.sh</code> 或 <code>rustup self update</code> 时，会下载 rustup 的替代版本（例如 <code>1.27.1</code>）。</p>
+</li>
+<li>
+<p><code>RUSTUP_IO_THREADS</code> <em>不稳定</em>（默认值为报告的CPU数量，最多为8）。设置用于执行密集I/O操作的线程数量。设置为 <code>1</code> 可以强制使用单线程进行I/O操作以方便故障排查，或者设置任意数值以覆盖自动检测功能。</p>
+</li>
+<li>
+<p><code>RUSTUP_TRACE_DIR</code> <em>不稳定</em>（默认：不记录日志）。启用日志记录功能，并指定日志文件存储的目录。日志文件的格式为PID.trace。这些日志文件可以通过Catapult项目的<a href="https://github.com/catapult-project/catapult/blob/master/tracing/README.md">日志记录器</a>进行读取。</p>
+</li>
+<li>
+<p><code>RUSTUP_TERM_COLOR</code> (默认值为 <code>auto</code>)。用于控制是否在终端中显示彩色输出。设置为 <code>auto</code> 时，仅在 tty 流中使用颜色；设置为 <code>always</code> 时，始终启用颜色显示；设置为 <code>never</code> 时，禁用颜色显示。</p>
+</li>
+<li>
+<p><code>RUSTUP_UNPACK_RAM</code> <em>不稳定</em>（默认情况下，会优先使用空闲内存；如果无法判断，则使用500MiB，最低为210MiB）。该值表示在解包过程中将使用的内存大小（以字节为单位），单位为 <code>rustup</code>。</p>
+</li>
+<li>
+<p><code>RUSTUP_NO_BACKTRACE</code>。即使在设置了 <code>RUST_BACKTRACE</code> 的情况下，也会禁用非恐慌错误时的回溯追踪功能。</p>
+</li>
+<li>
+<p><code>RUSTUP_PERMIT_COPY_RENAME</code> <em>unstable</em>。如果尝试重命名会导致交叉设备链接错误，则允许Rusup返回复制文件。 这些错误发生在OverlayFS上，它被 <a href="https://docs.docker.com/storage/storagedriver/overlayfs-driver/#modifying-files-or-directories">Docker</a>使用。 此功能牺牲了一些交易保护，并且可能会在任何时候被删除。Linux。</p>
+</li>
+<li>
+<p><code>RUSTUP_AUTO_INSTALL</code> (默认：1) 当设置为 <code>1</code>时，当活动工具链不存在时安装。将此值设置为 <code>0</code> 以禁用自动安装。</p>
+</li>
+<li>
+<p><code>RUSTUP_HARDLINK_PROXIES</code> <em>unstable</em>。设置后，Rusup不会尝试符号链接，而是总是使用硬链接。 如果您发现这个修复问题, 请在<a href="https://github.com/rust-lang/rustup/issues">rusup issue Tracker</a>上报告这个问题。</p>
+</li>
+<li>
+<p><code>RUSTUP_TERM_PROGRES_WHEN</code> (默认：<code>auto</code>)。控制是否显示进度条。设置为<code>始终启用进度条，并设置为</code>永远关闭进度条。设置为`永远关闭进度条’。</p>
+</li>
+<li>
+<p><code>RUSTUP_TERM_WIDTH</code> (默认：无)。允许覆盖进度条的终端宽度。</p>
+</li>
+<li>
+<p><code>RUSTUP_DOWNLOAD_TIMEOUT</code> <em>unstable</em> (默认：180)。用于覆盖下载组件的默认超时时间(秒)。</p>
+</li>
+<li>
+<p><code>RUSTUP_CONCURRENT_DOWNLOADS</code> <em>unstable</em> (默认：2) 控制同时下载次数.</p>
+</li>
+<li>
+<p><code>RUSTUP_TOOLCHAIN_SOURCE</code> <em>unstable</em>。请通过Rusup 告诉代理工具如何确定<code>RUSTUP_TOOLCHAIN</code>。 非生长工具不应设置此环境变量，除非是为了反映早先从生死中的调用。</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="配置"><a class="header" href="#配置">配置</a></h1>
+<p>Rustup 有一个 <a href="https://github.com/toml-lang/toml">TOML</a> 设置文件，位于 <code>${RUSTUP_HOME}/settings.toml</code> 位置（该文件默认设置为 <code>~/.rustup</code> 或 <code>%USERPROFILE%/.rustup</code>）。该文件的格式并非 rustup 公共接口的一部分——应该通过 rustup CLI 来进行设置查询和更改。</p>
+<p>在 Unix 操作系统中，某些设置会参考一个备用配置文件。这个备用文件位于 <code>/etc/rustup/settings.toml</code> 目录下，目前只能定义 <code>default_toolchain</code> 范围内的设置。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="网络代理"><a class="header" href="#网络代理">网络代理</a></h1>
+<p>企业网络通常没有直接对外 HTTP 访问权限，而是强制使用代理服务器。如果你处于这样的网络中，可以通过在环境中设置<code>rustup</code>的 URL 来要求其使用代理服务器。在大多数情况下，设置<code>https_proxy</code>参数应该就足够了。不同系统和 shell 下的命令可能会有所不同。</p>
+<ul>
+<li>
+<p>在支持<strong>bash</strong>或<strong>zsh</strong>等 shell 脚本语言的 Unix 类系统中：</p>
+<pre><code class="language-bash">export https_proxy=socks5://proxy.example.com:1080
+</code></pre>
+</li>
+<li>
+<p>在 Windows 系统中，<a href="https://en.wikipedia.org/wiki/Cmd.exe"><strong>命令提示符（cmd）</strong></a>:</p>
+<pre><code class="language-cmd">set https_proxy=socks5://proxy.example.com:1080
+</code></pre>
+</li>
+<li>
+<p>在 Windows [<strong>PowerShell</strong>](https://en.wikipedia.org/wiki/PowerShell(或<strong>Powershell Core</strong>):在 Windows 操作系统上，可以使用 [<strong>PowerShell</strong>](https://en.wikipedia.org/wiki/PowerShell(或<strong>Powershell Core</strong>))进行各种操作。</p>
+<pre><code class="language-cmd">$env:https_proxy="socks5://proxy.example.com:1080"
+</code></pre>
+</li>
+<li>
+<p>当使用 HTTP 代理时，将<code>socks5://proxy.example.com:1080</code>替换为<code>http://proxy.example.com:8080</code>。</p>
+</li>
+</ul>
+<p>如果你需要更复杂的配置，<code>rustup</code>支持与<strong>curl</strong>程序所使用的约定方式相兼容的操作。这些约定在[curl 的手册页》中的<strong>环境</strong>部分有详细说明：https://curl.se/docs/manpage.html#:~:text=Environment,%20Environment%20variables。</p>
+<p>“curl”这个工具目前已被<strong>弃用</strong>，不过仍然可以通过设置<code>RUSTUP_USE_CURL</code>环境变量来继续使用它，例如：</p>
+<pre><code class="language-bash">RUSTUP_USE_CURL=1 rustup update
+</code></pre>
+<p>请注意，某些版本的<code>libcurl</code>似乎要求在环境变量中去掉<code>http://</code>或<code>https://</code>的前缀。例如，<code>export http_proxy=proxy.example.com:1080</code>（同样也需要设置 HTTPS 相关参数）。如果你通过<code>libcurl</code>使用<code>rustup</code>时遇到“SSL 协议未知”的错误，而通过命令行<code>curl</code>命令则没有问题，那么很可能就是这个问题导致的。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="示例"><a class="header" href="#示例">示例</a></h1>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>命令</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td><code>rusup 默认夜晚</code></td><td>将<a href="#default-toolchain">默认工具链</a> 设置为最新夜晚。</td></tr>
+<tr><td><code>rusup 设置简档最小化</code></td><td>设置默认 <a href="#配置文件">profile</a>设置默认<a href="#配置文件">配置文件</a></td></tr>
+<tr><td><code>rustup target list</code></td><td>列出所有活动工具链的 <a href="#交叉编译">targets</a></td></tr>
+<tr><td><code>rustup target add arm-linux-androideabi</code></td><td>Install the Android target安装安卓目标设备</td></tr>
+<tr><td><code>rusup targets remove arm-linux-androideabi</code> </td><td>移除安卓目标</td></tr>
+<tr><td><code>rusup 每晚运行rustc foo.rs</code></td><td>不论活动的工具链，每晚运行一次</td></tr>
+<tr><td><code>rustc +夜间foo.rs</code> </td><td><a href="#toolchain-override-shorthand">Shorthand</a> 每晚运行一个编译器的方法</td></tr>
+<tr><td><code>rusup 夜间运行 bash</code></td><td>运行一个为夜间编译器配置的shell文件</td></tr>
+<tr><td><code>rusup default stable-msvc</code> </td><td>在 Windows上，使用 MSVC 工具链而不是 GNU</td></tr>
+<tr><td><code>rusup overlapper 设置 2015-04-01</code> </td><td>对于当前目录，从指定日期起使用每夜一次</td></tr>
+<tr><td><code>rusup toolchain link my-toolchain "C:\RustInstallation"</code> </td><td>通过创建符号链接来安装自定义的工具链，从而替代现有的安装程序。</td></tr>
+<tr><td><code>rusup show</code> </td><td>请显示当前目录下将使用的工具链。</td></tr>
+<tr><td><code>rustup 工具链 卸载 夜间版</code></td><td>卸载指定的工具链</td></tr>
+<tr><td><code>rustup 工具链帮助</code></td><td>显示有关子命令（如<code>toolchain</code>）的帮助页面。</td></tr>
+<tr><td><code>rusup man cargo</code> </td><td>(仅适用于 Unix 系统）查看特定命令的说明页，例如<code>cargo</code>命令。</td></tr>
+</tbody>
+</table>
+</div>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="安全性"><a class="header" href="#安全性">安全性</a></h1>
+<p><code>rustup</code> 对于大多数人来说是足够安全的，但它<a href="https://github.com/rust-lang/rustup/issues?q=is%3Aopen+is%3Aissue+label%3Asecurity">仍然需要工作</a>。 <code>rustup</code>通过HTTPS进行所有下载，但尚未验证下载签名。</p>
+<p>从1.18.4版本开始，安装过程中的文件模式会遵循umask的设置。如果确实需要严格控制权限，建议使用umask。</p>
+<p>如果您想报告一个安全问题，请遵循<a href="https://www.rust-lang.org/policies/security">Rust 安全政策</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="常见问题解答"><a class="header" href="#常见问题解答">常见问题解答</a></h1>
+<h3 id="这是官方的rust项目吗"><a class="header" href="#这是官方的rust项目吗">这是官方的Rust项目吗？</a></h3>
+<p>是的，rustup 是一个官方的 Rust 项目。在 https://www.rust-lang.org 上可以找到关于如何安装 Rust 的官方指导。</p>
+<h3 id="这与多锈现象有什么关系呢"><a class="header" href="#这与多锈现象有什么关系呢">这与多锈现象有什么关系呢？</a></h3>
+<p>rusup 是 <a href="https://github.com/brson/multirust">multirust</a>的继承者。 从多精灵开始，是从shell脚本重写多精灵到Rust。 由 <a href="https://github.com/Diggsey">Diggory Blake</a>，现在由Rust 项目维护。</p>
+<h3 id="可以尝试下载rust源码吗"><a class="header" href="#可以尝试下载rust源码吗">可以尝试下载Rust源码吗？</a></h3>
+<p>Rust的标准库源可以通过运行 <code>rustup 组件添加 rust-src</code> 来获取。 它将被下载到当前工具链的<toolchain root="">/lib/rustlib/src/rust` 目录。</toolchain></p>
+<p>编译器和工具的源必须从 <a href="https://github.com/rust-lang/rust/">Rust 存储库</a>或独立的 <a href="https://forge.rust-lang.org/infra/other-installation-methods.html#source-code">source tarballs</a>获取。 </p>
+<h3 id="rustup-在-windows-系统上运行时出现错误错误编号为-32"><a class="header" href="#rustup-在-windows-系统上运行时出现错误错误编号为-32">Rustup 在 Windows 系统上运行时出现错误，错误编号为 32。</a></h3>
+<p>如果 <code>rustup</code> 在 Windows 系统上出现错误 32，可能是由于后台运行的反病毒扫描导致的。请禁用反病毒扫描程序，然后再次尝试。</p>
+<h3 id="出现错误无法删除rustup-bin文件cusersusercargobinrustupexe"><a class="header" href="#出现错误无法删除rustup-bin文件cusersusercargobinrustupexe">出现错误：无法删除‘rustup-bin’文件：‘C:\Users\USER\.cargo\bin\rustup.exe’</a></h3>
+<p>如果<code>rustup</code>无法以这种方式进行自我更新，通常是因为正在运行 RLS 程序（即你的编辑器处于打开状态，同时 RLS 也在运行）。解决方法是停止 RLS 的运行（关闭编辑器），然后再尝试一次。</p>
+<h3 id="成功终止了-rustup-进程但是无法执行rustc---version命令"><a class="header" href="#成功终止了-rustup-进程但是无法执行rustc---version命令">成功终止了 rustup 进程，但是无法执行<code>rustc --version</code>命令。</a></h3>
+<p>重新启动你的 shell 进程。这样就能将 Cargo 的 bin 目录（<code>$CARGO_HOME/bin</code>）重新加载到你的<code>PATH</code>环境变量中。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
