@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-09-29 08:20:45 +0000",
+      "hash" : "f2763b72b6b3442112a13f78fa9da6141ebfa5ee",
+      "title" : "fix(rustup-init/sh): dont let an external `local` pass for the builtin"
     }
   },
   "type" : "branch",
