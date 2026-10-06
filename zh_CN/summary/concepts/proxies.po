@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/proxies.md:1
+msgid "Proxies"
+msgstr "代理服务器"
+
+#: src/concepts/proxies.md:3
+msgid ""
+"`rustup` provides a number of wrappers for common Rust tools. These are "
+"called _proxies_ and represent commands which are provided by the various "
+"[components](components.md)."
+msgstr ""
+"`rustup` 为通用的Rust工具提供了一些包装器。 这些被称为_proxies_ 并代表由各种 "
+"[components](components.md )提供的命令。"
+
+#: src/concepts/proxies.md:7
+msgid "The list of proxies is currently static in `rustup` and is as follows:"
+msgstr "代理服务器列表目前在 `rustup` 中静态，如下所示："
+
+#: src/concepts/proxies.md:11
+msgid ""
+"`rustc` is the compiler for the Rust programming language, provided by the "
+"project itself and comes from the `rustc` component."
+msgstr "`rustc`是Rustc编程语言的编译器，由项目本身提供，来自`rustc`组件'。"
+
+#: src/concepts/proxies.md:13
+msgid ""
+"`rustdoc` is a tool distributed in the `rustc` component which helps you to "
+"generate documentation for Rust projects."
+msgstr ""
+"`rustdoc`是一个在 `rustc` 组件中分配的工具，它帮助您生成Rust项目的文档。"
+
+#: src/concepts/proxies.md:15
+msgid ""
+"`cargo` is the Rust package manager which downloads your Rust package’s "
+"dependencies, compiles your packages, makes distributable packages, and "
+"uploads them to crates.io (the Rust community’s package registry). It comes "
+"from the `cargo` component."
+msgstr ""
+"`cargo`是Rust 包管理器，它下载你的包依赖，编译你的包，提供可分发的包，并将它"
+"们上传到箱子。 o (Rust Community的软件包注册表)。它来自于“cargo”组件。"
+
+#: src/concepts/proxies.md:17
+msgid ""
+"`rust-lldb`, `rust-gdb`, and `rust-gdbgui` are simple wrappers around the "
+"`lldb`, `gdb`, and `gdbgui` debuggers respectively. The wrappers enable some "
+"pretty-printing of Rust values and add some convenience features to the "
+"debuggers by means of their scripting interfaces."
+msgstr ""
+"`rust-lldb`、`rust-gdbb`、`rust-gdbgui`分别是`lldb`、`gdb`和`gdbgui`的包裹。 "
+"封装程序可以让一些预印Rust值，并通过其脚本接口为调试器添加一些便利功能。"
+
+#: src/concepts/proxies.md:19
+msgid ""
+"`rust-analyzer` is part of the Rust IDE integration tooling. It implements "
+"the language-server protocol to permit IDEs and editors such as Visual "
+"Studio Code, Vim, or Emacs, access to the semantics of the Rust code you are "
+"editing. It comes from the `rust-analyzer` component."
+msgstr ""
+"`rust-analyzer` 是Rust IDE 集成工具的一部分。 它执行语言服务器协议以允许IDEs"
+"和编辑，例如Visual Studio代码。 Vim, 或 Emacs, 访问你正在编辑的Rust 代码的语"
+"义。 它来自`rust-analyzer`组件'。"
+
+#: src/concepts/proxies.md:21
+msgid ""
+"`cargo-clippy` and `clippy-driver` are related to the `clippy` linting tool "
+"which provides extra checks for common mistakes and stylistic choices and it "
+"comes from the `clippy` component."
+msgstr ""
+"`cargo-clipppy`和`clippy-driver`都与`clippy`工具相关，它为常见错误和风格选择"
+"提供额外的检查，它来自`clippy`组件'。"
+
+#: src/concepts/proxies.md:23
+msgid ""
+"`cargo-miri` is an experimental interpreter for Rust's mid-level "
+"intermediate representation (MIR) and it comes from the `miri` component."
+msgstr "`cargo-miri` 是Rust中级代表制的实验性解释器，它来自`miri` 部分。"
+
+#: src/concepts/proxies.md:25
+msgid ""
+"`rls` is a deprecated IDE tool that has been replaced by `rust-analyzer`. It "
+"comes from the `rls` component."
+msgstr ""
+"`rls` 是一个废弃的 IDE 工具，它已被`rt-analyzer`所替代。它来自`rls`组件。"

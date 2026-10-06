@@ -1,0 +1,213 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/environment-variables.md:1
+msgid "Environment variables"
+msgstr "环境变量"
+
+#: src/environment-variables.md:3
+msgid ""
+"`RUSTUP_LOG` (default: none). Enables Rustup's \"custom logging mode\". In "
+"this mode, the verbosity of Rustup's log lines can be specified with "
+"`tracing_subscriber`'s [directive syntax](https://docs.rs/tracing-subscriber/"
+"latest/tracing_subscriber/filter/struct.EnvFilter.html#directives). For "
+"example, set `RUSTUP_LOG=rustup=DEBUG` to receive log lines from `rustup` "
+"itself with a maximal verbosity of `DEBUG`."
+msgstr ""
+"`RUSTUP_LOG`（默认：无）。启用 Rustup 的“自定义日志模式”。在这种模式下，可以"
+"通过 `tracing_subscriber` 的[指令语法](https://docs.rs/tracing-subscriber/"
+"latest/tracing_subscriber/filter/struct.EnvFilter.html#directives)来指定 "
+"Rustup 日志行的详细程度。例如，将 `RUSTUP_LOG=rustup=DEBUG` 设置为接收来自 "
+"`rustup` 本身的日志行，并且最大详细程度为 `DEBUG`。"
+
+#: src/environment-variables.md:8
+msgid ""
+"`RUSTUP_HOME` (default: `~/.rustup` or `%USERPROFILE%/.rustup`). Sets the "
+"root `rustup` folder, used for storing installed toolchains and "
+"configuration options."
+msgstr ""
+"`RUSTUP_HOME`（默认值为 `~/.rustup` 或 `%USERPROFILE%/.rustup`）。设置根文件"
+"夹为 `rustup`，用于存储已安装的工具链和配置选项。"
+
+#: src/environment-variables.md:12
+msgid ""
+"`RUSTUP_TOOLCHAIN` (default: none). If set, will [override](overrides.md) "
+"the toolchain used for all rust tool invocations. A toolchain with this name "
+"should be installed, or invocations will fail. This can specify custom "
+"toolchains, installable toolchains, or the absolute path to a toolchain."
+msgstr ""
+"`RUSTUP_TOOLCHAIN`（默认值为空）。如果设置此选项，将[覆盖](overrides.md)所有"
+"Rust工具调用所使用的工具链。必须安装具有此名称的工具链，否则工具调用将会失"
+"败。该选项可以指定自定义工具链、可安装的工具链，或者工具链的绝对路径。"
+
+#: src/environment-variables.md:17
+msgid ""
+"`RUSTUP_DIST_SERVER` (default: `https://static.rust-lang.org`). Sets the "
+"root URL for downloading static resources related to Rust. You can change "
+"this to instead use a local mirror, or to test the binaries from the staging "
+"directory."
+msgstr ""
+"`RUSTUP_DIST_SERVER` (默认值为 `https://static.rust-lang.org`)。用于下载与"
+"Rust相关的静态资源的根URL。你可以将其更改为使用本地镜像，或者从 staging 目录"
+"中测试二进制文件。"
+
+#: src/environment-variables.md:22
+msgid ""
+"~~`RUSTUP_DIST_ROOT`~~ _deprecated_ (default: `https://static.rust-lang.org/"
+"dist`). Use `RUSTUP_DIST_SERVER` instead."
+msgstr ""
+"~~`RUSTUP_DIST_ROOT`~~ *已不再推荐使用* (默认: `https://static.rust-lang.org/"
+"dist`)。建议使用 `RUSTUP_DIST_SERVER`。"
+
+#: src/environment-variables.md:25
+msgid ""
+"`RUSTUP_UPDATE_ROOT` (default `https://static.rust-lang.org/rustup`). Sets "
+"the root URL for downloading self-update."
+msgstr ""
+"`RUSTUP_UPDATE_ROOT` (默认 `https://static.rust-lang.org/rustup`)。设置用于下"
+"载自更新内容的根URL。"
+
+#: src/environment-variables.md:28
+msgid ""
+"`RUSTUP_VERSION` (default: none). Overrides the rustup version (e.g. "
+"`1.27.1`) to be downloaded when executing `rustup-init.sh` or `rustup self "
+"update`."
+msgstr ""
+"`RUSTUP_VERSION`（默认：无）。当执行 `rustup-init.sh` 或 `rustup self "
+"update` 时，会下载 rustup 的替代版本（例如 `1.27.1`）。"
+
+#: src/environment-variables.md:31
+msgid ""
+"`RUSTUP_IO_THREADS` _unstable_ (default: reported cpu count, max 8). Sets "
+"the number of threads to perform close IO in. Set to `1` to force single-"
+"threaded IO for troubleshooting, or an arbitrary number to override "
+"automatic detection."
+msgstr ""
+"`RUSTUP_IO_THREADS` *不稳定*（默认值为报告的CPU数量，最多为8）。设置用于执行"
+"密集I/O操作的线程数量。设置为 `1` 可以强制使用单线程进行I/O操作以方便故障排"
+"查，或者设置任意数值以覆盖自动检测功能。"
+
+#: src/environment-variables.md:36
+msgid ""
+"`RUSTUP_TRACE_DIR` _unstable_ (default: no tracing). Enables tracing and "
+"determines the directory that traces will be written too. Traces are of the "
+"form PID.trace. Traces can be read by the Catapult project [tracing viewer]"
+"(https://github.com/catapult-project/catapult/blob/master/tracing/README.md)."
+msgstr ""
+"`RUSTUP_TRACE_DIR` *不稳定*（默认：不记录日志）。启用日志记录功能，并指定日志"
+"文件存储的目录。日志文件的格式为PID.trace。这些日志文件可以通过Catapult项目的"
+"[日志记录器](https://github.com/catapult-project/catapult/blob/master/"
+"tracing/README.md)进行读取。"
+
+#: src/environment-variables.md:40
+msgid ""
+"`RUSTUP_TERM_COLOR` (default: `auto`). Controls whether colored output is "
+"used in the terminal. Set to `auto` to use colors only in tty streams, to "
+"`always` to always enable colors, or to `never` to disable colors."
+msgstr ""
+"`RUSTUP_TERM_COLOR` (默认值为 `auto`)。用于控制是否在终端中显示彩色输出。设置"
+"为 `auto` 时，仅在 tty 流中使用颜色；设置为 `always` 时，始终启用颜色显示；设"
+"置为 `never` 时，禁用颜色显示。"
+
+#: src/environment-variables.md:44
+msgid ""
+"`RUSTUP_UNPACK_RAM` _unstable_ (default: free memory or 500MiB if unable to "
+"tell, min 210MiB). Caps the amount of RAM (in bytes) `rustup` will use for "
+"IO tasks while unpacking."
+msgstr ""
+"`RUSTUP_UNPACK_RAM` *不稳定*（默认情况下，会优先使用空闲内存；如果无法判断，"
+"则使用500MiB，最低为210MiB）。该值表示在解包过程中将使用的内存大小（以字节为"
+"单位），单位为 `rustup`。"
+
+#: src/environment-variables.md:47
+msgid ""
+"`RUSTUP_NO_BACKTRACE`. Disables backtraces on non-panic errors even when "
+"`RUST_BACKTRACE` is set."
+msgstr ""
+"`RUSTUP_NO_BACKTRACE`。即使在设置了 `RUST_BACKTRACE` 的情况下，也会禁用非恐慌"
+"错误时的回溯追踪功能。"
+
+#: src/environment-variables.md:50
+msgid ""
+"`RUSTUP_PERMIT_COPY_RENAME` _unstable_. When set, allows rustup to fall-back "
+"to copying files if attempts to `rename` result in cross-device link errors. "
+"These errors occur on OverlayFS, which is used by [Docker](https://docs."
+"docker.com/storage/storagedriver/overlayfs-driver/#modifying-files-or-"
+"directories). This feature sacrifices some transactions protections and may "
+"be removed at any point. Linux only."
+msgstr ""
+"`RUSTUP_PERMIT_COPY_RENAME` _unstable_。如果尝试重命名会导致交叉设备链接错"
+"误，则允许Rusup返回复制文件。 这些错误发生在OverlayFS上，它被 [Docker]"
+"(https://docs.docker.com/storage/storagedriver/overlayfs-driver/#modifying-"
+"files-or-directories)使用。 此功能牺牲了一些交易保护，并且可能会在任何时候被"
+"删除。Linux。"
+
+#: src/environment-variables.md:56
+msgid ""
+"`RUSTUP_AUTO_INSTALL` (default: 1) When set to `1`, installs the active "
+"toolchain when it is absent. Set this value to `0` to disable automatic "
+"installation."
+msgstr ""
+"`RUSTUP_AUTO_INSTALL` (默认：1) 当设置为 `1`时，当活动工具链不存在时安装。将"
+"此值设置为 `0` 以禁用自动安装。"
+
+#: src/environment-variables.md:60
+msgid ""
+"`RUSTUP_HARDLINK_PROXIES` _unstable_. When set, rustup will not attempt to "
+"symlink proxies and instead always use hardlinks. If you find this fixes a "
+"problem, then please report the issue on the [rustup issue tracker](https://"
+"github.com/rust-lang/rustup/issues)."
+msgstr ""
+"`RUSTUP_HARDLINK_PROXIES` _unstable_。设置后，Rusup不会尝试符号链接，而是总是"
+"使用硬链接。 如果您发现这个修复问题, 请在[rusup issue Tracker](https://"
+"github.com/rust-lang/rustup/issues )上报告这个问题。"
+
+#: src/environment-variables.md:64
+msgid ""
+"`RUSTUP_TERM_PROGRESS_WHEN` (default: `auto`). Controls whether progress "
+"bars are shown or not. Set to `always` to always enable progress bars, and "
+"to `never` to disable them."
+msgstr ""
+"`RUSTUP_TERM_PROGRES_WHEN` (默认：`auto`)。控制是否显示进度条。设置为`始终启"
+"用进度条，并设置为`永远关闭进度条。设置为`永远关闭进度条'。"
+
+#: src/environment-variables.md:67
+msgid ""
+"`RUSTUP_TERM_WIDTH` (default: none). Allows to override the terminal width "
+"for progress bars."
+msgstr "`RUSTUP_TERM_WIDTH` (默认：无)。允许覆盖进度条的终端宽度。"
+
+#: src/environment-variables.md:69
+msgid ""
+"`RUSTUP_DOWNLOAD_TIMEOUT` _unstable_ (default: 180). Allows to override the "
+"default timeout (in seconds) for downloading components."
+msgstr ""
+"`RUSTUP_DOWNLOAD_TIMEOUT` _unstable_ (默认：180)。用于覆盖下载组件的默认超时"
+"时间(秒)。"
+
+#: src/environment-variables.md:72
+msgid ""
+"`RUSTUP_CONCURRENT_DOWNLOADS` _unstable_ (default: 2). Controls the number "
+"of downloads made concurrently."
+msgstr "`RUSTUP_CONCURRENT_DOWNLOADS` _unstable_ (默认：2) 控制同时下载次数."
+
+#: src/environment-variables.md:75
+msgid ""
+"`RUSTUP_TOOLCHAIN_SOURCE` _unstable_. Set by rustup to tell proxied tools "
+"how `RUSTUP_TOOLCHAIN` was determined. Non-rustup tools should not set this "
+"environment variable, except insofar as to mirror an earlier invocation from "
+"rustup."
+msgstr ""
+"`RUSTUP_TOOLCHAIN_SOURCE` _unstable_。请通过Rusup 告诉代理工具如何确定"
+"`RUSTUP_TOOLCHAIN`。 非生长工具不应设置此环境变量，除非是为了反映早先从生死中"
+"的调用。"
