@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/installation/index.md:1
+msgid "Installation"
+msgstr "安装"
+
+#: src/installation/index.md:3
+msgid ""
+"Follow the instructions at <https://www.rust-lang.org/tools/install>. If "
+"that doesn't work for you there are [other installation methods](other.md)."
+msgstr ""
+"请按照 <https://www.rust-lang.org/tools/install> 中的说明进行操作。如果那样做"
+"仍然无法解决问题，还有[其他安装方法]可供选择。"
+
+#: src/installation/index.md:6
+msgid ""
+"`rustup` installs `rustc`, `cargo`, `rustup` and other standard tools to "
+"Cargo's `bin` directory. On Unix it is located at `$HOME/.cargo/bin` and on "
+"Windows at `%USERPROFILE%\\.cargo\\bin`. This is the same directory that "
+"`cargo install` will install Rust programs and Cargo plugins."
+msgstr ""
+"`rustup`负责将`rustc`、`cargo`以及`rustup`等其他标准工具安装到 Cargo 的`bin`"
+"目录下。在 Unix 系统中，该目录位于`$HOME/.cargo/bin`；在 Windows 系统中则位于"
+"`%USERPROFILE%\\.cargo\\bin`。正是这个目录，也是`cargo install`用于安装 Rust "
+"程序和 Cargo 插件的目标目录。"
+
+#: src/installation/index.md:11
+msgid ""
+"This directory will be in your `$PATH` environment variable, which means you "
+"can run them from the shell without further configuration. Open a _new_ "
+"shell and type the following:"
+msgstr ""
+"这个目录将存在于你的 `$PATH` 环境变量中，这意味着你可以无需额外配置就从 "
+"shell 中运行它们。打开一个新的 shell，然后输入以下内容："
+
+#: src/installation/index.md:19
+msgid ""
+"If you see something like `rustc 1.19.0 (0ade33941 2017-07-17)` then you are "
+"ready to Rust. If you decide Rust isn't your thing, you can completely "
+"remove it from your system by running `rustup self uninstall`."
+msgstr ""
+"如果你看到类似 `rustc 1.19.0 (0ade33941 2017-07-17)` 这样的内容，那么你就已经"
+"准备好开始使用 Rust 了。如果你觉得 Rust 不适合你，可以通过运行 `rustup self "
+"uninstall` 来完全从你的系统中移除它。"
+
+#: src/installation/index.md:25
+msgid "Choosing where to install"
+msgstr "选择安装位置"
+
+#: src/installation/index.md:27
+msgid ""
+"`rustup` allows you to customise your installation by setting the "
+"environment variables `CARGO_HOME` and `RUSTUP_HOME` before running the "
+"`rustup-init` executable. As mentioned in the [Environment Variables](../"
+"environment-variables.md) section, `RUSTUP_HOME` sets the root `rustup` "
+"folder, which is used for storing installed toolchains and configuration "
+"options. `CARGO_HOME` contains cache files used by [cargo](https://doc.rust-"
+"lang.org/cargo/)."
+msgstr ""
+"`rustup`允许你通过设置`CARGO_HOME`和`RUSTUP_HOME`这两个环境变量来自定义你的安"
+"装过程。在运行`rustup-init`脚本之前，就可以进行这些设置。如[环境变量配置](../"
+"environment-variables.md)部分所述，`RUSTUP_HOME`变量用于指定`rustup`程序的根"
+"目录，该目录用于存储安装好的工具链和配置选项。`CARGO_HOME`变量则包含由[cargo]"
+"(https://doc.rust-lang.org/cargo/)使用的缓存文件。"
+
+#: src/installation/index.md:33
+msgid ""
+"Note that you will need to ensure these environment variables are always set "
+"and that `CARGO_HOME/bin` is in the `$PATH` environment variable when using "
+"the toolchain."
+msgstr ""
+"请注意，在使用工具链时，必须确保这些环境变量始终被设置，并且 `CARGO_HOME/"
+"bin` 位于 `$PATH` 环境变量中。"
+
+#: src/installation/index.md:40
+msgid "Installing nightly"
+msgstr "安装最新版本"
+
+#: src/installation/index.md:42
+msgid ""
+"If you specify the [nightly channel](../concepts/channels.md) when "
+"installing `rustup`, the `rustup-init` script will do a \"forced\" "
+"installation by default. A \"forced\" installation means it will install the "
+"nightly channel regardless of whether it might be missing [components](../"
+"concepts/components.md) that you want. If you want to install rustup with "
+"the nightly channel, and ensure it has the components that you want, you "
+"will need to do this in two phases. For example, if you want to make a fresh "
+"installation of `rustup` and then install `nightly` along with `clippy` or "
+"`miri`, first install `rustup` without a toolchain:"
+msgstr ""
+"如果在安装`rustup`时指定了[夜间更新的频道](../concepts/channels.md)，那么"
+"`rustup-init`脚本会默认进行“强制安装”。所谓“强制安装”意味着会安装该夜间更新的"
+"频道，而不会考虑是否缺少你需要的[组件](../concepts/components.md)。如果你希望"
+"安装带有夜间更新频道的`rustup`，并且确保它包含了你需要的组件，那么你需要分两"
+"步来完成这个过程。例如，如果你想进行全新安装的话"
+
+#: src/installation/index.md:51
+msgid ""
+"```console\n"
+"curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain none -y\n"
+"```"
+msgstr ""
+"```console\n"
+"curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --"
+"default-toolchain none -y\n"
+"```"
+
+#: src/installation/index.md:55
+msgid ""
+"Next you can install `nightly` allowing `rustup` to downgrade until it finds "
+"the components you need:"
+msgstr ""
+"接下来，你可以安装 `nightly`，从而让 `rustup` 降级，直到找到你需要的组件。"
+
+#: src/installation/index.md:62
+msgid ""
+"This can be used to great effect in CI, to get you a toolchain rapidly which "
+"meets your criteria."
+msgstr ""
+"这在持续集成过程中可以发挥重要作用，能够快速为您提供符合您要求的工具链。"
+
+#: src/installation/index.md:68
+msgid "Enable tab completion for Bash, Fish, Zsh, or PowerShell"
+msgstr "启用 Bash、Fish、Zsh 或 PowerShell 的Tab键补全功能"
+
+#: src/installation/index.md:70
+msgid ""
+"`rustup` now supports generating completion scripts for Bash, Fish, Zsh, and "
+"PowerShell. See `rustup help completions` for full details, but the gist is "
+"as simple as using one of the following:"
+msgstr ""
+"`rustup` 现在支持为 Bash、Fish、Zsh 和 PowerShell 生成补全脚本。有关详细信"
+"息，请参阅 `rustup help completions`，其原理很简单，只需使用以下其中一种方式"
+"即可。"
+
+#: src/installation/index.md:94
+msgid ""
+"**Note**: you may need to restart your shell in order for the changes to "
+"take effect."
+msgstr "**注意**：可能需要重新启动你的终端窗口，以便这些更改生效。"
+
+#: src/installation/index.md:97
+msgid ""
+"For `zsh`, you must then add the following line in your `~/.zshrc` before "
+"`compinit`:"
+msgstr ""
+"对于 `zsh`，您需要在 `~/.zshrc` 中添加以下行，然后才能使用 `compinit`："
+
+#: src/installation/index.md:101
+msgid "~/.zfunc"
+msgstr "~/.zfunc"
+
+#: src/installation/index.md:104
+msgid ""
+"In Xonsh you can reuse Fish completion by installing [xontrib-fish-completer]"
+"(https://github.com/xonsh/xontrib-fish-completer)."
+msgstr ""
+"在 Xonsh 中，你可以通过安装[xontrib-fish-completer](https://github.com/xonsh/"
+"xontrib-fish-completer)来重新使用 Fish 补全功能。"

@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/channels.md:1
+msgid "Channels"
+msgstr "频道"
+
+#: src/concepts/channels.md:3
+msgid ""
+"Rust is released to three different \"channels\": stable, beta, and nightly. "
+"The stable releases are made every 6 weeks (with occasional point releases). "
+"Beta releases are the version that will appear in the next stable release. "
+"Nightly releases are made every night. See [The Rust Book](https://doc.rust-"
+"lang.org/book/appendix-07-nightly-rust.html) for more details on Rust's "
+"train release model. The release schedule is posted to the [Rust Forge]"
+"(https://forge.rust-lang.org/). `rustup` assists with installing different "
+"channels, keeping them up-to-date, and easily switching between them."
+msgstr ""
+"Rust 被释放到三种不同的“通道”：稳定、贝塔和夜晚。稳定释放每6周（偶尔发布点"
+"数）。 测试版发布是将出现在下一次稳定版本中。夜间发布是每晚发布一次。 请参阅"
+"[Rust Book](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html)关于"
+"Rust的火车发布模型的更多详细信息。发布计划已张贴到[Rust Forge](https://forge."
+"rust-lang.org/)。 `rustup` 有助于安装不同的频道，随时更新，并且易于在它们之间"
+"切换。"
+
+#: src/concepts/channels.md:11
+msgid ""
+"After a release channel has been installed, `rustup` can be used to update "
+"the installed version to the latest release on that channel. See the "
+"[Keeping rust up to date](../basics.md#keeping-rust-up-to-date) section for "
+"more information."
+msgstr ""
+"在安装了发布通道之后，可以使用 `rustup` 将已安装的版本更新到该通道上最新的版"
+"本。更多详细信息，请参见 [保持 Rust 的更新](../basics.md#keeping-rust-up-to-"
+"date)部分。"
+
+#: src/concepts/channels.md:15
+msgid ""
+"`rustup` can also install specific versions of Rust, such as `1.45.2` or "
+"`nightly-2020-07-27`. See the [Toolchains](toolchains.md) chapter for more "
+"information on installing different channels and releases. See the "
+"[Overrides](../overrides.md) chapter for details on switching between "
+"toolchains and pinning your project to a specific toolchain."
+msgstr ""
+"`rustup` 也可以安装特定版本的 Rust, 例如`1.45.2` 或 `夜间-2020-07-27`。 请参"
+"阅 [Toolchains](toolchains.md章，以了解安装不同频道和发布版本的更多信息。 请"
+"参阅 [Overrides](../overrides.md章，以了解工具链之间切换和将您的项目置于特定"
+"的工具链中的详细信息。"
+
+#: src/concepts/channels.md:26
+msgid "Working with nightly Rust"
+msgstr "每晚使用 Rust"
+
+#: src/concepts/channels.md:28
+msgid ""
+"`rustup` gives you easy access to the nightly compiler and its [experimental "
+"features](https://doc.rust-lang.org/unstable-book/). To add it just run "
+"`rustup toolchain install nightly`:"
+msgstr ""
+"`rustup` 可以让您轻松地访问每夜编译器及其[实验功能](https://doc.rust-lang."
+"org/unstable-book/)。要添加它，只需要运行 `rustup toolchain 夜间安装'："
+
+#: src/concepts/channels.md:50
+msgid ""
+"Now Rust nightly is installed, but not activated. To test it out you can run "
+"a command from the nightly toolchain like"
+msgstr ""
+"现在必须每晚安装一次，但没有激活。要测试它，您可以从每晚的工具链中运行一个命"
+"令。"
+
+#: src/concepts/channels.md:58
+msgid ""
+"But more likely you want to use it for a while. To switch to nightly "
+"globally, change [the default](../overrides.md#default-toolchain) with "
+"`rustup default nightly`:"
+msgstr ""
+"但你想要在一段时间内使用它的可能性更大。要切换到全局夜晚，请使用 `rusup "
+"default 夜晚` 来更改 [默认](../overrides.md#default-toolchain) ："
+
+#: src/concepts/channels.md:70
+msgid ""
+"Now any time you run `cargo` or `rustc` you will be running the nightly "
+"compiler."
+msgstr "现在你运行`cargo`或`rustc`时，你将运行夜间编译器。"
+
+#: src/concepts/channels.md:73
+msgid ""
+"With nightly installed any time you run `rustup update`, the nightly channel "
+"will be updated in addition to stable:"
+msgstr ""
+"每运行一次`rustup update`后，夜间版软件也会随之更新。除了稳定版之外，夜间版软"
+"件也会得到更新。"
+
+#: src/concepts/channels.md:90
+msgid "Nightly availability"
+msgstr "每晚可用"
+
+#: src/concepts/channels.md:92
+msgid ""
+"Nightly toolchains may fail to build, so for any given date and target "
+"platform there may not be a toolchain available. Furthermore, nightly builds "
+"may be published with missing non-default [components](components.md) (such "
+"as [`clippy`](https://github.com/rust-lang/rust-clippy)). As such, it can be "
+"difficult to find fully-working nightlies. Use the [rustup-components-"
+"history](https://rust-lang.github.io/rustup-components-history/) project to "
+"find the build status of recent nightly toolchains and components."
+msgstr ""
+"每晚工具链可能无法构建，因此对于任何给定的日期和目标平台，可能没有可用的工具"
+"链。 此外，夜间构建可能会发布缺少非默认的 [components](components.md) (例如"
+"[`clippy`](https://github.com/rust-lang/rust-clippy))。 因此，很难找到正常工"
+"作的夜晚。 使用 [rustup-components-history](https://rust-lang.github.io/"
+"rustup-components-history/) 项目来查找最近夜间工具链和组件的构建状态。"
+
+#: src/concepts/channels.md:99
+msgid ""
+"When you attempt to install or update the `nightly` channel, `rustup` will "
+"check if a required or previously installed component is missing. If it is "
+"missing, `rustup` will automatically search for an older release that "
+"contains the required components. There are several ways to change this "
+"behavior:"
+msgstr ""
+"当你尝试安装或更新 `夜间` 通道时，`rustup` 将检查是否缺少所需或以前安装过的组"
+"件。 如果缺失，`rustup` 将自动搜索包含所需组件的旧版本。有几种方法可以改变这"
+"种行为："
+
+#: src/concepts/channels.md:104
+msgid ""
+"Use the `--force` flag to `rustup toolchain install` to force it to install "
+"the most recent version even if there is a missing component."
+msgstr ""
+"使用 \"--force\" 标志来`rusup toolchain install` 来强制它安装最新版本，即使缺"
+"少一个组件。"
+
+#: src/concepts/channels.md:106
+msgid ""
+"Use the `--profile` flag to `rustup toolchain install` to use a different "
+"profile that does not contain the missing component. For example, `--"
+"profile=minimal` should always work, as the minimal set is required to "
+"exist. See the [Profiles](profiles.md) chapter for more detail."
+msgstr ""
+"使用 \"--profile\" 标志来使用 \"rusup toolchain install\" 来使用一个不包含缺"
+"失组件的不同配置文件。 例如，`--profile=minimal` 应该始终能够运行，因为最小的"
+"集是需要存在的。更多详细信息请参阅 [Profiles](profiles.md章)。"
+
+#: src/concepts/channels.md:110
+msgid ""
+"Install a specific date that contains the components you need. For example, "
+"`rustup toolchain install nightly-2020-07-27`. You can then use [overrides]"
+"(../overrides.md) to pin to that specific release."
+msgstr ""
+"安装包含您需要的组件的特定日期。例如，\"rusup toolchain new 2020-07-27\"。 然"
+"后您可以使用 [overrides](../overrides.md) 引脚到指定的版本。"
