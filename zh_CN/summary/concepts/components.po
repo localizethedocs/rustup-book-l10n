@@ -1,0 +1,242 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/components.md:1
+msgid "Components"
+msgstr "组件"
+
+#: src/concepts/components.md:3
+msgid ""
+"Each [toolchain](toolchains.md) has several \"components\", some of which "
+"are required (like `rustc`) and some that are optional (like [`clippy`]"
+"(https://github.com/rust-lang/rust-clippy)). The `rustup component` command "
+"is used to manage the installed components. For example, run `rustup "
+"component list` to see a list of available and installed components."
+msgstr ""
+"每个 [toolchain](toolchains.md) 有几个“组件”，其中一些是必需的(例如`rustc`)，"
+"还有一些是可选的(例如[`clippy`](https://github.com/rust-lang/rust-clippy))。 "
+"`rusup component` 命令用于管理已安装的组件。 例如，运行 `rusup 组件列表` 以查"
+"看可用和已安装组件的列表。"
+
+#: src/concepts/components.md:9
+msgid ""
+"Components can be added when installing a toolchain with the `--component` "
+"flag. For example:"
+msgstr "在安装 \"--component\" 标志的工具链时可以添加组件。例如："
+
+#: src/concepts/components.md:16
+msgid ""
+"Components can be added to an already-installed toolchain with the `rustup "
+"component` command:"
+msgstr "组件可以添加到已安装的 \"rusup 组件\" 命令的工具链中："
+
+#: src/concepts/components.md:23
+msgid ""
+"To make it easier to choose which components are installed, `rustup` has the "
+"concept of \"profiles\" which provide named groupings of different "
+"components. See the [Profiles](profiles.md) chapter for more detail."
+msgstr ""
+"为了更容易选择哪些组件被安装，`rustup`具有\"配置文件\"的概念，提供不同组件的"
+"命名组合。 更多细节请参阅 [Profiles](profiles.md章)。"
+
+#: src/concepts/components.md:27
+msgid ""
+"Most components have a target-triple suffix, such as `rustc-x86_64-apple-"
+"darwin`, to signify the platform the component is for."
+msgstr ""
+"大多数组件有目标三重后缀，例如`rustc-x86_64-apple-darwin`，表示组件所要使用的"
+"平台。"
+
+#: src/concepts/components.md:30
+msgid ""
+"The set of available components may vary with different releases and "
+"toolchains. The following is an overview of the different components:"
+msgstr "现有组件的组别可能因不同的版本和工具链而不同。"
+
+#: src/concepts/components.md:33
+msgid ""
+"`rustc` --- The Rust compiler and [Rustdoc](https://doc.rust-lang.org/"
+"rustdoc/)."
+msgstr ""
+"`rustc` --- Rust编译器和 [Rustdoc](https://doc.rust-lang.org/rustdoc/)。  "
+
+#: src/concepts/components.md:34
+msgid ""
+"`cargo` --- [Cargo](https://doc.rust-lang.org/cargo/) is a package manager "
+"and build tool."
+msgstr ""
+"`cargo` --- [Cargo](https://doc.rust-lang.org/cargo/) 是一个软件包管理器和构"
+"建工具。"
+
+#: src/concepts/components.md:35
+msgid ""
+"`rustfmt` --- [Rustfmt](https://github.com/rust-lang/rustfmt) is a tool for "
+"automatically formatting code."
+msgstr ""
+"`rustfmt` --- [Rustfmt](https://github.com/rust-lang/rustfmt) 是自动格式化代"
+"码的工具。"
+
+#: src/concepts/components.md:36
+msgid ""
+"`rust-std` --- This is the Rust [standard library](https://doc.rust-lang.org/"
+"std/). There is a separate `rust-std` component for each target that `rustc` "
+"supports, such as `rust-std-x86_64-pc-windows-msvc`. See the [Cross-"
+"compilation](../cross-compilation.md) chapter for more detail."
+msgstr ""
+"`rust-std` --- 这是Rust [标准库](https://doc.rust-lang.org/std/)。 `rustc`支"
+"持的每个目标都有一个单独的`rust-std`组件，如`rust-std-x86_64-pc-winds-"
+"msvc`。 更多细节请参阅 [Cross-compilation](../cross-compilation.md章)。"
+
+#: src/concepts/components.md:40
+msgid ""
+"`rust-docs` --- This is a local copy of the [Rust documentation](https://doc."
+"rust-lang.org/). Use the `rustup doc` command to open the documentation in a "
+"web browser. Run `rustup doc --help` for more options."
+msgstr ""
+"`rust-docs` - 这是[Rust文档]的本地副本(https://doc.rust-lang.org/)。 使用 "
+"\"rusup doc\" 命令在 web 浏览器中打开文档。运行 \"rusup doc --help\" 获取更多"
+"选项。"
+
+#: src/concepts/components.md:43
+msgid ""
+"`rust-analyzer` --- [rust-analyzer](https://rust-analyzer.github.io/) is a "
+"language server that provides support for editors and IDEs."
+msgstr ""
+"`rust-analyzer` --- [rust-analyzer](https://rust-analyzer.github.io/) 是一个"
+"语言服务器，为编辑器和 IDE 提供支持。"
+
+#: src/concepts/components.md:45
+msgid ""
+"`clippy` --- [Clippy](https://github.com/rust-lang/rust-clippy) is a lint "
+"tool that provides extra checks for common mistakes and stylistic choices."
+msgstr ""
+"`clippy` - [Clippy](https://github.com/rust-lang/rust-clippy) 是一个直线工"
+"具，为常见错误和风格选择提供额外的检查。"
+
+#: src/concepts/components.md:47
+msgid ""
+"`miri` --- [Miri](https://github.com/rust-lang/miri/) is an experimental "
+"Rust interpreter, which can be used for checking for undefined-behavior."
+msgstr ""
+"`miri` - [Miri](https://github.com/rust-lang/miri/) 是一个实验性的Rust 解释"
+"器，可以用于检查未定义的行为。"
+
+#: src/concepts/components.md:49
+msgid ""
+"`rust-src` --- This is a local copy of the source code of the Rust standard "
+"library. This can be used by some tools, such as [rust-analyzer](https://"
+"rust-analyzer.github.io/), to provide auto-completion for functions within "
+"the standard library; [Miri](https://github.com/rust-lang/miri/) which is a "
+"Rust interpreter; and Cargo's experimental [build-std](https://doc.rust-lang."
+"org/nightly/cargo/reference/unstable.html#build-std) feature, which allows "
+"you to rebuild the standard library locally."
+msgstr ""
+"`rust-src` --- 这是Rust标准库源代码的本地副本。 这可以通过一些工具来使用，例"
+"如 [rust-analyzer](https://rust-analyzer.github.io/)，为标准库中的功能提供自"
+"动完成； [Miri](https://github.com/rust-lang/miri/) 是Rust解释器； 和 Cargo "
+"的实验 [build-std](https://doc.rust-lang.org/nightly/cargo/reference/"
+"unstable.html#build-std)功能，允许您在本地重建标准库。"
+
+#: src/concepts/components.md:54
+msgid ""
+"`rust-mingw` --- This contains a linker and platform libraries for building "
+"on the `x86_64-pc-windows-gnu` platform."
+msgstr ""
+"`rust-mingw` — — 它包含一个链接库和平台库，用于在 `x86_64-pc-winds-gnu` 平台"
+"上建造。"
+
+#: src/concepts/components.md:56
+msgid ""
+"`llvm-tools` --- This component contains a collection of [LLVM](https://llvm."
+"org/) tools. **This component has not been stabilized and may change in the "
+"future and is provided as-is.** Availability of individual LLVM tools may "
+"change over LLVM versions (including removal of specific LLVM tools), and "
+"**is not subject to compiler or toolchain stability guarantees**. See "
+"[\\#85658](https://github.com/rust-lang/rust/issues/85658)."
+msgstr ""
+"`llvm-tools` --- 此组件包含了一个 [LLVM](https://llvm.org/)工具集。 **这个组"
+"件尚未稳定下来，可能会在将来改变，并且是按原样提供。 * 单独的LVM工具的可用性"
+"可能会随着LLVM版本而改变(包括移除具体的LLVM工具)。 **不受编译器或工具链稳定性"
+"保证的约束**。 请参阅[\\#85658](https://github.com/rust-lang/rust/"
+"issues/85658)。"
+
+#: src/concepts/components.md:62
+msgid ""
+"`rustc-dev` --- This component contains the compiler as a library. Most "
+"users will not need this; it is only needed for development _of_ tools that "
+"link to the compiler, such as making modifications to [Clippy](https://"
+"github.com/rust-lang/rust-clippy)."
+msgstr ""
+"`rustc-dev` — — 这个组件包含编译器作为库。 大多数用户将不需要这样做； 它仅用"
+"于连接到编译器的开发_of_工具，如修改 [Clippy](https://github.com/rust-lang/"
+"rust-clippy)。"
+
+#: src/concepts/components.md:66
+msgid "Previous components"
+msgstr "之前的组件"
+
+#: src/concepts/components.md:68
+msgid ""
+"See [here](https://rust-lang.github.io/rustup/devel/concepts/components."
+"html#previous-components) for the latest version of this section."
+msgstr ""
+"本节的最新版本请参阅 [here](https://rust-lang.github.io/rustup/devel/"
+"concepts/components.html#previous-components)。  "
+
+#: src/concepts/components.md:71
+msgid ""
+"These components have been deprecated and are not published in new Rust "
+"releases."
+msgstr "这些组件已被弃用，并且不会在新的Rust 版本中发布。"
+
+#: src/concepts/components.md:73
+msgid ""
+"`rls` --- [RLS](https://github.com/rust-lang/rls) is a language server that "
+"is deprecated and has been replaced by rust-analyzer."
+msgstr ""
+"`rls` --- [RLS](https://github.com/rust-lang/rls) 是一个已废弃的语言服务器，"
+"已被生利分析器所替代。"
+
+#: src/concepts/components.md:75
+msgid ""
+"`rust-analysis` --- Metadata about the standard library, used by [RLS]"
+"(https://github.com/rust-lang/rls)."
+msgstr ""
+"`rust-analysis` --- 关于标准库的元数据，被[RLS](https://github.com/rust-lang/"
+"rls)所使用。"
+
+#: src/concepts/components.md:76
+msgid ""
+"The `wasm32-wasi` target --- It has been [renamed](https://blog.rust-lang."
+"org/2024/04/09/updates-to-rusts-wasi-targets.html) to `wasm32-wasip1`."
+msgstr ""
+"“wasm32-wasi”目标版本已经[更名为](https://blog.rust-lang.org/2024/04/09/"
+"updates-to-rusts-wasi-targets.html)“wasm32-wasip1”。"
+
+#: src/concepts/components.md:80
+msgid "Component availability"
+msgstr "组件可用性"
+
+#: src/concepts/components.md:82
+msgid ""
+"Not all components are available for all toolchains. Especially on the "
+"nightly channel, some components may not be included if they are in a broken "
+"state. The current status of all the components may be found on the [rustup "
+"components history](https://rust-lang.github.io/rustup-components-history/) "
+"page. See the [Nightly availability](channels.md#nightly-availability) "
+"section for more details."
+msgstr ""
+"并非所有组件都适用于所有的工具链。 特别是在夜间频道上，如果某些组件处于故障状"
+"态，它们可能不会被包含。 所有组件的当前状态可以在 [rusup 组件历史](https://"
+"rust-lang.github.io/rustup-components-history/) 页面找到。 详情请查看[每晚可"
+"用性](channels.md#nightly-availability)部分。"

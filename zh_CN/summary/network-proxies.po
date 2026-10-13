@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/network-proxies.md:1
+msgid "Network proxies"
+msgstr "网络代理"
+
+#: src/network-proxies.md:3
+msgid ""
+"Enterprise networks often don't have direct outside HTTP access, but enforce "
+"the use of proxies. If you're on such a network, you can request that "
+"`rustup` uses a proxy by setting its URL in the environment. In most cases, "
+"setting `https_proxy` should be sufficient. Commands may differ between "
+"different systems and shells:"
+msgstr ""
+"企业网络通常没有直接对外 HTTP 访问权限，而是强制使用代理服务器。如果你处于这"
+"样的网络中，可以通过在环境中设置`rustup`的 URL 来要求其使用代理服务器。在大多"
+"数情况下，设置`https_proxy`参数应该就足够了。不同系统和 shell 下的命令可能会"
+"有所不同。"
+
+#: src/network-proxies.md:9
+msgid "On a Unix-like system with a shell like **bash** or **zsh**:"
+msgstr "在支持**bash**或**zsh**等 shell 脚本语言的 Unix 类系统中："
+
+#: src/network-proxies.md:11 src/network-proxies.md:15
+msgid "socks5://proxy.example.com:1080"
+msgstr "socks5://proxy.example.com:1080"
+
+#: src/network-proxies.md:13
+msgid ""
+"On Windows [**Command Prompt (cmd)**](https://en.wikipedia.org/wiki/Cmd.exe):"
+msgstr ""
+"在 Windows 系统中，[**命令提示符（cmd）**](https://en.wikipedia.org/wiki/Cmd."
+"exe):"
+
+#: src/network-proxies.md:17
+msgid ""
+"On Windows [**PowerShell**](https://en.wikipedia.org/wiki/PowerShell) (or "
+"**PowerShell Core**):"
+msgstr ""
+"在 Windows [**PowerShell**](https://en.wikipedia.org/wiki/PowerShell(或"
+"**Powershell Core**):在 Windows 操作系统上，可以使用 [**PowerShell**]"
+"(https://en.wikipedia.org/wiki/PowerShell(或**Powershell Core**))进行各种操"
+"作。"
+
+#: src/network-proxies.md:19
+msgid "\"socks5://proxy.example.com:1080\""
+msgstr "\"socks5://proxy.example.com:1080\""
+
+#: src/network-proxies.md:21
+msgid ""
+"Replace `socks5://proxy.example.com:1080` with `http://proxy.example."
+"com:8080` when an HTTP proxy is used instead."
+msgstr ""
+"当使用 HTTP 代理时，将`socks5://proxy.example.com:1080`替换为`http://proxy."
+"example.com:8080`。"
+
+#: src/network-proxies.md:24
+msgid ""
+"If you need a more complex setup, `rustup` supports the convention used by "
+"the **curl** program, documented in the ENVIRONMENT section of [its manual "
+"page](https://curl.se/docs/manpage.html#:~:text=Environment,-"
+"The%20environment%20variables)."
+msgstr ""
+"如果你需要更复杂的配置，`rustup`支持与**curl**程序所使用的约定方式相兼容的操"
+"作。这些约定在[curl 的手册页》中的**环境**部分有详细说明：https://curl.se/"
+"docs/manpage.html#:~:text=Environment,%20Environment%20variables。"
+
+#: src/network-proxies.md:28
+msgid ""
+"The use of `curl` is presently **deprecated**, however it can still be used "
+"by providing the `RUSTUP_USE_CURL` environment variable, for example:"
+msgstr ""
+"“curl”这个工具目前已被**弃用**，不过仍然可以通过设置`RUSTUP_USE_CURL`环境变量"
+"来继续使用它，例如："
+
+#: src/network-proxies.md:32
+msgid "1"
+msgstr "1"
+
+#: src/network-proxies.md:35
+msgid ""
+"Note that some versions of `libcurl` apparently require you to drop the "
+"`http://` or `https://` prefix in environment variables. For example, "
+"`export http_proxy=proxy.example.com:1080` (and likewise for HTTPS). If you "
+"are getting an SSL `unknown protocol` error from `rustup` via `libcurl` but "
+"the command-line `curl` command works fine, this may be the problem."
+msgstr ""
+"请注意，某些版本的`libcurl`似乎要求在环境变量中去掉`http://`或`https://`的前"
+"缀。例如，`export http_proxy=proxy.example.com:1080`（同样也需要设置 HTTPS 相"
+"关参数）。如果你通过`libcurl`使用`rustup`时遇到“SSL 协议未知”的错误，而通过命"
+"令行`curl`命令则没有问题，那么很可能就是这个问题导致的。"
