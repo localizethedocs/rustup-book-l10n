@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-10-13 01:18:23 +0000",
+      "hash" : "d5513a294ef371f16895c6c6f5ae99c2ec62f1f3",
+      "title" : "chore(deps): update taiki-e/install-action action to v2.87.27"
     }
   },
   "type" : "branch",
