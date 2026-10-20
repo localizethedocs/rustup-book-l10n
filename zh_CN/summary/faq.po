@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/faq.md:1
+msgid "FAQ"
+msgstr "常见问题解答"
+
+#: src/faq.md:3
+msgid "Is this an official Rust project?"
+msgstr "这是官方的Rust项目吗？"
+
+#: src/faq.md:5
+msgid ""
+"Yes. rustup is an official Rust project. It is the recommended way to "
+"install Rust at https://www.rust-lang.org."
+msgstr ""
+"是的，rustup 是一个官方的 Rust 项目。在 https://www.rust-lang.org 上可以找到"
+"关于如何安装 Rust 的官方指导。"
+
+#: src/faq.md:8
+msgid "How is this related to multirust?"
+msgstr "这与多锈现象有什么关系呢？"
+
+#: src/faq.md:10
+msgid ""
+"rustup is the successor to [multirust](https://github.com/brson/multirust). "
+"rustup began as multirust-rs, a rewrite of multirust from shell script to "
+"Rust, by [Diggory Blake](https://github.com/Diggsey), and is now maintained "
+"by The Rust Project."
+msgstr ""
+"rusup 是 [multirust](https://github.com/brson/multirust)的继承者。 从多精灵开"
+"始，是从shell脚本重写多精灵到Rust。 由 [Diggory Blake](https://github.com/"
+"Diggsey)，现在由Rust 项目维护。"
+
+#: src/faq.md:17
+msgid "Can rustup download the Rust source code?"
+msgstr "可以尝试下载Rust源码吗？"
+
+#: src/faq.md:19
+msgid ""
+"The source for Rust's standard library can be obtained by running `rustup "
+"component add rust-src`. It will be downloaded to the `<toolchain root>/lib/"
+"rustlib/src/rust` directory of the current toolchain."
+msgstr ""
+"Rust的标准库源可以通过运行 `rustup 组件添加 rust-src` 来获取。 它将被下载到当"
+"前工具链的<toolchain root>/lib/rustlib/src/rust` 目录。"
+
+#: src/faq.md:23
+msgid ""
+"The source for the compiler and tools must be obtained from the [Rust "
+"repository](https://github.com/rust-lang/rust/) or the standalone [source "
+"tarballs](https://forge.rust-lang.org/infra/other-installation-methods."
+"html#source-code)."
+msgstr ""
+"编译器和工具的源必须从 [Rust 存储库](https://github.com/rust-lang/rust/)或独"
+"立的 [source tarballs](https://forge.rust-lang.org/infra/other-installation-"
+"methods.html#source-code )获取。  "
+
+#: src/faq.md:29
+msgid "rustup fails with Windows error 32"
+msgstr "Rustup 在 Windows 系统上运行时出现错误，错误编号为 32。"
+
+#: src/faq.md:31
+msgid ""
+"If `rustup` fails with Windows error 32, it may be due to antivirus scanning "
+"in the background. Disable antivirus scanner and try again."
+msgstr ""
+"如果 `rustup` 在 Windows 系统上出现错误 32，可能是由于后台运行的反病毒扫描导"
+"致的。请禁用反病毒扫描程序，然后再次尝试。"
+
+#: src/faq.md:34
+msgid ""
+"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\\\."
+"cargo\\bin\\rustup.exe'\""
+msgstr ""
+"出现错误：无法删除‘rustup-bin’文件：‘C:\\Users\\USER\\\\.cargo\\bin\\rustup."
+"exe’"
+
+#: src/faq.md:36
+msgid ""
+"If `rustup` fails to self-update in this way it's usually because RLS is "
+"running (your editor is open and running RLS). The solution is to stop RLS "
+"(by closing your editor) and try again."
+msgstr ""
+"如果`rustup`无法以这种方式进行自我更新，通常是因为正在运行 RLS 程序（即你的编"
+"辑器处于打开状态，同时 RLS 也在运行）。解决方法是停止 RLS 的运行（关闭编辑"
+"器），然后再尝试一次。"
+
+#: src/faq.md:40
+msgid "rustup exited successfully but I can't run `rustc --version`"
+msgstr "成功终止了 rustup 进程，但是无法执行`rustc --version`命令。"
+
+#: src/faq.md:42
+msgid ""
+"Restart your shell. This will reload your `PATH` environment variable to "
+"include Cargo's bin directory (`$CARGO_HOME/bin`)."
+msgstr ""
+"重新启动你的 shell 进程。这样就能将 Cargo 的 bin 目录（`$CARGO_HOME/bin`）重"
+"新加载到你的`PATH`环境变量中。"
