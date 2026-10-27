@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The rustup book\n"
-"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"POT-Creation-Date: 2026-10-27T13:59:22Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/installation/already-installed-rust.md:1
@@ -41,16 +41,17 @@ msgstr ""
 #: src/installation/already-installed-rust.md:22
 msgid ""
 "You can then use \"system\" as a `rustup` toolchain, just like \"nightly\". "
-"For example, using the [toolchain override shorthand](../overrides."
-"md#toolchain-override-shorthand), you can run `cargo +system build` to build "
-"with the system toolchain, or `cargo +nightly build` to build with nightly."
+"For example, using the [toolchain override shorthand](../"
+"overrides.md#toolchain-override-shorthand), you can run `cargo +system "
+"build` to build with the system toolchain, or `cargo +nightly build` to "
+"build with nightly."
 msgstr ""
 
 #: src/installation/already-installed-rust.md:26
 msgid ""
 "If you wish to develop with the system toolchain (e.g. for distribution "
-"packages), you may want to make it your [default toolchain](../overrides."
-"md#default-toolchain):"
+"packages), you may want to make it your [default toolchain](../"
+"overrides.md#default-toolchain):"
 msgstr ""
 
 #: src/installation/already-installed-rust.md:33
