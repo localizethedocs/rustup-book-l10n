@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-10-27 11:12:59 +0000",
+      "hash" : "3d011da95de82efe13ec2731834ac77f2775903e",
+      "title" : "fix(toolchain): don't fall back to external RA redirecting to rustup"
     }
   },
   "type" : "branch",
