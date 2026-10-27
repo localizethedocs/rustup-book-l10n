@@ -49,8 +49,8 @@ msgstr "\"socks5://proxy.example.com:1080\""
 
 #: src/network-proxies.md:21
 msgid ""
-"Replace `socks5://proxy.example.com:1080` with `http://proxy.example."
-"com:8080` when an HTTP proxy is used instead."
+"Replace `socks5://proxy.example.com:1080` with `http://"
+"proxy.example.com:8080` when an HTTP proxy is used instead."
 msgstr ""
 
 #: src/network-proxies.md:24

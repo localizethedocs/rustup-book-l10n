@@ -17,14 +17,14 @@ msgstr "配置"
 
 #: src/configuration.md:3
 msgid ""
-"Rustup has a [TOML](https://github.com/toml-lang/toml) settings file at "
-"`${RUSTUP_HOME}/settings.toml` (which defaults to `~/.rustup` or "
+"Rustup has a [TOML](https://github.com/toml-lang/toml) settings file at `$"
+"{RUSTUP_HOME}/settings.toml` (which defaults to `~/.rustup` or "
 "`%USERPROFILE%/.rustup`). The schema for this file is not part of the public "
 "interface for rustup - the rustup CLI should be used to query and set "
 "settings."
 msgstr ""
-"Rustup 有一个 [TOML](https://github.com/toml-lang/toml) 设置文件，位于 "
-"`${RUSTUP_HOME}/settings.toml` 位置（该文件默认设置为 `~/.rustup` 或 "
+"Rustup 有一个 [TOML](https://github.com/toml-lang/toml) 设置文件，位于 `$"
+"{RUSTUP_HOME}/settings.toml` 位置（该文件默认设置为 `~/.rustup` 或 "
 "`%USERPROFILE%/.rustup`）。该文件的格式并非 rustup 公共接口的一部分——应该通"
 "过 rustup CLI 来进行设置查询和更改。"
 

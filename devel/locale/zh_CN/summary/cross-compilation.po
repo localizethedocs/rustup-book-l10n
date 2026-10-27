@@ -63,8 +63,8 @@ msgstr ""
 "工具来进行交叉编译，比如链接器。例如，要将其编译为 Android 版本，就必须安装"
 "[Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)。未来，"
 "`rustup`将会提供关于如何安装 NDK 组件的帮助。更多详细信息请参考`cargo`配置文"
-"件的[目标部分](https://doc.rust-lang.org/cargo/reference/config."
-"html#target)。"
+"件的[目标部分](https://doc.rust-lang.org/cargo/reference/"
+"config.html#target)。"
 
 #: src/cross-compilation.md:35
 msgid ""

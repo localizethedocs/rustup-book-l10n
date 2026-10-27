@@ -17,8 +17,8 @@ msgstr "組態"
 
 #: src/configuration.md:3
 msgid ""
-"Rustup has a [TOML](https://github.com/toml-lang/toml) settings file at "
-"`${RUSTUP_HOME}/settings.toml` (which defaults to `~/.rustup` or "
+"Rustup has a [TOML](https://github.com/toml-lang/toml) settings file at `$"
+"{RUSTUP_HOME}/settings.toml` (which defaults to `~/.rustup` or "
 "`%USERPROFILE%/.rustup`). The schema for this file is not part of the public "
 "interface for rustup - the rustup CLI should be used to query and set "
 "settings."

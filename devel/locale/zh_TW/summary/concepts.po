@@ -84,8 +84,8 @@ msgstr ""
 #: src/concepts/index.md:47
 msgid ""
 "**profile** --- In order to make it easier to work with components, a "
-"\"profile\" defines a grouping of components. See the [Profiles](profiles."
-"md) chapter for more details."
+"\"profile\" defines a grouping of components. See the [Profiles]"
+"(profiles.md) chapter for more details."
 msgstr ""
 
 #: src/concepts/index.md:51

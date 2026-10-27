@@ -59,8 +59,8 @@ msgstr ""
 msgid ""
 "The source for the compiler and tools must be obtained from the [Rust "
 "repository](https://github.com/rust-lang/rust/) or the standalone [source "
-"tarballs](https://forge.rust-lang.org/infra/other-installation-methods."
-"html#source-code)."
+"tarballs](https://forge.rust-lang.org/infra/other-installation-"
+"methods.html#source-code)."
 msgstr ""
 
 #: src/faq.md:29
@@ -75,8 +75,8 @@ msgstr ""
 
 #: src/faq.md:34
 msgid ""
-"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\\\."
-"cargo\\bin\\rustup.exe'\""
+"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\"
+"\\.cargo\\bin\\rustup.exe'\""
 msgstr ""
 
 #: src/faq.md:36
