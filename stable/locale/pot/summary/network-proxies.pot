@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The rustup book\n"
-"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"POT-Creation-Date: 2026-10-27T13:59:22Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/network-proxies.md:1
@@ -49,8 +49,8 @@ msgstr ""
 
 #: src/network-proxies.md:21
 msgid ""
-"Replace `socks5://proxy.example.com:1080` with `http://proxy.example."
-"com:8080` when an HTTP proxy is used instead."
+"Replace `socks5://proxy.example.com:1080` with `http://"
+"proxy.example.com:8080` when an HTTP proxy is used instead."
 msgstr ""
 
 #: src/network-proxies.md:24

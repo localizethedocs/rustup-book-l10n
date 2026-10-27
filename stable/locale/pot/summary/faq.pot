@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The rustup book\n"
-"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"POT-Creation-Date: 2026-10-27T13:59:22Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/faq.md:1
@@ -52,8 +52,8 @@ msgstr ""
 msgid ""
 "The source for the compiler and tools must be obtained from the [Rust "
 "repository](https://github.com/rust-lang/rust/) or the standalone [source "
-"tarballs](https://forge.rust-lang.org/infra/other-installation-methods."
-"html#source-code)."
+"tarballs](https://forge.rust-lang.org/infra/other-installation-"
+"methods.html#source-code)."
 msgstr ""
 
 #: src/faq.md:29
@@ -68,8 +68,8 @@ msgstr ""
 
 #: src/faq.md:34
 msgid ""
-"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\\\."
-"cargo\\bin\\rustup.exe'\""
+"I get \"error: could not remove 'rustup-bin' file: 'C:\\Users\\USER\\"
+"\\.cargo\\bin\\rustup.exe'\""
 msgstr ""
 
 #: src/faq.md:36
