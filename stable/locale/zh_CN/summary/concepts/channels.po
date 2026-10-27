@@ -29,9 +29,9 @@ msgstr ""
 "Rust 被释放到三种不同的“通道”：稳定、贝塔和夜晚。稳定释放每6周（偶尔发布点"
 "数）。 测试版发布是将出现在下一次稳定版本中。夜间发布是每晚发布一次。 请参阅"
 "[Rust Book](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html)关于"
-"Rust的火车发布模型的更多详细信息。发布计划已张贴到[Rust Forge](https://forge."
-"rust-lang.org/)。 `rustup` 有助于安装不同的频道，随时更新，并且易于在它们之间"
-"切换。"
+"Rust的火车发布模型的更多详细信息。发布计划已张贴到[Rust Forge](https://"
+"forge.rust-lang.org/)。 `rustup` 有助于安装不同的频道，随时更新，并且易于在它"
+"们之间切换。"
 
 #: src/concepts/channels.md:11
 msgid ""
@@ -67,8 +67,8 @@ msgid ""
 "features](https://doc.rust-lang.org/unstable-book/). To add it just run "
 "`rustup toolchain install nightly`:"
 msgstr ""
-"`rustup` 可以让您轻松地访问每夜编译器及其[实验功能](https://doc.rust-lang."
-"org/unstable-book/)。要添加它，只需要运行 `rustup toolchain 夜间安装'："
+"`rustup` 可以让您轻松地访问每夜编译器及其[实验功能](https://doc.rust-"
+"lang.org/unstable-book/)。要添加它，只需要运行 `rustup toolchain 夜间安装'："
 
 #: src/concepts/channels.md:50
 msgid ""

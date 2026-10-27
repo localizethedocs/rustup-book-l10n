@@ -40,8 +40,8 @@ msgstr "`rusup 设置简档最小化`"
 #: src/examples.md:6
 msgid "Set the default [profile](concepts/profiles.md)"
 msgstr ""
-"设置默认 [profile](concepts/profiles.md)设置默认[配置文件](concepts/profiles."
-"md)"
+"设置默认 [profile](concepts/profiles.md)设置默认[配置文件](concepts/"
+"profiles.md)"
 
 #: src/examples.md:7
 msgid "`rustup target list`"

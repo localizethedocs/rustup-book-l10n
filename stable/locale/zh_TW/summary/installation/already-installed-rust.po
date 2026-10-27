@@ -41,16 +41,17 @@ msgstr ""
 #: src/installation/already-installed-rust.md:22
 msgid ""
 "You can then use \"system\" as a `rustup` toolchain, just like \"nightly\". "
-"For example, using the [toolchain override shorthand](../overrides."
-"md#toolchain-override-shorthand), you can run `cargo +system build` to build "
-"with the system toolchain, or `cargo +nightly build` to build with nightly."
+"For example, using the [toolchain override shorthand](../"
+"overrides.md#toolchain-override-shorthand), you can run `cargo +system "
+"build` to build with the system toolchain, or `cargo +nightly build` to "
+"build with nightly."
 msgstr ""
 
 #: src/installation/already-installed-rust.md:26
 msgid ""
 "If you wish to develop with the system toolchain (e.g. for distribution "
-"packages), you may want to make it your [default toolchain](../overrides."
-"md#default-toolchain):"
+"packages), you may want to make it your [default toolchain](../"
+"overrides.md#default-toolchain):"
 msgstr ""
 
 #: src/installation/already-installed-rust.md:33

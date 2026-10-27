@@ -33,9 +33,9 @@ msgstr ""
 
 #: src/index.md:13
 msgid ""
-"The source code of rustup and this manual may be found at <https://github."
-"com/rust-lang/rustup>. If you find a problem, check out the [issue tracker]"
-"(https://github.com/rust-lang/rustup/issues)."
+"The source code of rustup and this manual may be found at <https://"
+"github.com/rust-lang/rustup>. If you find a problem, check out the [issue "
+"tracker](https://github.com/rust-lang/rustup/issues)."
 msgstr ""
 
 #: src/index.md:17

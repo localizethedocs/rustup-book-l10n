@@ -83,9 +83,9 @@ msgstr ""
 
 #: src/concepts/components.md:40
 msgid ""
-"`rust-docs` --- This is a local copy of the [Rust documentation](https://doc."
-"rust-lang.org/). Use the `rustup doc` command to open the documentation in a "
-"web browser. Run `rustup doc --help` for more options."
+"`rust-docs` --- This is a local copy of the [Rust documentation](https://"
+"doc.rust-lang.org/). Use the `rustup doc` command to open the documentation "
+"in a web browser. Run `rustup doc --help` for more options."
 msgstr ""
 
 #: src/concepts/components.md:43
@@ -112,9 +112,9 @@ msgid ""
 "library. This can be used by some tools, such as [rust-analyzer](https://"
 "rust-analyzer.github.io/), to provide auto-completion for functions within "
 "the standard library; [Miri](https://github.com/rust-lang/miri/) which is a "
-"Rust interpreter; and Cargo's experimental [build-std](https://doc.rust-lang."
-"org/nightly/cargo/reference/unstable.html#build-std) feature, which allows "
-"you to rebuild the standard library locally."
+"Rust interpreter; and Cargo's experimental [build-std](https://doc.rust-"
+"lang.org/nightly/cargo/reference/unstable.html#build-std) feature, which "
+"allows you to rebuild the standard library locally."
 msgstr ""
 
 #: src/concepts/components.md:54
@@ -125,11 +125,11 @@ msgstr ""
 
 #: src/concepts/components.md:56
 msgid ""
-"`llvm-tools` --- This component contains a collection of [LLVM](https://llvm."
-"org/) tools. **This component has not been stabilized and may change in the "
-"future and is provided as-is.** Availability of individual LLVM tools may "
-"change over LLVM versions (including removal of specific LLVM tools), and "
-"**is not subject to compiler or toolchain stability guarantees**. See "
+"`llvm-tools` --- This component contains a collection of [LLVM](https://"
+"llvm.org/) tools. **This component has not been stabilized and may change in "
+"the future and is provided as-is.** Availability of individual LLVM tools "
+"may change over LLVM versions (including removal of specific LLVM tools), "
+"and **is not subject to compiler or toolchain stability guarantees**. See "
 "[\\#85658](https://github.com/rust-lang/rust/issues/85658)."
 msgstr ""
 
@@ -147,8 +147,8 @@ msgstr ""
 
 #: src/concepts/components.md:68
 msgid ""
-"See [here](https://rust-lang.github.io/rustup/devel/concepts/components."
-"html#previous-components) for the latest version of this section."
+"See [here](https://rust-lang.github.io/rustup/devel/concepts/"
+"components.html#previous-components) for the latest version of this section."
 msgstr ""
 
 #: src/concepts/components.md:71
@@ -171,8 +171,8 @@ msgstr ""
 
 #: src/concepts/components.md:76
 msgid ""
-"The `wasm32-wasi` target --- It has been [renamed](https://blog.rust-lang."
-"org/2024/04/09/updates-to-rusts-wasi-targets.html) to `wasm32-wasip1`."
+"The `wasm32-wasi` target --- It has been [renamed](https://blog.rust-"
+"lang.org/2024/04/09/updates-to-rusts-wasi-targets.html) to `wasm32-wasip1`."
 msgstr ""
 
 #: src/concepts/components.md:80

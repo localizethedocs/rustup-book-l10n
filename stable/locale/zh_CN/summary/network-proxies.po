@@ -40,8 +40,8 @@ msgstr "socks5://proxy.example.com:1080"
 msgid ""
 "On Windows [**Command Prompt (cmd)**](https://en.wikipedia.org/wiki/Cmd.exe):"
 msgstr ""
-"在 Windows 系统中，[**命令提示符（cmd）**](https://en.wikipedia.org/wiki/Cmd."
-"exe):"
+"在 Windows 系统中，[**命令提示符（cmd）**](https://en.wikipedia.org/wiki/"
+"Cmd.exe):"
 
 #: src/network-proxies.md:17
 msgid ""
@@ -59,11 +59,11 @@ msgstr "\"socks5://proxy.example.com:1080\""
 
 #: src/network-proxies.md:21
 msgid ""
-"Replace `socks5://proxy.example.com:1080` with `http://proxy.example."
-"com:8080` when an HTTP proxy is used instead."
+"Replace `socks5://proxy.example.com:1080` with `http://"
+"proxy.example.com:8080` when an HTTP proxy is used instead."
 msgstr ""
-"当使用 HTTP 代理时，将`socks5://proxy.example.com:1080`替换为`http://proxy."
-"example.com:8080`。"
+"当使用 HTTP 代理时，将`socks5://proxy.example.com:1080`替换为`http://"
+"proxy.example.com:8080`。"
 
 #: src/network-proxies.md:24
 msgid ""
