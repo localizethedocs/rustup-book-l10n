@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:46Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/security.md:1
+msgid "Security"
+msgstr "安全性"
+
+#: src/security.md:3
+msgid ""
+"`rustup` is secure enough for most people, but it [still needs work](https://"
+"github.com/rust-lang/rustup/issues?q=is%3Aopen+is%3Aissue+label%3Asecurity). "
+"`rustup` performs all downloads over HTTPS, but does not yet validate "
+"signatures of downloads."
+msgstr ""
+"`rustup` 对于大多数人来说是足够安全的，但它[仍然需要工作](https://github.com/"
+"rust-lang/rustup/issues?q=is%3Aopen+is%3Aissue+label%3Asecurity)。 `rustup`通"
+"过HTTPS进行所有下载，但尚未验证下载签名。"
+
+#: src/security.md:9
+msgid ""
+"File modes on installation honor umask as of 1.18.4, use umask if very tight "
+"controls are desired."
+msgstr ""
+"从1.18.4版本开始，安装过程中的文件模式会遵循umask的设置。如果确实需要严格控制"
+"权限，建议使用umask。"
+
+#: src/security.md:12
+msgid ""
+"If you wish to report a security issue, please follow the [Rust security "
+"policy](https://www.rust-lang.org/policies/security)."
+msgstr ""
+"如果您想报告一个安全问题，请遵循[Rust 安全政策](https://www.rust-lang.org/"
+"policies/security)。"
