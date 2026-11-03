@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The rustup book\n"
+"POT-Creation-Date: 2026-04-18T16:04:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/concepts/toolchains.md:1
+msgid "Toolchains"
+msgstr "工具链"
+
+#: src/concepts/toolchains.md:3
+msgid ""
+"Many `rustup` commands deal with _toolchains_, a single installation of the "
+"Rust compiler. `rustup` supports multiple types of toolchains. The most "
+"basic track the official release [channels](channels.md): _stable_, _beta_ "
+"and _nightly_; but `rustup` can also install toolchains from the official "
+"archives, for alternate host platforms, and from local builds."
+msgstr ""
+"许多`rustup`命令处理的 _toolchains_，Rust编译器的单一安装。`rustup` 支持多种"
+"类型的工具链。 官方发布的最基本的音轨 [channels](channels.md): _stable_, "
+"_beta_ 和 _nightly_; 但`rustup` 也可以从官方档案中为备用主机平台和本地建筑安"
+"装工具链。"
+
+#: src/concepts/toolchains.md:11
+msgid "Toolchain specification"
+msgstr "工具链规范"
+
+#: src/concepts/toolchains.md:13
+msgid "Standard release channel toolchain names have the following form:"
+msgstr "标准发行频道工具链名称有以下表单："
+
+#: src/concepts/toolchains.md:25
+msgid ""
+"'channel' is a named release channel, a major and minor version number such "
+"as `1.42`, or a fully specified version number, such as `1.42.0`. Channel "
+"names can be optionally appended with an archive date, as in "
+"`nightly-2014-12-18`, in which case the toolchain is downloaded from the "
+"archive for that date."
+msgstr ""
+"“通道”是一个命名的发布频道，一个主要和次要的版本号，如`1.42`，或一个完全指定"
+"的版本号，如`1.42.0`。 频道名称可选择附加归档日期，比如“2014-12-18晚”， 在这"
+"种情况下，将从该日期的归档中下载工具链。"
+
+#: src/concepts/toolchains.md:30
+msgid ""
+"Finally, the host may be specified as a target tuple. This is most useful "
+"for installing a 32-bit compiler on a 64-bit platform, or for installing the "
+"[MSVC-based toolchain](https://www.rust-lang.org/tools/install?"
+"platform_override=win) on Windows. For example:"
+msgstr ""
+"最后，主机可以指定为目标管。 这对于在 64 位平台上安装 32 位编译器或在 "
+"Windows 上安装 [基于 MSVC 的工具链](https://www.rust-lang.org/tools/install?"
+"platform_override=win)最有用。例如："
+
+#: src/concepts/toolchains.md:38
+msgid ""
+"For convenience, elements of the target tuple that are omitted will be "
+"inferred, so the above could be written:"
+msgstr "为方便起见，将推断被遗漏的目标管道的要素，因此可以写上："
+
+#: src/concepts/toolchains.md:45
+msgid ""
+"Toolchain names that don't name a channel instead can be used to name "
+"[custom toolchains](#custom-toolchains)."
+msgstr ""
+"没有给频道命名的工具链名称可以用来命名[自定义工具链](#custom-toolchains)。"
+
+#: src/concepts/toolchains.md:51
+msgid "Custom toolchains"
+msgstr "自定义工具链接"
+
+#: src/concepts/toolchains.md:53
+msgid ""
+"For convenience of developers working on Rust itself, `rustup` can manage "
+"local builds of the Rust toolchain. To teach `rustup` about your build, run:"
+msgstr ""
+"为了方便从事 Rust 开发的开发者，rustup 可以负责管理 Rust 工具链的本地构建工"
+"作。如果你想向 rustup 说明你的构建过程，可以运行以下命令："
+
+#: src/concepts/toolchains.md:60
+msgid ""
+"For example, on Ubuntu you might clone `rust-lang/rust` into `~/rust`, build "
+"it, and then run:"
+msgstr ""
+"例如，在 Ubuntu 系统中，你可以将 `rust-lang/rust` 克隆到 `~/rust` 中，然后构"
+"建它，最后运行："
+
+#: src/concepts/toolchains.md:68
+msgid ""
+"Now you can name `my-toolchain` as any other `rustup` toolchain. Create a "
+"`rustup` toolchain for each of your `rust-lang/rust` workspaces and test "
+"them easily with `rustup run my-toolchain rustc`."
+msgstr ""
+"现在，你可以将 `my-toolchain` 命名为任何其他 `rustup` 工具链。为你的每个 "
+"`rust-lang/rust` 工作区创建一个 `rustup` 工具链，并可以使用 `rustup run my-"
+"toolchain rustc` 轻松测试它们。"
+
+#: src/concepts/toolchains.md:72
+msgid ""
+"Because the `rust-lang/rust` tree does not include Cargo, _when `cargo` is "
+"invoked for a custom toolchain and it is not available, `rustup` will "
+"attempt to use `cargo` from one of the release channels_, preferring "
+"'nightly', then 'beta' or 'stable'."
+msgstr ""
+"因为 `rust-lang/rust` 这个工具树并不包含 Cargo，*当为自定义工具链调用 "
+"`cargo` 且无法使用时， `rustup` 会尝试从某个发布渠道使用 `cargo`*，优先选择 "
+"'nightly'，然后是 'beta' 或 'stable'。"
