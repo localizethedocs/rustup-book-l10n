@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-11-10 13:31:09 +0000",
+      "hash" : "fff7962857f21dada50920acee5c9fd008c565de",
+      "title" : "Update platforms to 4.3.0"
     }
   },
   "type" : "branch",
