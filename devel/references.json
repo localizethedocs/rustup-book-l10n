@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-11-17 16:21:48 +0000",
+      "hash" : "134fa1f932c8d989435d5e867cb7e61d1448e9bb",
+      "title" : "fix(dist): avoid panic for missing undated nightly releases"
     }
   },
   "type" : "branch",
