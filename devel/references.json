@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-17 07:33:26 +0000",
-      "hash" : "d32f88bba027fda2efad7fc67ba34a03fa481fad",
-      "title" : "ci: powerpc64-unknown-linux-musl is now stable"
+      "date" : "2026-11-24 11:40:39 +0000",
+      "hash" : "655163a2bdeb9c5f6f2f401afe07f83a0a551864",
+      "title" : "fix(errors): suggest the closest matching toolchain"
     }
   },
   "type" : "branch",
